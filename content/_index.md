@@ -1,47 +1,41 @@
 +++
-title = "DocDock Theme for Hugo"
-description = ""
-date = "2017-04-24T18:36:24+02:00"
-
+title = "PEARG Documentation"
+description = "Bioinformatics documentation for PEARG lab members"
 +++
 
-# Hugo docDock theme
-[Hugo-theme-docdock {{%icon fa-github%}}](https://github.com/vjeantet/hugo-theme-docdock) is a theme for Hugo, a fast and modern static website engine written in Go. Hugo is often used for blogs, **this theme is fully designed for documentation.**
+# PEARG Documentation
+This site contains bioinformatics-related documentation for PEARG lab members.
 
-This theme is a partial porting of the [Learn theme of matcornic {{%icon fa-github%}}](https://github.com/matcornic/hugo-theme-learn).
+### Getting started
 
-{{%panel%}}docDock works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-organisation/_index.md"%}}) {{%/panel%}}
+These documents go over what compute resources are available to you, how to
+get an account on our clusters, and some terms of conditions.
 
-## Main features
+* [HPC resources overview]({{%relref "getting-started/hpc-resources.md"%}})
+* [Getting an account]({{%relref "getting-started/getting-an-account.md"%}})
 
-* [Search]({{%relref "search/_index.md" %}})
-* **Unlimited menu levels**
-* [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* Automatic next/prev buttons to navigate through menu entries
-* [Image resizing, shadow...]({{%relref "shortcodes/image.md" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.md" %}})
-* [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Excerpt]({{%relref "shortcodes/excerpt.md"%}}) ! Include segment of content from one page in another
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.md" %}}) (flowchart, sequence, gantt)
-* [Icons]({{%relref "shortcodes/icon.md" %}}), [Buttons]({{%relref "shortcodes/button.md" %}}), [Alerts]({{%relref "shortcodes/alert.md" %}}), [Panels]({{%relref "shortcodes/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.md" %}}), [Expand]({{%relref "shortcodes/expand.md" %}})
-* [customizable look and feel]({{%relref "content-organisation/customize-style/_index.md"%}}), [theme variants]({{%relref "content-organisation/customize-style/theme-variants.md"%}})
+### Best practices
 
+These documents describe some best practices when using our compute resources.
+Not following some of these guidelines may result in a scolding.
 
-
-
-![](https://raw.githubusercontent.com/vjeantet/hugo-theme-docdock/master/images/tn.png?width=33pc&classes=border,shadow)
-
-## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
-{{%alert%}}Your modification will be deployed automatically when merged.{{%/alert%}}
+* [Directory structure]({{%relref "best-practices/directory-structure.md"%}})
+* [Naming files]({{%relref "best-practices/naming-files.md"%}})
+* [Reference data]({{%relref "best-practices/reference-data.md"%}})
+* [Stacks databases]({{%relref "best-practices/stacks-databases.md"%}})
+* [Running jobs with SLURM ]({{%relref "best-practices/running-jobs-with-slurm.md"%}})
 
 
-## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t docdock` -- source code is [available here at GitHub {{%icon fa-github%}}](https://github.com/vjeantet/hugo-theme-docDock)
+### Contribute to this documentation
 
-{{% panel theme="success" header="Automated deployments" footer="Netlify builds, deploys, and hosts  frontends." %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/).
+This documentation's source code is hosted on
+[GitHub](https://github.com/pearg/pearg_documentation). Feel free to update the 
+content--- just click the **Edit this page** link displayed on top right of 
+each page, and create a pull request when done.
 
-Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
-{{% /panel %}}
+#### Contact
+
+For questions, suggestions, or feedback, contact me at 
+[jchung@unimelb.edu.au](mailto:jchung@unimelb.edu.au) or submit an 
+[issue on GitHub](https://github.com/pearg/pearg_documentation/issues).
 

@@ -638,6 +638,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #body-inner {
     margin-bottom: 5rem;
+    width: 80%;
 }
 #chapter {
     display: flex;
@@ -787,7 +788,7 @@ pre {
     line-height: 1.15;
 }
 pre code {
-    color: #237794;
+    color: #EEEEEE;
     background: inherit;
     white-space: inherit;
     border: 0;
@@ -1197,6 +1198,7 @@ td {
     }
 }
 .copy-to-clipboard {
+/* 
     background-image: url(../images/clippy.svg);
     background-position: 50% 50%;
     background-size: 16px 16px;
@@ -1213,6 +1215,7 @@ td {
     cursor: pointer;
     border-radius: 0 2px 2px 0;
     margin-bottom: 1px;
+ */
 }
 .copy-to-clipboard:hover {
     background-color: #E8E2CD;
