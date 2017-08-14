@@ -38,7 +38,11 @@ Check your project directory At absolute minimum, please check:</description>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/best-practices/naming-files/</guid>
-      <description>This document describes best practices for naming files.</description>
+      <description>This document describes best practices for naming files.
+I highly recommend you read this Data Carpentary document on file naming.
+Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
+X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz  The filename contains a lot of information which is descriptive to the user and can be easily extracted programatically.
+Just by looking at the filename and knowing what each field represents, we have the following information:</description>
     </item>
     
     <item>
@@ -74,7 +78,8 @@ Check your project directory At absolute minimum, please check:</description>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/best-practices/stacks-databases/</guid>
-      <description>Best practises for working with Stacks databases.</description>
+      <description>Clusters which don&amp;rsquo;t allow databases Barcoo (Melbourne Bioinformatics clusters) If you&amp;rsquo;re using the barcoo cluster for your analysis, you won&amp;rsquo;t be able to load your catalog to a database on the cluster. This means you&amp;rsquo;ll need to do your computation (on barcoo) separately to a machine that alows database access.
+On barcoo If you&amp;rsquo;re using ref_map.pl or denovo_map.pl you can use the -S option to disable all database interaction. The output from this step should be many tsv files.</description>
     </item>
     
     <item>
