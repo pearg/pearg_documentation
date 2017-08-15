@@ -1,7 +1,7 @@
 +++
-title = "Other posts"
+title = "Metadata Documentation"
 description = ""
-weight = 10
+weight = 30
 alwaysopen = false
 +++
 

@@ -1,7 +1,7 @@
 +++
-title = "Getting Started"
+title = "Usage Documentation"
 description = ""
-weight = 1
+weight = 50
 alwaysopen = true
 +++
 

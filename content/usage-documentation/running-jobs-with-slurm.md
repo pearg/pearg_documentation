@@ -5,7 +5,7 @@ date: '2017-08-11'
 slug: running-jobs-with-slurm
 categories: []
 tags: []
-weight: 4
+weight: 1
 description: 'Documentation on how to run SLURM jobs.'
 ---
 

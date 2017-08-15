@@ -13,6 +13,7 @@ get an account on our clusters, and some terms of conditions.
 
 * [HPC resources overview]({{%relref "getting-started/hpc-resources.md"%}})
 * [Getting an account]({{%relref "getting-started/getting-an-account.md"%}})
+* [Tips for Windows users]({{%relref "getting-started/tips-for-windows-users.md"%}})
 
 ### Best practices
 
@@ -21,9 +22,23 @@ Not following some of these guidelines may result in a scolding.
 
 * [Directory structure]({{%relref "best-practices/directory-structure.md"%}})
 * [Naming files]({{%relref "best-practices/naming-files.md"%}})
-* [Reference data]({{%relref "best-practices/reference-data.md"%}})
 * [Stacks databases]({{%relref "best-practices/stacks-databases.md"%}})
+
+
+### Metadata Documentation
+
+These documents describe how to use our metadata system to record information
+relating to your samples.
+
+* [Metadata overview]({{%relref "metadata-documentation/metadata-overview.md"%}})
+* [Using Mediaflux]({{%relref "metadata-documentation/using-mediaflux.md"%}})
+
+### Usage Documentation
+
+Documentation related to using our clusters.
+
 * [Running jobs with SLURM ]({{%relref "best-practices/running-jobs-with-slurm.md"%}})
+* [Reference data]({{%relref "usage-documentation/reference-data.md"%}})
 
 
 ### Contribute to this documentation
