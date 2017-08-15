@@ -1,5 +1,19 @@
 [
 {
+	"uri": "/pearg_documentation/metadata-documentation/metadata-overview/",
+	"title": "Metadata Overview",
+	"tags": [],
+	"description": "A overview of our metadata system in use.",
+	"content": "This document describes our system of storing metadata for sequencing samples.\n"
+},
+{
+	"uri": "/pearg_documentation/usage-documentation/running-jobs-with-slurm/",
+	"title": "Running Jobs with SLURM",
+	"tags": [],
+	"description": "Documentation on how to run SLURM jobs.",
+	"content": "Documentation on how to run SLURM jobs.\n"
+},
+{
 	"uri": "/pearg_documentation/best-practices/directory-structure/",
 	"title": "Directory Structure",
 	"tags": [],
@@ -8,10 +22,10 @@
 },
 {
 	"uri": "/pearg_documentation/getting-started/",
-	"title": "Getting started",
+	"title": "Getting Started",
 	"tags": [],
 	"description": "",
-	"content": "  HPC Resources  An overview of high-performance computing resources available.\n Getting an Account  How to get an account on our clusters.\n "
+	"content": "  HPC Resources  An overview of high-performance computing resources available.\n Getting an Account  How to get an account on our clusters.\n Tips for Windows Users  Tips for Windows users starting out with UNIX.\n Getting Help  How to get technical help.\n "
 },
 {
 	"uri": "/pearg_documentation/getting-started/hpc-resources/",
@@ -19,6 +33,13 @@
 	"tags": [],
 	"description": "An overview of high-performance computing resources available.",
 	"content": "This page lists the compute resources available to PEARG lab members.\n"
+},
+{
+	"uri": "/pearg_documentation/metadata-documentation/using-mediaflux/",
+	"title": "Using Mediaflux",
+	"tags": [],
+	"description": "How to use Mediaflux.",
+	"content": "Instructions on how to use Mediaflux.\n"
 },
 {
 	"uri": "/pearg_documentation/best-practices/naming-files/",
@@ -35,39 +56,60 @@
 	"content": "How to get an account on our clusters.\n"
 },
 {
-	"uri": "/pearg_documentation/best-practices/reference-data/",
+	"uri": "/pearg_documentation/getting-started/tips-for-windows-users/",
+	"title": "Tips for Windows Users",
+	"tags": [],
+	"description": "Tips for Windows users starting out with UNIX.",
+	"content": "This document will include helpful things to know such as ^M line-endings, SSH clients, transferring files to and from remote servers, etc.\n"
+},
+{
+	"uri": "/pearg_documentation/usage-documentation/reference-data/",
 	"title": "Reference Data",
 	"tags": [],
 	"description": "Organisation of shared reference data.",
 	"content": "This document describes how the reference data will be stored.\n"
 },
 {
-	"uri": "/pearg_documentation/best-practices/running-jobs-with-slurm/",
-	"title": "Running Jobs with SLURM",
-	"tags": [],
-	"description": "Documentation on how to run SLURM jobs.",
-	"content": "Documentation on how to run SLURM jobs.\n"
-},
-{
 	"uri": "/pearg_documentation/best-practices/stacks-databases/",
 	"title": "Stacks Databases",
 	"tags": [],
 	"description": "Best practises for working with Stacks databases.",
-	"content": " Clusters which don\u0026rsquo;t allow databases Barcoo (Melbourne Bioinformatics clusters) If you\u0026rsquo;re using the barcoo cluster for your analysis, you won\u0026rsquo;t be able to load your catalog to a database on the cluster. This means you\u0026rsquo;ll need to do your computation (on barcoo) separately to a machine that alows database access.\nOn barcoo If you\u0026rsquo;re using ref_map.pl or denovo_map.pl you can use the -S option to disable all database interaction. The output from this step should be many tsv files.\nExample output:\nbatch_1.catalog.alleles.tsv batch_1.catalog.snps.tsv batch_1.catalog.tags.tsv batch_1.haplotypes.tsv batch_1.hapstats.tsv batch_1.markers.tsv batch_1.populations.log batch_1.sumstats_summary.tsv batch_1.sumstats.tsv batch_1.vcf mozzie-1.alleles.tsv mozzie-1.matches.tsv mozzie-1.models.tsv mozzie-1.snps.tsv mozzie-1.tags.tsv mozzie-2.alleles.tsv mozzie-2.matches.tsv mozzie-2.models.tsv mozzie-2.snps.tsv mozzie-2.tags.tsv ...  Transfer your data You\u0026rsquo;ll need to transfer your output files from ref_map.pl or denovo_map.pl to another computer which you have permission to create databases on. Since tsv files are plain-text, it\u0026rsquo;s good practice to compress them before transferring.\nWe can use rsync with the --compress option to do this easily.\nOn barcoo, in an interactive slurm session, you can transfer the directory called catalog with the following command:\nrsync -av --compress --update --progress \\ catalog \\ \u0026lt;username\u0026gt;@\u0026lt;IP-address\u0026gt;:\u0026lt;path_to_my_project_directory\u0026gt;  replacing \u0026lt;username\u0026gt;, \u0026lt;IP-address\u0026gt;, and \u0026lt;path_to_my_project_directory\u0026gt; with your relevant information.\nLoad the catalog with load_radtags.pl On your machine which you have permission to create databases, load your catalog with load_radtags.pl.\ne.g.\nload_radtags.pl ... # WIP  Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don\u0026rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.\nNaming your databases Make sure to include your name and the date your database was created in your database name. Some examples of good database names are:\nalice_mozzie_x123_2017-03-04 bob_possum_filtered_2017-07-01 carol_AaegL2_males_2017-01-22  If your name and a creation date is not included in your database name, your database may be deleted without warning.\nRemoving databases Backing up databases "
+	"content": " # # Note: This document is a work in progress and the commands are untested #  Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don\u0026rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.\nNaming your databases Make sure to include your name and the date your database was created in your database name. Some examples of good database names are:\nalice_mozzie_x123_2017-03-04 bob_possum_filtered_2017-07-01 carol_AaegL2_males_2017-01-22  If your name and a creation date is not included in your database name, your database may be deleted without warning.\n Removing databases Delete databases by using the SQL DROP DATABASE statement.\nmysql -e \u0026quot;DROP DATABASE jess_radtags_2017-08-15\u0026quot;  Backing up databases You can also backup your database with the mysqldump command. The output is in plain-text, so use gzip to compress the file to save space.\nmysqldump --databases jess_radtags_2017-08-15 \\ | gzip \u0026gt; ~/my_backups/jess_radtags_2017-08-15.sql.gz  Restoring a database from backup You can restore your saved databases by importing your file into MySQL.\nmysql jess_radtags_2017-05-02 \u0026lt; ~/my_backups/jess_radtags_2017-05-02.sql  Running Stacks on clusters which don\u0026rsquo;t allow databases If you\u0026rsquo;re using the barcoo cluster for your analysis, you won\u0026rsquo;t be able to load your catalog to a database on the cluster. This means you\u0026rsquo;ll need to do your computation (on barcoo) separately to a machine that alows database access.\nOn barcoo If you\u0026rsquo;re using ref_map.pl or denovo_map.pl you can use the -S option to disable all database interaction. The output from this step should be many tsv files.\nExample output:\nbatch_1.catalog.alleles.tsv batch_1.catalog.snps.tsv batch_1.catalog.tags.tsv batch_1.haplotypes.tsv batch_1.hapstats.tsv batch_1.markers.tsv batch_1.populations.log batch_1.sumstats_summary.tsv batch_1.sumstats.tsv batch_1.vcf mozzie-1.alleles.tsv mozzie-1.matches.tsv mozzie-1.models.tsv mozzie-1.snps.tsv mozzie-1.tags.tsv mozzie-2.alleles.tsv mozzie-2.matches.tsv mozzie-2.models.tsv mozzie-2.snps.tsv mozzie-2.tags.tsv ...  Transfer your data You\u0026rsquo;ll need to transfer your output files from ref_map.pl or denovo_map.pl to another computer which you have permission to create databases on. Since tsv files are plain-text, it\u0026rsquo;s good practice to compress them before transferring.\nYou can use a graphical FTP client or the command line to transfer files. Here we\u0026rsquo;ll use rsync with the --compress option to do transfer the files.\nOn barcoo, in an interactive slurm session, you can transfer the directory called catalog with the following command:\nrsync -av --compress --update --progress \\ catalog \\ \u0026lt;username\u0026gt;@\u0026lt;IP-address\u0026gt;:\u0026lt;path_to_my_project_directory\u0026gt;  replacing \u0026lt;username\u0026gt;, \u0026lt;IP-address\u0026gt;, and \u0026lt;path_to_my_project_directory\u0026gt; with your relevant information.\nLoad the catalog with load_radtags.pl On your machine which you have permission to create databases, load your catalog with load_radtags.pl.\n# Create an empty database mysql -e \u0026quot;CREATE DATABASE jess_radtags_2017-08-15\u0026quot; # Load template tables mysql jess_radtags_2017-08-15 \u0026lt; /usr/local/share/stacks/sql/stacks.sql # Load RAD tags load_radtags.pl \\ -D jess_radtags_2017-08-15 \\ -p catalog \\ -b 1 -B -e \u0026quot;Description here\u0026quot; \\ -c  "
+},
+{
+	"uri": "/pearg_documentation/best-practices/backing-up-your-data/",
+	"title": "Backing Up Your Data",
+	"tags": [],
+	"description": "Best practices for backing up your data.",
+	"content": "This document goes over why and how to backup your data.\n"
+},
+{
+	"uri": "/pearg_documentation/getting-started/getting-help/",
+	"title": "Getting Help",
+	"tags": [],
+	"description": "How to get technical help.",
+	"content": "Getting help.\n"
 },
 {
 	"uri": "/pearg_documentation/best-practices/",
-	"title": "Best practices",
+	"title": "Best Practices",
 	"tags": [],
 	"description": "",
-	"content": "  Directory Structure  How to structure your project directory when performing an analysis.\n Naming Files  Best practices for naming files.\n Reference Data  Organisation of shared reference data.\n Running Jobs with SLURM  Documentation on how to run SLURM jobs.\n Stacks Databases  Best practises for working with Stacks databases.\n "
+	"content": "  Directory Structure  How to structure your project directory when performing an analysis.\n Naming Files  Best practices for naming files.\n Stacks Databases  Best practises for working with Stacks databases.\n Backing Up Your Data  Best practices for backing up your data.\n "
 },
 {
-	"uri": "/pearg_documentation/post/",
-	"title": "Other posts",
+	"uri": "/pearg_documentation/metadata-documentation/",
+	"title": "Metadata Documentation",
 	"tags": [],
 	"description": "",
-	"content": "  "
+	"content": "  Metadata Overview  A overview of our metadata system in use.\n Using Mediaflux  How to use Mediaflux.\n "
+},
+{
+	"uri": "/pearg_documentation/usage-documentation/",
+	"title": "Usage Documentation",
+	"tags": [],
+	"description": "",
+	"content": "  Running Jobs with SLURM  Documentation on how to run SLURM jobs.\n Reference Data  Organisation of shared reference data.\n "
 },
 {
 	"uri": "/pearg_documentation/_header/",
@@ -88,7 +130,7 @@
 	"title": "PEARG Documentation",
 	"tags": [],
 	"description": "Bioinformatics documentation for PEARG lab members",
-	"content": " PEARG Documentation This site contains bioinformatics-related documentation for PEARG lab members.\nGetting started These documents go over what compute resources are available to you, how to get an account on our clusters, and some terms of conditions.\n HPC resources overview Getting an account  Best practices These documents describe some best practices when using our compute resources. Not following some of these guidelines may result in a scolding.\n Directory structure Naming files Reference data Stacks databases Running jobs with SLURM   Contribute to this documentation This documentation\u0026rsquo;s source code is hosted on GitHub. Feel free to update the content\u0026mdash; just click the Edit this page link displayed on top right of each page, and create a pull request when done.\nContact For questions, suggestions, or feedback, contact me at jchung@unimelb.edu.au or submit an issue on GitHub.\n"
+	"content": " PEARG Documentation This site contains bioinformatics-related documentation for PEARG lab members.\nGetting started These documents go over what compute resources are available to you, how to get an account on our clusters, and some terms of conditions.\n HPC resources overview Getting an account Tips for Windows users  Best practices These documents describe some best practices when using our compute resources. Not following some of these guidelines may result in a scolding.\n Directory structure Naming files Stacks databases  Metadata Documentation These documents describe how to use our metadata system to record information relating to your samples.\n Metadata overview Using Mediaflux  Usage Documentation Documentation related to using our clusters.\n Running jobs with SLURM  Reference data  Contribute to this documentation This documentation\u0026rsquo;s source code is hosted on GitHub. Feel free to update the content\u0026mdash; just click the Edit this page link displayed on top right of each page, and create a pull request when done.\nContact For questions, suggestions, or feedback, contact me at jchung@unimelb.edu.au or submit an issue on GitHub.\n"
 },
 {
 	"uri": "/pearg_documentation/tags/",

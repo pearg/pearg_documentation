@@ -6,10 +6,28 @@
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Metadata Overview</title>
+      <link>/pearg_documentation/metadata-documentation/metadata-overview/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/metadata-documentation/metadata-overview/</guid>
+      <description>This document describes our system of storing metadata for sequencing samples.</description>
+    </item>
+    
+    <item>
+      <title>Running Jobs with SLURM</title>
+      <link>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
+      <description>Documentation on how to run SLURM jobs.</description>
+    </item>
     
     <item>
       <title>Directory Structure</title>
@@ -30,6 +48,15 @@ Check your project directory At absolute minimum, please check:</description>
       
       <guid>/pearg_documentation/getting-started/hpc-resources/</guid>
       <description>This page lists the compute resources available to PEARG lab members.</description>
+    </item>
+    
+    <item>
+      <title>Using Mediaflux</title>
+      <link>/pearg_documentation/metadata-documentation/using-mediaflux/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
+      <description>Instructions on how to use Mediaflux.</description>
     </item>
     
     <item>
@@ -55,21 +82,21 @@ Just by looking at the filename and knowing what each field represents, we have 
     </item>
     
     <item>
-      <title>Reference Data</title>
-      <link>/pearg_documentation/best-practices/reference-data/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      <title>Tips for Windows Users</title>
+      <link>/pearg_documentation/getting-started/tips-for-windows-users/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/reference-data/</guid>
-      <description>This document describes how the reference data will be stored.</description>
+      <guid>/pearg_documentation/getting-started/tips-for-windows-users/</guid>
+      <description>This document will include helpful things to know such as ^M line-endings, SSH clients, transferring files to and from remote servers, etc.</description>
     </item>
     
     <item>
-      <title>Running Jobs with SLURM</title>
-      <link>/pearg_documentation/best-practices/running-jobs-with-slurm/</link>
+      <title>Reference Data</title>
+      <link>/pearg_documentation/usage-documentation/reference-data/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/running-jobs-with-slurm/</guid>
-      <description>Documentation on how to run SLURM jobs.</description>
+      <guid>/pearg_documentation/usage-documentation/reference-data/</guid>
+      <description>This document describes how the reference data will be stored.</description>
     </item>
     
     <item>
@@ -78,8 +105,26 @@ Just by looking at the filename and knowing what each field represents, we have 
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/best-practices/stacks-databases/</guid>
-      <description>Clusters which don&amp;rsquo;t allow databases Barcoo (Melbourne Bioinformatics clusters) If you&amp;rsquo;re using the barcoo cluster for your analysis, you won&amp;rsquo;t be able to load your catalog to a database on the cluster. This means you&amp;rsquo;ll need to do your computation (on barcoo) separately to a machine that alows database access.
-On barcoo If you&amp;rsquo;re using ref_map.pl or denovo_map.pl you can use the -S option to disable all database interaction. The output from this step should be many tsv files.</description>
+      <description># # Note: This document is a work in progress and the commands are untested #  Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
+Naming your databases Make sure to include your name and the date your database was created in your database name.</description>
+    </item>
+    
+    <item>
+      <title>Backing Up Your Data</title>
+      <link>/pearg_documentation/best-practices/backing-up-your-data/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/best-practices/backing-up-your-data/</guid>
+      <description>This document goes over why and how to backup your data.</description>
+    </item>
+    
+    <item>
+      <title>Getting Help</title>
+      <link>/pearg_documentation/getting-started/getting-help/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/getting-started/getting-help/</guid>
+      <description>Getting help.</description>
     </item>
     
     <item>

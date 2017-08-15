@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="Best practices for naming files.">
+    <meta name="description" content="">
 
 
-    <title>Naming Files :: PEARG Documentation</title>
+    <title>Metadata Documentation :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 </script>
   </head>
-  <body class="" data-url="/pearg_documentation/best-practices/naming-files/">
+  <body class="" data-url="/pearg_documentation/metadata-documentation/">
     <nav id="sidebar" class="">
 
 
@@ -211,7 +211,7 @@
   
     
     <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
-        parent
+        
         
         parent
         ">
@@ -265,7 +265,7 @@
   
     
       <li data-nav-id="/pearg_documentation/best-practices/naming-files/" class="dd-item
-     active
+     
       ">
         <a href="/pearg_documentation/best-practices/naming-files/">
         <span>Naming Files</span> 
@@ -332,8 +332,8 @@
   
     
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/pearg_documentation/metadata-documentation/">
@@ -343,7 +343,7 @@
         
 
           
-            <i class="fa fa-angle-right fa-lg category-icon"></i>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
           
 
         
@@ -543,7 +543,7 @@
               
               
             <div id="top-github-link">
-              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/best-practices/naming-files.md" target="blank">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/_index.md" target="blank">
                 <i class="fa fa-code-fork"></i>
                 Edit page
               </a>
@@ -564,12 +564,7 @@
 
 
 
-
-
-
- <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/best-practices/'>Best Practices</a> > Naming Files
-
- 
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > Metadata Documentation
 
  
 
@@ -578,19 +573,7 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#be-descriptive">Be descriptive</a></li>
-<li><a href="#be-consistent">Be consistent</a></li>
-<li><a href="#allowed-characters">Allowed characters</a></li>
-<li><a href="#avoid-using-spaces">Avoid using spaces</a></li>
-<li><a href="#yyyy-mm-dd">YYYY-MM-DD</a></li>
-<li><a href="#lowercase-and-uppercase">Lowercase and uppercase</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -599,7 +582,7 @@
         
         <div id="body-inner">
           
-            <h1>Naming Files</h1>
+            <h1>Metadata Documentation</h1>
           
 
 
@@ -607,112 +590,96 @@
 
 
 
-<p>This document describes best practices for naming files.</p>
 
-<p>I highly recommend you read this Data Carpentary document on
-<a href="https://butterflyology.github.io/rr-organization1/01-file-naming/">file naming</a>.</p>
 
-<h2 id="be-descriptive">Be descriptive</h2>
 
-<p>Good filenames should be precise. For example, a raw FASTQ filename received
-from AGRF may look something like this:</p>
 
-<pre><code class="language-text">X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz
-</code></pre>
 
-<p>The filename contains a lot of information which is descriptive to the user and
-can be easily extracted programatically.</p>
 
-<p>Just by looking at the filename and knowing what each field represents, we have
-the following information:</p>
 
-<ul>
-<li>Sample name: <code>X54321-1</code></li>
-<li>Flowcell ID: <code>AB1XXXXXX</code></li>
-<li>Index: <code>GAATTCGT-ATAGAGGC</code></li>
-<li>Lane: <code>L007</code></li>
-<li>Forward/Reverse: <code>R2</code></li>
-<li>File format: <code>fastq</code></li>
-<li>Compression: <code>gz</code></li>
+
+
+
+<ul class="children children-h4">
+	
+    
+    
+
+	
+		
+	
+		
+  
+
+
+	
+	
+
+<h4>
+<a href="/pearg_documentation/metadata-documentation/metadata-overview/" >Metadata Overview</a>
+</h4>
+
+
+
+
+
+
+
+			
+				
+<p>A overview of our metadata system in use.</p>
+				
+			
+		
+
+		
+			
+
+		
+	
+		
+  
+
+
+	
+	
+
+<h4>
+<a href="/pearg_documentation/metadata-documentation/using-mediaflux/" >Using Mediaflux</a>
+</h4>
+
+
+
+
+
+
+
+			
+				
+<p>How to use Mediaflux.</p>
+				
+			
+		
+
+		
+			
+
+		
+	
+
+	
 </ul>
 
-<p>Storing metadata in this fashion allows us to avoid mixing up samples and
-losing expensive sequencing data due to lost information.</p>
 
-<h2 id="be-consistent">Be consistent</h2>
 
-<p>If you&rsquo;re storing metadata in filenames, it&rsquo;s good practice to be consistent
-with what each field represents. Being consisent also means filenames are
-sorted in a logical manner when listed alphabetically.</p>
 
-<p>Good consistency:</p>
-
-<pre><code class="language-text">2017-02-07_cg_meeting_notes_with_alice.md
-2017-02-14_cg_meeting_notes_with_bob.md
-2017-02-21_cg_meeting_notes_with_alice.md
-2017-02-28_cg_meeting_notes_with_carol.md
-</code></pre>
-
-<p>Bad consistency:</p>
-
-<pre><code class="language-text">14.02.17_bob_cg_meeting.md
-21-02-alice-meeting-cg.md
-carol_cg_meeting_notes_2017-02-28.md
-cg_meeting_with_alice_2017-02-07.md
-</code></pre>
-
-<h2 id="allowed-characters">Allowed characters</h2>
-
-<p>Avoid special characters. The only characters you should be using in your
-filenames are the alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>), underscores
-(<code>_</code>), periods (<code>.</code>), and dashes (<code>-</code>). Always start your filename with an
-alphanumeric character.</p>
-
-<h2 id="avoid-using-spaces">Avoid using spaces</h2>
-
-<p>Using spaces in filenames makes things difficult when working with UNIX.
-Therefore, use underscores <code>_</code> and dashes <code>-</code> to separate words.</p>
-
-<p>For example:</p>
-
-<pre><code class="language-text">sample-data-from-bob.txt
-2017-03-03_raw_data_ID_A721BW.tar.gz
-</code></pre>
-
-<p>You can also use periods <code>.</code> for additional metadata information.</p>
-
-<pre><code class="language-text">sample-1.AaegL3.bam
-sample-1.AaegL3.sorted.bam
-sample-1.AaegL3.sorted.filtered.bam
-</code></pre>
-
-<h2 id="yyyy-mm-dd">YYYY-MM-DD</h2>
-
-<p>The <a href="https://xkcd.com/1179/">correct</a> way to write numeric dates is <code>YYYY-MM-DD</code>,
-(i.e. ISO 8601).</p>
-
-<p>Good names:</p>
-
-<pre><code class="language-text">2017-08-01_results/
-2016-04-22_meeting_notes.txt
-2018-11-29_raw-data-from-john-doe.tar.gz
-</code></pre>
-
-<h2 id="lowercase-and-uppercase">Lowercase and uppercase</h2>
-
-<p>Using purely lowecase letters, or a mixture of lower and uppercase letters
-in filenames are both ok. It&rsquo;s a matter of personal preference.</p>
-
-<p>Avoid having files that differ only by case in the same directory. e.g.</p>
-
-<pre><code class="language-text">notes.txt
-Notes.txt
-</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
+
 
 
 
@@ -831,7 +798,6 @@ Notes.txt
             
                 
                     
-                    
                 
                 
 
@@ -844,45 +810,6 @@ Notes.txt
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -910,22 +837,6 @@ Notes.txt
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -967,6 +878,58 @@ Notes.txt
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1017,10 +980,10 @@ Notes.txt
 
 
         
-            <a class="nav nav-prev" href="/pearg_documentation/best-practices/directory-structure/" title="Directory Structure"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/pearg_documentation/best-practices/backing-up-your-data/" title="Backing Up Your Data"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/best-practices/stacks-databases/" title="Stacks Databases" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/metadata-overview/" title="Metadata Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1047,4 +1010,3 @@ Notes.txt
 
   </body>
 </html>
-
