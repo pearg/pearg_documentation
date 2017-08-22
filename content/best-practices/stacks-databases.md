@@ -24,13 +24,15 @@ your old databases.
 
 ### Naming your databases
 
+Your database name must end with `_radtags` to show up in the web interface.
+
 Make sure to include your name and the date your database was created in your
 database name. Some examples of good database names are:
 
 ```text
-alice_mozzie_x123_2017-03-04
-bob_possum_filtered_2017-07-01
-carol_AaegL2_males_2017-01-22
+alice_mozzie_20170304_radtags
+bob_possum_filtered_20170701_radtags
+carol_AaegL2_males_20170122_radtags
 ```
 
 {{% notice warning %}}
@@ -44,7 +46,7 @@ database may be deleted without warning.
 Delete databases by using the SQL `DROP DATABASE` statement.
 
 ```bash
-mysql -e "DROP DATABASE jess_radtags_2017-08-15"
+mysql -e "DROP DATABASE jess_20170815_radtags"
 ```
 
 ### Backing up databases
@@ -53,8 +55,9 @@ You can also backup your database with the `mysqldump` command. The output is
 in plain-text, so use `gzip` to compress the file to save space.
 
 ```bash
-mysqldump --databases jess_radtags_2017-08-15 \
-    | gzip > ~/my_backups/jess_radtags_2017-08-15.sql.gz
+mysqldump --databases jess_20170815_radtags \
+    | gzip \
+    > ~/my_backups/jess_20170815_radtags.sql.gz
 ```
 
 ### Restoring a database from backup
@@ -62,7 +65,11 @@ mysqldump --databases jess_radtags_2017-08-15 \
 You can restore your saved databases by importing your file into MySQL.
 
 ```bash
-mysql jess_radtags_2017-05-02 < ~/my_backups/jess_radtags_2017-05-02.sql
+# Uncompress your file
+gunzip jess_20170815_radtags.sql.gz
+
+# Import from file
+mysql jess_20170815_radtags < ~/my_backups/jess_20170815_radtags.sql
 ```
 
 -----
@@ -134,14 +141,14 @@ catalog with [`load_radtags.pl`](http://catchenlab.life.illinois.edu/stacks/comp
 
 ```bash
 # Create an empty database
-mysql -e "CREATE DATABASE jess_radtags_2017-08-15"
+mysql -e "CREATE DATABASE jess_20170815_radtags"
 
 # Load template tables
-mysql jess_radtags_2017-08-15 < /usr/local/share/stacks/sql/stacks.sql
+mysql jess_20170815_radtags < /usr/local/share/stacks/sql/stacks.sql
 
 # Load RAD tags
 load_radtags.pl \
-    -D jess_radtags_2017-08-15 \
+    -D jess_20170815_radtags \
     -p catalog \
     -b 1
     -B -e "Description here" \

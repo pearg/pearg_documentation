@@ -44,6 +44,16 @@ While the sysadmin won't be authoritarian about the precise directory structure,
 any flagrant disregard for the guidelines (such as dumping all your processing
 files in the top-level results directory) will be met with consequences.
 
+-----
+
+## Filesystem overview
+
+Click on the image to view a larger version of the recommended directory
+structure or scroll down for another example in text.
+
+[![](https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/images/NGS_filesystem_thumbnail.png)](https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/images/NGS_filesystem.png)
+
+-----
 
 ## Creating a project directory using the template
 
@@ -54,6 +64,8 @@ files in the top-level results directory) will be met with consequences.
 
 You should rename the directories starting with `rename_*` into something
 sensible.
+
+-----
 
 ## Example directory structure
 
