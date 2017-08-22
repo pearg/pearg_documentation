@@ -628,12 +628,14 @@ your old databases.</p>
 
 <h3 id="naming-your-databases">Naming your databases</h3>
 
+<p>Your database name must end with <code>_radtags</code> to show up in the web interface.</p>
+
 <p>Make sure to include your name and the date your database was created in your
 database name. Some examples of good database names are:</p>
 
-<pre><code class="language-text">alice_mozzie_x123_2017-03-04
-bob_possum_filtered_2017-07-01
-carol_AaegL2_males_2017-01-22
+<pre><code class="language-text">alice_mozzie_20170304_radtags
+bob_possum_filtered_20170701_radtags
+carol_AaegL2_males_20170122_radtags
 </code></pre>
 
 <div class="notices warning" ><p>If your name and a creation date is not included in your database name, your
@@ -645,7 +647,7 @@ database may be deleted without warning.</p>
 
 <p>Delete databases by using the SQL <code>DROP DATABASE</code> statement.</p>
 
-<pre><code class="language-bash">mysql -e &quot;DROP DATABASE jess_radtags_2017-08-15&quot;
+<pre><code class="language-bash">mysql -e &quot;DROP DATABASE jess_20170815_radtags&quot;
 </code></pre>
 
 <h3 id="backing-up-databases">Backing up databases</h3>
@@ -653,15 +655,20 @@ database may be deleted without warning.</p>
 <p>You can also backup your database with the <code>mysqldump</code> command. The output is
 in plain-text, so use <code>gzip</code> to compress the file to save space.</p>
 
-<pre><code class="language-bash">mysqldump --databases jess_radtags_2017-08-15 \
-    | gzip &gt; ~/my_backups/jess_radtags_2017-08-15.sql.gz
+<pre><code class="language-bash">mysqldump --databases jess_20170815_radtags \
+    | gzip \
+    &gt; ~/my_backups/jess_20170815_radtags.sql.gz
 </code></pre>
 
 <h3 id="restoring-a-database-from-backup">Restoring a database from backup</h3>
 
 <p>You can restore your saved databases by importing your file into MySQL.</p>
 
-<pre><code class="language-bash">mysql jess_radtags_2017-05-02 &lt; ~/my_backups/jess_radtags_2017-05-02.sql
+<pre><code class="language-bash"># Uncompress your file
+gunzip jess_20170815_radtags.sql.gz
+
+# Import from file
+mysql jess_20170815_radtags &lt; ~/my_backups/jess_20170815_radtags.sql
 </code></pre>
 
 <hr />
@@ -730,14 +737,14 @@ with your relevant information.</p>
 catalog with <a href="http://catchenlab.life.illinois.edu/stacks/comp/load_radtags.php"><code>load_radtags.pl</code></a>.</p>
 
 <pre><code class="language-bash"># Create an empty database
-mysql -e &quot;CREATE DATABASE jess_radtags_2017-08-15&quot;
+mysql -e &quot;CREATE DATABASE jess_20170815_radtags&quot;
 
 # Load template tables
-mysql jess_radtags_2017-08-15 &lt; /usr/local/share/stacks/sql/stacks.sql
+mysql jess_20170815_radtags &lt; /usr/local/share/stacks/sql/stacks.sql
 
 # Load RAD tags
 load_radtags.pl \
-    -D jess_radtags_2017-08-15 \
+    -D jess_20170815_radtags \
     -p catalog \
     -b 1
     -B -e &quot;Description here&quot; \
