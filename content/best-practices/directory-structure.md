@@ -164,7 +164,7 @@ project_name/
 Inside each result subdirectory, there should be multiple directories 
 containing output from steps in your workflow. In this example, the directories
 inside `2017-08-01_results` are: `demuxed_seq`, `demuxed_cat`, `alignments`, 
-and `stacks`. Your directory names may look different depending on what
+`stacks`, and `qc`. Your directory names may look different depending on what
 type of analysis you're performing. The contents of each directory is described 
 below.
 
@@ -282,6 +282,31 @@ stored in its own directory.
 Each time you run Stacks `populations` with designated filters, you should
 store the files in a separate directory. You should also include a file
 containing the code that was used to produce the output.
+
+#### QC data
+
+```text
+results/
+├── 2017-08-01_results/
+│   ├── demuxed_seq/
+│   ├── demuxed_cat/
+│   ├── alignments/
+│   ├── stacks/
+│   ├── qc/
+│   │   ├── fastqc/
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── flagstat/
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+```
+
+The `qc` directory should contain the output of programs run for quality 
+control purposes (e.g. fastQC, samtools flagstat).
 
 ### Scripts directory
 
