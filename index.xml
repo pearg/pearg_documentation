@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PEARG Documentation</title>
-    <link>https://pearg.github.io/pearg_documentation/</link>
+    <link>/pearg_documentation/</link>
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Metadata Overview</title>
-      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</link>
+      <link>/pearg_documentation/metadata-documentation/metadata-overview/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</guid>
+      <guid>/pearg_documentation/metadata-documentation/metadata-overview/</guid>
       <description>This document describes our system of storing metadata for sequencing samples.</description>
     </item>
     
     <item>
       <title>Running Jobs with SLURM</title>
-      <link>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
+      <link>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
+      <guid>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
       <description>Documentation on how to run SLURM jobs.</description>
     </item>
     
     <item>
       <title>Directory Structure</title>
-      <link>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</link>
+      <link>/pearg_documentation/best-practices/directory-structure/</link>
       <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</guid>
+      <guid>/pearg_documentation/best-practices/directory-structure/</guid>
       <description>When using the PEARG clusters or the Melbourne Bioinformatics clusters, your files and data should be organised according to the convention described here.
 Each project should have its own directory located inside your home directory or a shared location. Your project directory name should be meaningful.
 Any shared data such as reference genomes and indices should be stored outside your project directory to avoid unnecessary duplication of data.
@@ -43,29 +43,29 @@ Check your project directory At absolute minimum, please check:</description>
     
     <item>
       <title>HPC Resources</title>
-      <link>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</link>
+      <link>/pearg_documentation/getting-started/hpc-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</guid>
+      <guid>/pearg_documentation/getting-started/hpc-resources/</guid>
       <description>This page lists the compute resources available to PEARG lab members.</description>
     </item>
     
     <item>
       <title>Using Mediaflux</title>
-      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</link>
+      <link>/pearg_documentation/metadata-documentation/using-mediaflux/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
+      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
       <description>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
 The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers. Note that uploading large files via the browser is unreliable and slow, therefore Mediaflux Desktop should not be used for uploading.</description>
     </item>
     
     <item>
       <title>Naming Files</title>
-      <link>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</link>
+      <link>/pearg_documentation/best-practices/naming-files/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</guid>
+      <guid>/pearg_documentation/best-practices/naming-files/</guid>
       <description>This document describes best practices for naming files.
 I highly recommend you read this Data Carpentary document on file naming.
 Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
@@ -75,66 +75,66 @@ Just by looking at the filename and knowing what each field represents, we have 
     
     <item>
       <title>Getting an Account</title>
-      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</link>
+      <link>/pearg_documentation/getting-started/getting-an-account/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</guid>
+      <guid>/pearg_documentation/getting-started/getting-an-account/</guid>
       <description>How to get an account on our clusters.</description>
     </item>
     
     <item>
       <title>Tips for Windows Users</title>
-      <link>https://pearg.github.io/pearg_documentation/getting-started/tips-for-windows-users/</link>
+      <link>/pearg_documentation/getting-started/tips-for-windows-users/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/getting-started/tips-for-windows-users/</guid>
+      <guid>/pearg_documentation/getting-started/tips-for-windows-users/</guid>
       <description>This document will include helpful things to know such as ^M line-endings, SSH clients, transferring files to and from remote servers, etc.</description>
     </item>
     
     <item>
       <title>Reference Data</title>
-      <link>https://pearg.github.io/pearg_documentation/usage-documentation/reference-data/</link>
+      <link>/pearg_documentation/usage-documentation/reference-data/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/reference-data/</guid>
+      <guid>/pearg_documentation/usage-documentation/reference-data/</guid>
       <description>This document describes how the reference data will be stored.</description>
     </item>
     
     <item>
       <title>Stacks Databases</title>
-      <link>https://pearg.github.io/pearg_documentation/best-practices/stacks-databases/</link>
+      <link>/pearg_documentation/best-practices/stacks-databases/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/best-practices/stacks-databases/</guid>
+      <guid>/pearg_documentation/best-practices/stacks-databases/</guid>
       <description># # Note: This document is a work in progress and the commands are untested #  Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
 Naming your databases Your database name must end with _radtags to show up in the web interface.</description>
     </item>
     
     <item>
       <title>Backing Up Your Data</title>
-      <link>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</link>
+      <link>/pearg_documentation/best-practices/backing-up-your-data/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</guid>
+      <guid>/pearg_documentation/best-practices/backing-up-your-data/</guid>
       <description>If you only have a single copy of your data, you&amp;rsquo;re vulnerable to losing it. A hardware failure or theft can lead to losing hundreds of hours of work or irreplacable photos.
 &amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;rdquo; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
     </item>
     
     <item>
       <title>Getting Help</title>
-      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</link>
+      <link>/pearg_documentation/getting-started/getting-help/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</guid>
+      <guid>/pearg_documentation/getting-started/getting-help/</guid>
       <description>Getting help.</description>
     </item>
     
     <item>
       <title>header</title>
-      <link>https://pearg.github.io/pearg_documentation/_header/</link>
+      <link>/pearg_documentation/_header/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>https://pearg.github.io/pearg_documentation/_header/</guid>
+      <guid>/pearg_documentation/_header/</guid>
       <description>PEARG Documentation</description>
     </item>
     
