@@ -28,17 +28,17 @@ You should be taken to the dashboard page that lists the services available.
 Find the 'Lubuntu Desktop' service and click on the access link to use VNC.
 This allows us to access the server using a graphical interface through a browser.
 
-![](/mediaflux/dashboard_vnc.png)
+![](../static/dashboard_vnc.png)
 
 Enter your credentials for your account to login. You may need to do this twice---
 once to access VNC and again to login to the Lubuntu desktop.
 
-<img src="/mediaflux/lubuntu_login.png" width=80%>
+<img src="../static/lubuntu_login.png" width=80%>
 
 Logging in will bring you to the Lubuntu desktop where you should see icons
 including a 'Mediaflux' icon. Double click it to launch Mediaflux Explorer.
 
-![](/mediaflux/lubuntu_desktop.png)
+![](../static/lubuntu_desktop.png)
 
 Select the HTTPS protocol in the dropdown menu and enter `mediaflux.vicnode.org.au`
 as the host. The port should automatically change to `443`.
@@ -50,6 +50,6 @@ the listed institutions.
 
 Finally, enter your unimelb username (not your email) and password to sign in.
 
-<img src="/mediaflux/mediaflux_login.png" width=80%>
+<img src="../static/mediaflux_login.png" width=80%>
 
 
