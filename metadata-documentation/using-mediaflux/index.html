@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "\/pearg_documentation\/";
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -334,7 +334,7 @@
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
         parent
         
-        
+        parent
         ">
       <a href="/pearg_documentation/metadata-documentation/">
         <span>Metadata Documentation</span>
@@ -593,7 +593,48 @@
 
 
 
-<p>Instructions on how to use Mediaflux.</p>
+<p>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or
+via your web browser with <a href="https://mediaflux.vicnode.org.au/desktop/">Mediaflux Desktop</a>.
+These clients allow you to view your data, transfer data, and edit metadata.</p>
+
+<p>The Mediaflux Explorer Java applet should be used when transferring data and is
+available on both <a href="http://45.113.232.220"><code>mozzie</code></a> and
+<a href="http://45.113.233.108/"><code>rescue</code></a> servers. Note that uploading large files
+via the browser is unreliable and slow, therefore Mediaflux Desktop should not be
+used for uploading.</p>
+
+<p>Assuming you have your data stored on one of our servers
+(<a href="http://45.113.232.220"><code>mozzie</code></a> or <a href="http://45.113.233.108/"><code>rescue</code></a>) open
+your preferred internet browser and enter the IP address of the server into
+the navigation bar.</p>
+
+<p>You should be taken to the dashboard page that lists the services available.
+Find the &lsquo;Lubuntu Desktop&rsquo; service and click on the access link to use VNC.
+This allows us to access the server using a graphical interface through a browser.</p>
+
+<p><img src="/mediaflux/dashboard_vnc.png" alt="" /></p>
+
+<p>Enter your credentials for your account to login. You may need to do this twice&mdash;
+once to access VNC and again to login to the Lubuntu desktop.</p>
+
+<p><img src="/mediaflux/lubuntu_login.png" width=80%></p>
+
+<p>Logging in will bring you to the Lubuntu desktop where you should see icons
+including a &lsquo;Mediaflux&rsquo; icon. Double click it to launch Mediaflux Explorer.</p>
+
+<p><img src="/mediaflux/lubuntu_desktop.png" alt="" /></p>
+
+<p>Select the HTTPS protocol in the dropdown menu and enter <code>mediaflux.vicnode.org.au</code>
+as the host. The port should automatically change to <code>443</code>.</p>
+
+<p>In the &lsquo;Domain&rsquo; field enter <code>aaf</code> and then move to the next field.
+A dropdown menu should then appear below the &lsquo;Domain&rsquo; field (if it doesn&rsquo;t show
+up immediately, wait a few seconds). Select <code>The University of Melbourne</code> from
+the listed institutions.</p>
+
+<p>Finally, enter your unimelb username (not your email) and password to sign in.</p>
+
+<p><img src="/mediaflux/mediaflux_login.png" width=80%></p>
 
 
 <footer class=" footline" >

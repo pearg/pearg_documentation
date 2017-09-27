@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "\/pearg_documentation\/";
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -334,7 +334,7 @@
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
         
         
-        
+        parent
         ">
       <a href="/pearg_documentation/metadata-documentation/">
         <span>Metadata Documentation</span>
@@ -343,7 +343,7 @@
         
 
           
-            <i class="fa fa-angle-right fa-lg category-icon"></i>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
           
 
         
@@ -578,7 +578,18 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#backing-up-your-experimental-data">Backing up your experimental data</a></li>
+<li><a href="#cloud-based-automated-backup-services">Cloud-based automated backup services</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -593,7 +604,67 @@
 
 
 
-<p>This document goes over why and how to backup your data.</p>
+
+
+<p>If you only have a single copy of your data, you&rsquo;re vulnerable to losing it.
+A hardware failure or theft can lead to losing hundreds of hours of work or
+irreplacable photos.</p>
+
+<p><em>&ldquo;Don&rsquo;t worry&mdash; I have a Time Machine backup,&rdquo;</em> I hear you say.
+Having a Time Machine backup is a good first step, however, you&rsquo;re still at risk
+in cases where you lose both copies in a house fire or if both your laptop
+and Time Machine hard drive are stolen.</p>
+
+<p>Hard disk drives are also prone to failure.</p>
+
+<p><a href="https://www.backblaze.com/blog/hard-drive-reliability-update-september-2014"><img src="https://www.backblaze.com/blog/wp-content/uploads/2014/09/blog-fail-drives-manufactureX.jpg" alt="Hard Drive Failure Rates by Model" width=50% border="0" /></a></p>
+
+<p>One solution is to store a copy of your data remotely in the cloud. Storage
+services will also have redundancy measures in place to avoid data loss when
+hard drives inevitably fail.</p>
+
+<p>A good rule to follow is the 3-2-1 rule for backing up your data.</p>
+
+<div class="panel panel-success">
+	<div class="panel-heading">The 3-2-1 rule for backups</div>
+	<div class="panel-body"><p>The 3-2-1 rule for backup goes as follows:</p>
+
+<ul>
+<li>Have at least three copies of your data</li>
+<li>Use at least two different types of media for your copies</li>
+<li>At least one of your copies should be offsite</li>
+</ul>
+</div>
+	
+</div>
+
+
+<h3 id="backing-up-your-experimental-data">Backing up your experimental data</h3>
+
+<p>Following the 3-2-1 rule, your sequencing data for your study should have at
+least three copies. A typical case would be:</p>
+
+<ul>
+<li>one copy on a external hard drive stored in the lab</li>
+<li>one copy on the volume attached to the server where you&rsquo;re doing your analysis</li>
+<li>one copy in Mediaflux labeled with appropriate
+<a href="https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/">metadata</a></li>
+</ul>
+
+<h3 id="cloud-based-automated-backup-services">Cloud-based automated backup services</h3>
+
+<p>Having a remote backup for your computer is also a good idea. Services such as
+<a href="https://www.backblaze.com/hellointernet">Backblaze</a> can automatically backup
+your computer, but they also have a monthly subscription fee at around $5 a month.</p>
+
+<p>An example of using the 3-2-1 rule for backing up your laptop would be:</p>
+
+<ul>
+<li>one copy on the SSD in your laptop</li>
+<li>one copy on a HDD with Time Machine backups</li>
+<li>one copy in the cloud using a cloud backup service such as
+<a href="https://www.backblaze.com/hellointernet">Backblaze</a></li>
+</ul>
 
 
 <footer class=" footline" >

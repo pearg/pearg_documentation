@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "\/pearg_documentation\/";
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -334,7 +334,7 @@
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
         
         
-        
+        parent
         ">
       <a href="/pearg_documentation/metadata-documentation/">
         <span>Metadata Documentation</span>
@@ -343,7 +343,7 @@
         
 
           
-            <i class="fa fa-angle-right fa-lg category-icon"></i>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
           
 
         
@@ -595,6 +595,7 @@
 <li><a href="#sequencing-data">Sequencing data</a></li>
 <li><a href="#alignment-data">Alignment data</a></li>
 <li><a href="#stacks-data">Stacks data</a></li>
+<li><a href="#qc-data">QC data</a></li>
 </ul></li>
 <li><a href="#scripts-directory">Scripts directory</a></li>
 <li><a href="#software-directory">Software directory</a></li>
@@ -773,7 +774,7 @@ beginning of the name so the directories are sorted chronologically.</p>
 <p>Inside each result subdirectory, there should be multiple directories
 containing output from steps in your workflow. In this example, the directories
 inside <code>2017-08-01_results</code> are: <code>demuxed_seq</code>, <code>demuxed_cat</code>, <code>alignments</code>,
-and <code>stacks</code>. Your directory names may look different depending on what
+<code>stacks</code>, and <code>qc</code>. Your directory names may look different depending on what
 type of analysis you&rsquo;re performing. The contents of each directory is described
 below.</p>
 
@@ -888,6 +889,30 @@ stored in its own directory.</p>
 <p>Each time you run Stacks <code>populations</code> with designated filters, you should
 store the files in a separate directory. You should also include a file
 containing the code that was used to produce the output.</p>
+
+<h4 id="qc-data">QC data</h4>
+
+<pre><code class="language-text">results/
+├── 2017-08-01_results/
+│   ├── demuxed_seq/
+│   ├── demuxed_cat/
+│   ├── alignments/
+│   ├── stacks/
+│   ├── qc/
+│   │   ├── fastqc/
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   ├── flagstat/
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+</code></pre>
+
+<p>The <code>qc</code> directory should contain the output of programs run for quality
+control purposes (e.g. fastQC, samtools flagstat).</p>
 
 <h3 id="scripts-directory">Scripts directory</h3>
 
