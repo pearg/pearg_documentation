@@ -2,7 +2,7 @@
 title = "Metadata Documentation"
 description = ""
 weight = 30
-alwaysopen = false
+alwaysopen = true
 +++
 
 

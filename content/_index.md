@@ -50,7 +50,6 @@ each page, and create a pull request when done.
 
 #### Contact
 
-For questions, suggestions, or feedback, contact me at 
-[jchung@unimelb.edu.au](mailto:jchung@unimelb.edu.au) or submit an 
+Contact me at [jchung@unimelb.edu.au](mailto:jchung@unimelb.edu.au) or submit an 
 [issue on GitHub](https://github.com/pearg/pearg_documentation/issues).
 
