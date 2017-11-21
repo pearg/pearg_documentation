@@ -5,15 +5,10 @@ date: '2017-08-11'
 slug: stacks-databases
 categories: []
 tags: []
-weight: 5
+weight: 2
 description: 'Best practises for working with Stacks databases.'
 ---
 
-```text
-#
-# Note: This document is a work in progress and the commands are untested
-#
-```
 
 ## Database management
 
@@ -144,7 +139,7 @@ catalog with [`load_radtags.pl`](http://catchenlab.life.illinois.edu/stacks/comp
 mysql -e "CREATE DATABASE jess_20170815_radtags"
 
 # Load template tables
-mysql jess_20170815_radtags < /usr/local/share/stacks/sql/stacks.sql
+mysql jess_20170815_radtags < /mnt/galaxy/gvl/software/stacks/share/stacks/sql/stacks.sql
 
 # Load RAD tags
 load_radtags.pl \
@@ -155,4 +150,19 @@ load_radtags.pl \
     -c
 ```
 
+#### Index the catalog with index_radtags.pl
 
+You'll then need to create indices for your database. Use `-c` to generate
+the catalog index and `-d` to generate the unique tags index.
+
+```bash
+index_radtags.pl \
+    -D jess_20170815_radtags \
+    -c \
+    -t
+```
+
+#### View your data in the web interface
+
+With your web browser, go to the server you have your data on, and navigate
+to the Stacks page. Click on your database name to view it.

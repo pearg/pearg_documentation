@@ -19,6 +19,7 @@ downloading a pre-compiled binary file and sometimes you're stuck in
 are also be many different ways to install software depending on which form
 it comes in. The most common ways you should use listed below.
 
+-----
 
 ## Downloading binaries or jar archives
 
@@ -73,6 +74,7 @@ Sometimes you'll need to specifiy the memory required like so:
 java -Xmx4g -jar <my_program>.jar
 ```
 
+-----
 
 ## Conda packages
 
@@ -146,6 +148,7 @@ And when you need your virtual environment again, you can reactivate it with:
 source activate <my-environment-name>
 ```
 
+-----
 
 ## Compiling from source
 
@@ -179,8 +182,9 @@ to be built in and checks dependencies. Typically, you can also specify
 additional options when running `./configure` such as `--prefix=/home/my_username/bin`
 to specify where to install the software. Running the configure script should
 output a Makefile. Running `make` will built the software and `make install`
-will copy the executable files into the default or specified directory. You
-can read more about using configure, make, and make install
+will copy the executable files into the default or specified directory. 
+
+You can read more about using configure, make, and make install
 [here](http://www.codecoffee.com/tipsforlinux/articles/27.html) and
 [here](https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install).
 

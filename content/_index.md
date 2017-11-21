@@ -22,8 +22,7 @@ Not following some of these guidelines may result in a scolding.
 
 * [Directory structure]({{%relref "best-practices/directory-structure.md"%}})
 * [Naming files]({{%relref "best-practices/naming-files.md"%}})
-* [Stacks databases]({{%relref "best-practices/stacks-databases.md"%}})
-
+* [Backing up your data]({{%relref "best-practices/backing-up-your-data.md"%}})
 
 ### Metadata Documentation
 
@@ -37,9 +36,10 @@ relating to your samples.
 
 Documentation related to using our clusters.
 
-* [Running jobs with SLURM ]({{%relref "best-practices/running-jobs-with-slurm.md"%}})
+* [Running jobs with SLURM ]({{%relref "usage-documentation/running-jobs-with-slurm.md"%}})
+* [Stacks databases]({{%relref "usage-documentation/stacks-databases.md"%}})
 * [Reference data]({{%relref "usage-documentation/reference-data.md"%}})
-
+* [Installing software]({{%relref "usage-documentation/installing-software.md"%}})
 
 ### Contribute to this documentation
 
