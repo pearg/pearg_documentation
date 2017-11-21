@@ -127,7 +127,7 @@
      
       ">
         <a href="/pearg_documentation/getting-started/hpc-resources/">
-        <span>HPC Resources</span> 
+        <span>Compute Resources</span> 
         
         </a></li>
      
@@ -269,26 +269,6 @@
       ">
         <a href="/pearg_documentation/best-practices/naming-files/">
         <span>Naming Files</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/best-practices/stacks-databases/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/best-practices/stacks-databases/">
-        <span>Stacks Databases</span> 
         
         </a></li>
      
@@ -466,11 +446,51 @@
  
   
     
+      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+        <span>Stacks Databases</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/pearg_documentation/usage-documentation/reference-data/" class="dd-item
      
       ">
         <a href="/pearg_documentation/usage-documentation/reference-data/">
         <span>Reference Data</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/installing-software/">
+        <span>Installing Software</span> 
         
         </a></li>
      
@@ -578,7 +598,29 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#checking-the-status-of-your-jobs">Checking the status of your jobs</a>
+<ul>
+<li><a href="#squeue">squeue</a>
+<ul>
+<li><a href="#scontrol-show-job">scontrol show job</a></li>
+<li><a href="#sacct">sacct</a></li>
+<li><a href="#sinfo">sinfo</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#running-your-jobs">Running your jobs</a>
+<ul>
+<li><a href="#sbatch">sbatch</a></li>
+<li><a href="#sinteractive">sinteractive</a></li>
+<li><a href="#scancel">scancel</a></li>
+</ul></li>
+<li><a href="#writing-a-slurm-script">Writing a SLURM script</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -593,7 +635,206 @@
 
 
 
-<p>Documentation on how to run SLURM jobs.</p>
+
+
+<p>Using a computer cluster with other users means sharing resources. SLURM
+(Simple Linux Utility for Resource Management) is a commonly used job scheduler
+that manages a queue where you submit your jobs and allocates
+resources to run your job when resources are available.</p>
+
+<p>The documentation on using SLURM at Melbourne Bioinformatics is quite
+comprehensive and can be found
+<a href="https://www.melbournebioinformatics.org.au/documentation/running_jobs/slurm_x86/">here</a>.</p>
+
+<h2 id="checking-the-status-of-your-jobs">Checking the status of your jobs</h2>
+
+<h3 id="squeue">squeue</h3>
+
+<p>You can view information about jobs in the SLURM queue with the <code>squeue</code>
+command. View the help message with <code>squeue --usage</code> or the manual with
+<code>man squeue</code>.</p>
+
+<pre><code class="language-bash"># List all jobs in the queue
+squeue
+
+# List all jobs for account UOM0041
+squeue --account=UOM0041
+
+# List all jobs in the queue for user jchung in long format
+squeue -l -u jchung
+</code></pre>
+
+<p>If you&rsquo;re using snowy or barcoo, you can also use the <code>showq</code> command.</p>
+
+<h4 id="scontrol-show-job">scontrol show job</h4>
+
+<p>If you want information regarding a specific job id, you can use <code>scontrol</code>.</p>
+
+<pre><code class="language-bash">scontrol show job &lt;job-id&gt;
+</code></pre>
+
+<h4 id="sacct">sacct</h4>
+
+<p>You can check the status of recently finished jobs with <code>sacct</code>.</p>
+
+<pre><code class="language-bash">sacct
+</code></pre>
+
+<h4 id="sinfo">sinfo</h4>
+
+<p>You can also view the status of the nodes in the cluster with <code>sinfo</code>.</p>
+
+<pre><code class="language-bash"># Show status of all nodes
+sinfo -Nel
+</code></pre>
+
+<p>If you want more information about a specific node, you can use <code>scontrol</code>.</p>
+
+<pre><code class="language-bash"># View information on the master node
+scontrol show node master
+</code></pre>
+
+<h2 id="running-your-jobs">Running your jobs</h2>
+
+<h3 id="sbatch">sbatch</h3>
+
+<p>Most of your jobs will be sumbitted to SLURM via <code>sbatch</code>. The commands that
+you want to run need to be written in a script (a plain-text file that we&rsquo;ll
+discuss further below), saved to a location, then submitted using <code>sbatch</code>.</p>
+
+<pre><code class="language-bash"># Print the help message from sbatch
+sbatch --help
+
+# Submit your script by specifying the name of your script
+sbatch my-script.sh
+</code></pre>
+
+<h3 id="sinteractive">sinteractive</h3>
+
+<p>You can use the <code>sinteractive</code> command to run your job in an interactive
+session. When SLURM allocates your job resources, you will be provided with
+an interactive terminal session. It is recommended to use sinteractive in
+conjunction with a terminal multiplexer such as GUN Screen so the job won&rsquo;t
+terminate if you disconnect from the server.</p>
+
+<pre><code class="language-bash"># Print the help message for sinteractive
+sinteractive --help
+
+# Submit a job with the default parameters
+sinteractive
+
+# Submit a job with 4 CPUs, 16 GB memory, and wall time of 1 day
+sinteractive --ntasks=1 --cpu-per-task=4 --mem=16384 --time=1-0:0:0
+</code></pre>
+
+<p>Note that the memory amount is specified in MB.</p>
+
+<h3 id="scancel">scancel</h3>
+
+<p>You can cancel a running job or a job in the queue with <code>scancel</code>.</p>
+
+<pre><code class="language-bash">scancel &lt;job-id&gt;
+</code></pre>
+
+<h2 id="writing-a-slurm-script">Writing a SLURM script</h2>
+
+<p>For beginners, I recommend using the
+<a href="https://www.melbournebioinformatics.org.au/jobscript-generator/">job script generator</a>
+written by Melbourne Bioinformatics.
+If you&rsquo;re using one of the PEARG clusters on the Nectar cloud (i.e. mozzie or
+rescue), you can ignore the &ldquo;Project ID&rdquo; and the &ldquo;Modules&rdquo; field.</p>
+
+<p>Here&rsquo;s an example of a simple SLURM script running on the mozzie server.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+#SBATCH --job-name=denovo_map
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+
+denovo_map.pl \
+    -m 3 -M 2 -n 1 -T 8 -b 1 -S \
+    -o denovo_map_m3_M2_n1_2017-11-09 \
+    -s ../processed_radtags/sample-1.fastq.gz \
+    -s ../processed_radtags/sample-2.fastq.gz \
+    -X &quot;populations: --vcf&quot;
+</code></pre>
+
+<p>The first line of the script must specify the interpreter the script will be
+executed with such as <code>bash</code> or <code>sh</code>. Keep this as <code>#!/bin/bash</code> unless you
+have reason to change it.</p>
+
+<p>Each line starting with <code>#SBATCH</code> is an option that SLURM&rsquo;s <code>sbatch</code> command
+uses. You can get view all available options with <code>sbatch -h</code> or by viewing
+the man page with <code>man sbatch</code>.</p>
+
+<p>The most common <code>#SBATCH</code> options you&rsquo;ll most likely be using are:</p>
+
+<ul>
+<li><code>--job-name=XXX</code>: You should always specify a job name for your job</li>
+<li><code>--nodes=1</code>: In most cases, you should be requesting one node so all the
+requested CPUs are on the same node.</li>
+<li><code>--ntasks=1</code>: In most cases you&rsquo;ll be running one task per job</li>
+<li><code>--cpus-per-task=X</code>: Specify the number of CPUs to request.</li>
+</ul>
+
+<p>You can also direct your stdout and stderr into defined files:</p>
+
+<ul>
+<li><code>-output my-file-%j.out</code></li>
+<li><code>-error my-file-%j.err</code></li>
+</ul>
+
+<p>If you&rsquo;re using barcoo or snowy, you&rsquo;ll also need to specify memory in MB with:</p>
+
+<ul>
+<li><code>--mem=XXXXX</code> for jobs using multiple CPUs, or</li>
+<li><code>--mem-per-cpu=XXXX</code> for single CPU jobs.</li>
+</ul>
+
+<p>With barcoo and snowy, you&rsquo;ll also need to specify the partition, and a time limit:</p>
+
+<ul>
+<li><code>-p main</code>: The partition is called &lsquo;main&rsquo;</li>
+<li><code>--time=D-HH:MM:SS</code>: Time limit given for the job. If the job exceeds the time,
+it is automatically terminated.</li>
+</ul>
+
+<p>Here&rsquo;s an example of a SLURM script for barcoo.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Partition for the job:
+#SBATCH -p main
+
+# Account to run the job:
+#SBATCH --account=VR0002
+
+# Multithreaded (SMP) job: must run on one node
+#SBATCH --nodes=1
+
+# The name of the job:
+#SBATCH --job-name=&quot;test-job&quot;
+
+# Maximum number of tasks/CPU cores used by the job:
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+
+# The amount of memory in megabytes per process in the job:
+#SBATCH --mem=32768
+
+# The maximum running time of the job in days-hours:mins:sec
+#SBATCH --time=0-1:0:00
+
+# Run the job from your home directory:
+cd $HOME
+
+# The job command(s):
+sleep 10
+</code></pre>
+
+<p>When using barcoo and snowy, don&rsquo;t forget to <code>module load</code> the software you
+need into your environment path.</p>
 
 
 <footer class=" footline" >
@@ -773,22 +1014,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -878,6 +1103,38 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -903,7 +1160,7 @@
             <a class="nav nav-prev" href="/pearg_documentation/usage-documentation/" title="Usage Documentation"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/reference-data/" title="Reference Data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/stacks-databases/" title="Stacks Databases" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

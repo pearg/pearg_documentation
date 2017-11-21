@@ -7,7 +7,7 @@
     <meta name="description" content="An overview of high-performance computing resources available.">
 
 
-    <title>HPC Resources :: PEARG Documentation</title>
+    <title>Compute Resources :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -127,7 +127,7 @@
      active
       ">
         <a href="/pearg_documentation/getting-started/hpc-resources/">
-        <span>HPC Resources</span> 
+        <span>Compute Resources</span> 
         
         </a></li>
      
@@ -269,26 +269,6 @@
       ">
         <a href="/pearg_documentation/best-practices/naming-files/">
         <span>Naming Files</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/best-practices/stacks-databases/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/best-practices/stacks-databases/">
-        <span>Stacks Databases</span> 
         
         </a></li>
      
@@ -466,11 +446,51 @@
  
   
     
+      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+        <span>Stacks Databases</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/pearg_documentation/usage-documentation/reference-data/" class="dd-item
      
       ">
         <a href="/pearg_documentation/usage-documentation/reference-data/">
         <span>Reference Data</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/installing-software/">
+        <span>Installing Software</span> 
         
         </a></li>
      
@@ -567,7 +587,7 @@
 
 
 
- <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/getting-started/'>Getting Started</a> > HPC Resources
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/getting-started/'>Getting Started</a> > Compute Resources
 
  
 
@@ -578,7 +598,19 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#cloud-servers">Cloud Servers</a>
+<ul>
+<li><a href="#mosquito-server-mozzie">Mosquito Server (mozzie)</a></li>
+<li><a href="#genetic-rescue-server-rescue">Genetic Rescue Server (rescue)</a></li>
+</ul></li>
+<li><a href="#melbourne-bioinformatics-hpc">Melbourne Bioinformatics HPC</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -587,13 +619,55 @@
         
         <div id="body-inner">
           
-            <h1>HPC Resources</h1>
+            <h1>Compute Resources</h1>
           
 
 
 
 
+
+
 <p>This page lists the compute resources available to PEARG lab members.</p>
+
+<h2 id="cloud-servers">Cloud Servers</h2>
+
+<p>These clusters are hosted on the Nectar cloud. Email
+<a href="mailto:jchung@unimelb.edu.au">jchung@unimelb.edu.au</a> to request an account.</p>
+
+<p>When using these servers you should follow the best practices described in
+<a href="/pearg_documentation/best-practices/">these documents</a>.</p>
+
+<p>Each server has approximately 10 TB of storage space which is not backed up.
+It is your own responsibility to have
+<a href="/pearg_documentation/best-practices/backing-up-your-data/">backups</a> of your
+important data.</p>
+
+<h3 id="mosquito-server-mozzie">Mosquito Server (mozzie)</h3>
+
+<p>IP address: <code>45.113.232.220</code></p>
+
+<p>The <a href="http://45.113.232.220">mozzie server</a> is a 32 core cluster comprised of
+two 16-core machines.
+The master node has 15 cores available for use and 64 GB of RAM, while the
+worker node has 16 cores and 128 GB available.</p>
+
+<h3 id="genetic-rescue-server-rescue">Genetic Rescue Server (rescue)</h3>
+
+<p>IP address: <code>115.146.85.115</code></p>
+
+<p>The <a href="http://115.146.85.115">rescue server</a> is a 28 core cluster comprised of
+two machines. The master node has 11 cores available for use and 48 GB of RAM,
+while the worker node has 16 cores and 128 GB availble.</p>
+
+<hr />
+
+<h2 id="melbourne-bioinformatics-hpc">Melbourne Bioinformatics HPC</h2>
+
+<p>Projects can also apply to get access to the Melbourne Bioinformatics clusters,
+<a href="https://www.melbournebioinformatics.org.au/documentation/resources/hardware/#ibm-idataplex-x86-system-barcoo">barcoo</a> and <a href="https://www.melbournebioinformatics.org.au/documentation/resources/hardware/#lenovo-nextscale-x86-system-snowy">snowy</a> which have hundreds of cores and a few nodes with very high amounts of memory.</p>
+
+<p>The documentation for using the Melbourne Bioinformatics computational resources
+are located <a href="https://www.melbournebioinformatics.org.au/documentation/">here</a>.</p>
 
 
 <footer class=" footline" >
@@ -775,22 +849,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -854,6 +912,38 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             

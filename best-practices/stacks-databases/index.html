@@ -127,7 +127,7 @@
      
       ">
         <a href="/pearg_documentation/getting-started/hpc-resources/">
-        <span>HPC Resources</span> 
+        <span>Compute Resources</span> 
         
         </a></li>
      
@@ -479,6 +479,26 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/installing-software/">
+        <span>Installing Software</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -593,6 +613,8 @@
 <li><a href="#on-barcoo">On barcoo</a></li>
 <li><a href="#transfer-your-data">Transfer your data</a></li>
 <li><a href="#load-the-catalog-with-load-radtags-pl">Load the catalog with load_radtags.pl</a></li>
+<li><a href="#index-the-catalog-with-index-radtags-pl">Index the catalog with index_radtags.pl</a></li>
+<li><a href="#view-your-data-in-the-web-interface">View your data in the web interface</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -613,11 +635,6 @@
 
 
 
-
-<pre><code class="language-text">#
-# Note: This document is a work in progress and the commands are untested
-#
-</code></pre>
 
 <h2 id="database-management">Database management</h2>
 
@@ -740,7 +757,7 @@ catalog with <a href="http://catchenlab.life.illinois.edu/stacks/comp/load_radta
 mysql -e &quot;CREATE DATABASE jess_20170815_radtags&quot;
 
 # Load template tables
-mysql jess_20170815_radtags &lt; /usr/local/share/stacks/sql/stacks.sql
+mysql jess_20170815_radtags &lt; /mnt/galaxy/gvl/software/stacks/share/stacks/sql/stacks.sql
 
 # Load RAD tags
 load_radtags.pl \
@@ -750,6 +767,22 @@ load_radtags.pl \
     -B -e &quot;Description here&quot; \
     -c
 </code></pre>
+
+<h4 id="index-the-catalog-with-index-radtags-pl">Index the catalog with index_radtags.pl</h4>
+
+<p>You&rsquo;ll then need to create indices for your database. Use <code>-c</code> to generate
+the catalog index and <code>-d</code> to generate the unique tags index.</p>
+
+<pre><code class="language-bash">index_radtags.pl \
+    -D jess_20170815_radtags \
+    -c \
+    -t
+</code></pre>
+
+<h4 id="view-your-data-in-the-web-interface">View your data in the web interface</h4>
+
+<p>With your web browser, go to the server you have your data on, and navigate
+to the Stacks page. Click on your database name to view it.</p>
 
 
 <footer class=" footline" >
@@ -1016,6 +1049,22 @@ load_radtags.pl \
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             

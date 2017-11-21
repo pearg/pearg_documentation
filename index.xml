@@ -26,7 +26,9 @@
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
-      <description>Documentation on how to run SLURM jobs.</description>
+      <description>Using a computer cluster with other users means sharing resources. SLURM (Simple Linux Utility for Resource Management) is a commonly used job scheduler that manages a queue where you submit your jobs and allocates resources to run your job when resources are available.
+The documentation on using SLURM at Melbourne Bioinformatics is quite comprehensive and can be found here.
+Checking the status of your jobs squeue You can view information about jobs in the SLURM queue with the squeue command.</description>
     </item>
     
     <item>
@@ -42,12 +44,16 @@ Check your project directory At absolute minimum, please check:</description>
     </item>
     
     <item>
-      <title>HPC Resources</title>
+      <title>Compute Resources</title>
       <link>/pearg_documentation/getting-started/hpc-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/getting-started/hpc-resources/</guid>
-      <description>This page lists the compute resources available to PEARG lab members.</description>
+      <description>This page lists the compute resources available to PEARG lab members.
+Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
+When using these servers you should follow the best practices described in these documents.
+Each server has approximately 10 TB of storage space which is not backed up. It is your own responsibility to have backups of your important data.
+Mosquito Server (mozzie) IP address: 45.</description>
     </item>
     
     <item>
@@ -74,12 +80,24 @@ Just by looking at the filename and knowing what each field represents, we have 
     </item>
     
     <item>
+      <title>Stacks Databases</title>
+      <link>/pearg_documentation/usage-documentation/stacks-databases/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/pearg_documentation/usage-documentation/stacks-databases/</guid>
+      <description>Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
+Naming your databases Your database name must end with _radtags to show up in the web interface.
+Make sure to include your name and the date your database was created in your database name.</description>
+    </item>
+    
+    <item>
       <title>Getting an Account</title>
       <link>/pearg_documentation/getting-started/getting-an-account/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/pearg_documentation/getting-started/getting-an-account/</guid>
-      <description>How to get an account on our clusters.</description>
+      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account.
+After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
     </item>
     
     <item>
@@ -101,13 +119,13 @@ Just by looking at the filename and knowing what each field represents, we have 
     </item>
     
     <item>
-      <title>Stacks Databases</title>
-      <link>/pearg_documentation/best-practices/stacks-databases/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      <title>Installing Software</title>
+      <link>/pearg_documentation/usage-documentation/installing-software/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/stacks-databases/</guid>
-      <description># # Note: This document is a work in progress and the commands are untested #  Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
-Naming your databases Your database name must end with _radtags to show up in the web interface.</description>
+      <guid>/pearg_documentation/usage-documentation/installing-software/</guid>
+      <description>If you want a particular piece of software installed on mozzie or rescue you can email me at jchung@unimelb.edu.au. Anyone is also free to compile and install software in their personal directories.
+Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as easy as a downloading a pre-compiled binary file and sometimes you&amp;rsquo;re stuck in Dependency Hell. There are also be many different ways to install software depending on which form it comes in.</description>
     </item>
     
     <item>

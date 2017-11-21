@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/pearg_documentation/getting-started/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+    <loc>/pearg_documentation/getting-started/hpc-resources/</loc>
   </url>
   
   <url>
-    <loc>/pearg_documentation/getting-started/hpc-resources/</loc>
+    <loc>/pearg_documentation/getting-started/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -33,6 +33,11 @@
   
   <url>
     <loc>/pearg_documentation/best-practices/naming-files/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/pearg_documentation/usage-documentation/stacks-databases/</loc>
     <lastmod>2017-08-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -51,8 +56,8 @@
   </url>
   
   <url>
-    <loc>/pearg_documentation/best-practices/stacks-databases/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+    <loc>/pearg_documentation/usage-documentation/installing-software/</loc>
+    <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
