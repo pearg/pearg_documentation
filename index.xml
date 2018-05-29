@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PEARG Documentation</title>
-    <link>/pearg_documentation/</link>
+    <link>https://pearg.github.io/pearg_documentation/</link>
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Metadata Overview</title>
-      <link>/pearg_documentation/metadata-documentation/metadata-overview/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/metadata-overview/</guid>
-      <description>This document describes our system of storing metadata for sequencing samples.</description>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</guid>
+      <description>The Hoffmann Lab has a system for storing its raw sequencing data. It is important you follow the system in place and ensure all your data is properly labelled and backed up. This is to ensure that sequencing data generated at the present time can still be used in future analyses, even if you are no longer at the lab. Storing our next-generation sequencing data in a systematic manner also benefits the whole lab as other lab members can find and use data that could be beneficial to their project.</description>
     </item>
     
     <item>
       <title>Running Jobs with SLURM</title>
-      <link>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
       <description>Using a computer cluster with other users means sharing resources. SLURM (Simple Linux Utility for Resource Management) is a commonly used job scheduler that manages a queue where you submit your jobs and allocates resources to run your job when resources are available.
 The documentation on using SLURM at Melbourne Bioinformatics is quite comprehensive and can be found here.
 Checking the status of your jobs squeue You can view information about jobs in the SLURM queue with the squeue command.</description>
@@ -33,10 +33,10 @@ Checking the status of your jobs squeue You can view information about jobs in t
     
     <item>
       <title>Directory Structure</title>
-      <link>/pearg_documentation/best-practices/directory-structure/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</link>
       <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/directory-structure/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</guid>
       <description>When using the PEARG clusters or the Melbourne Bioinformatics clusters, your files and data should be organised according to the convention described here.
 Each project should have its own directory located inside your home directory or a shared location. Your project directory name should be meaningful.
 Any shared data such as reference genomes and indices should be stored outside your project directory to avoid unnecessary duplication of data.
@@ -45,10 +45,10 @@ Check your project directory At absolute minimum, please check:</description>
     
     <item>
       <title>Compute Resources</title>
-      <link>/pearg_documentation/getting-started/hpc-resources/</link>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/getting-started/hpc-resources/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</guid>
       <description>This page lists the compute resources available to PEARG lab members.
 Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
 When using these servers you should follow the best practices described in these documents.
@@ -58,20 +58,33 @@ Mosquito Server (mozzie) IP address: 45.</description>
     
     <item>
       <title>Using Mediaflux</title>
-      <link>/pearg_documentation/metadata-documentation/using-mediaflux/</link>
-      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
-      <description>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
-The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers. Note that uploading large files via the browser is unreliable and slow, therefore Mediaflux Desktop should not be used for uploading.</description>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
+      <description>The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.
+1. Mediaflux Introduction
+ How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets
+ Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  3. Adding Libraries to Assets
+ Creating assets in libraries/ Setting library metadata  4.</description>
+    </item>
+    
+    <item>
+      <title>Installing Software</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</guid>
+      <description>If you want a particular piece of software installed on mozzie or rescue you can email me at jchung@unimelb.edu.au. Anyone is also free to compile and install software in their personal directories.
+Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as easy as a downloading a pre-compiled binary file and sometimes you&amp;rsquo;re stuck in Dependency Hell. There are also be many different ways to install software depending on which form it comes in.</description>
     </item>
     
     <item>
       <title>Naming Files</title>
-      <link>/pearg_documentation/best-practices/naming-files/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/naming-files/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</guid>
       <description>This document describes best practices for naming files.
 I highly recommend you read this Data Carpentary document on file naming.
 Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
@@ -80,79 +93,62 @@ Just by looking at the filename and knowing what each field represents, we have 
     </item>
     
     <item>
+      <title>Getting an Account</title>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</guid>
+      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account.
+After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
+    </item>
+    
+    <item>
+      <title>Mediaflux Explorer</title>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</guid>
+      <description>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
+The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers. Note that uploading large files via the browser is unreliable and slow, therefore Mediaflux Desktop should not be used for uploading.</description>
+    </item>
+    
+    <item>
       <title>Stacks Databases</title>
-      <link>/pearg_documentation/usage-documentation/stacks-databases/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/stacks-databases/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</guid>
       <description>Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
 Naming your databases Your database name must end with _radtags to show up in the web interface.
 Make sure to include your name and the date your database was created in your database name.</description>
     </item>
     
     <item>
-      <title>Getting an Account</title>
-      <link>/pearg_documentation/getting-started/getting-an-account/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/pearg_documentation/getting-started/getting-an-account/</guid>
-      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account.
-After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
-    </item>
-    
-    <item>
-      <title>Tips for Windows Users</title>
-      <link>/pearg_documentation/getting-started/tips-for-windows-users/</link>
-      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/pearg_documentation/getting-started/tips-for-windows-users/</guid>
-      <description>This document will include helpful things to know such as ^M line-endings, SSH clients, transferring files to and from remote servers, etc.</description>
-    </item>
-    
-    <item>
-      <title>Reference Data</title>
-      <link>/pearg_documentation/usage-documentation/reference-data/</link>
-      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/pearg_documentation/usage-documentation/reference-data/</guid>
-      <description>This document describes how the reference data will be stored.</description>
-    </item>
-    
-    <item>
-      <title>Installing Software</title>
-      <link>/pearg_documentation/usage-documentation/installing-software/</link>
-      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/pearg_documentation/usage-documentation/installing-software/</guid>
-      <description>If you want a particular piece of software installed on mozzie or rescue you can email me at jchung@unimelb.edu.au. Anyone is also free to compile and install software in their personal directories.
-Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as easy as a downloading a pre-compiled binary file and sometimes you&amp;rsquo;re stuck in Dependency Hell. There are also be many different ways to install software depending on which form it comes in.</description>
-    </item>
-    
-    <item>
       <title>Backing Up Your Data</title>
-      <link>/pearg_documentation/best-practices/backing-up-your-data/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/backing-up-your-data/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</guid>
       <description>If you only have a single copy of your data, you&amp;rsquo;re vulnerable to losing it. A hardware failure or theft can lead to losing hundreds of hours of work or irreplacable photos.
 &amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;rdquo; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
     </item>
     
     <item>
       <title>Getting Help</title>
-      <link>/pearg_documentation/getting-started/getting-help/</link>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/getting-started/getting-help/</guid>
-      <description>Getting help.</description>
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</guid>
+      <description>For help related to getting/using compute resources or queries related to bioinformatics, email Jessica Chung (jchung@unimelb.edu.au).
+For help related to Mediaflux and metadata, email Tom Schmidt (tom.schmidt@unimelb.edu.au) or Jessica Chung (jchung@unimelb.edu.au).</description>
     </item>
     
     <item>
       <title>header</title>
-      <link>/pearg_documentation/_header/</link>
+      <link>https://pearg.github.io/pearg_documentation/_header/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>/pearg_documentation/_header/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/_header/</guid>
       <description>PEARG Documentation</description>
     </item>
     

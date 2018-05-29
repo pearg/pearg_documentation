@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="">
+    <meta name="description" content="How to use Mediaflux Explorer.">
 
 
-    <title>Best Practices :: PEARG Documentation</title>
+    <title>Mediaflux Explorer :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 </script>
   </head>
-  <body class="" data-url="/pearg_documentation/best-practices/">
+  <body class="" data-url="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
     <nav id="sidebar" class="">
 
 
@@ -191,8 +191,8 @@
   
     
     <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
-        parent
-        active
+        
+        
         parent
         ">
       <a href="/pearg_documentation/best-practices/">
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
-        
+        parent
         
         parent
         ">
@@ -366,7 +366,7 @@
   
     
       <li data-nav-id="/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item
-     
+     active
       ">
         <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
         <span>Mediaflux Explorer</span> 
@@ -543,7 +543,7 @@
               
               
             <div id="top-github-link">
-              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/best-practices/_index.md" target="blank">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/mediaflux-explorer.md" target="blank">
                 <i class="fa fa-code-fork"></i>
                 Edit page
               </a>
@@ -564,7 +564,12 @@
 
 
 
- <a href='/pearg_documentation/'>PEARG Documentation</a> > Best Practices
+
+
+
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/metadata-documentation/'>Metadata Documentation</a> > Mediaflux Explorer
+
+ 
 
  
 
@@ -582,133 +587,59 @@
         
         <div id="body-inner">
           
-            <h1>Best Practices</h1>
+            <h1>Mediaflux Explorer</h1>
           
 
 
 
 
+<p>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or
+via your web browser with <a href="https://mediaflux.vicnode.org.au/desktop/">Mediaflux Desktop</a>.
+These clients allow you to view your data, transfer data, and edit metadata.</p>
 
+<p>The Mediaflux Explorer Java applet should be used when transferring data and is
+available on both <a href="http://45.113.232.220"><code>mozzie</code></a> and
+<a href="http://45.113.233.108/"><code>rescue</code></a> servers. Note that uploading large files
+via the browser is unreliable and slow, therefore Mediaflux Desktop should not be
+used for uploading.</p>
 
+<p>Assuming you have your data stored on one of our servers
+(<a href="http://45.113.232.220"><code>mozzie</code></a> or <a href="http://45.113.233.108/"><code>rescue</code></a>) open
+your preferred internet browser and enter the IP address of the server into
+the navigation bar.</p>
 
+<p>You should be taken to the dashboard page that lists the services available.
+Find the &lsquo;Lubuntu Desktop&rsquo; service and click on the access link to use VNC.
+This allows us to access the server using a graphical interface through a browser.</p>
 
+<p><img src="../static/dashboard_vnc.png" alt="" /></p>
 
+<p>Enter your credentials for your account to login. You may need to do this twice&mdash;
+once to access VNC and again to login to the Lubuntu desktop.</p>
 
+<p><img src="../static/lubuntu_login.png" width=80%></p>
 
+<p>Logging in will bring you to the Lubuntu desktop where you should see icons
+including a &lsquo;Mediaflux&rsquo; icon. Double click it to launch Mediaflux Explorer.</p>
 
+<p><img src="../static/lubuntu_desktop.png" alt="" /></p>
 
+<p>Select the HTTPS protocol in the dropdown menu and enter <code>mediaflux.vicnode.org.au</code>
+as the host. The port should automatically change to <code>443</code>.</p>
 
+<p>In the &lsquo;Domain&rsquo; field enter <code>aaf</code> and then move to the next field.
+A dropdown menu should then appear below the &lsquo;Domain&rsquo; field (if it doesn&rsquo;t show
+up immediately, wait a few seconds). Select <code>The University of Melbourne</code> from
+the listed institutions.</p>
 
+<p>Finally, enter your unimelb username (not your email) and password to sign in.</p>
 
-<ul class="children children-h4">
-	
-    
-    
-
-	
-		
-	
-		
-  
-
-
-	
-	
-
-<h4>
-<a href="/pearg_documentation/best-practices/directory-structure/" >Directory Structure</a>
-</h4>
-
-
-
-
-
-
-
-			
-				
-<p>How to structure your project directory when performing an analysis.</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-		
-  
-
-
-	
-	
-
-<h4>
-<a href="/pearg_documentation/best-practices/naming-files/" >Naming Files</a>
-</h4>
-
-
-
-
-
-
-
-			
-				
-<p>Best practices for naming files.</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-		
-  
-
-
-	
-	
-
-<h4>
-<a href="/pearg_documentation/best-practices/backing-up-your-data/" >Backing Up Your Data</a>
-</h4>
-
-
-
-
-
-
-
-			
-				
-<p>Best practices for backing up your data.</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-
-	
-</ul>
-
-
-
-
+<p><img src="../static/mediaflux_login.png" width=80%></p>
 
 
 <footer class=" footline" >
 	
 </footer>
-
-
 
 
 
@@ -811,74 +742,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -943,6 +806,78 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1009,10 +944,10 @@
 
 
         
-            <a class="nav nav-prev" href="/pearg_documentation/getting-started/getting-help/" title="Getting Help"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/using-mediaflux/" title="Using Mediaflux"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/best-practices/directory-structure/" title="Directory Structure" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/" title="Usage Documentation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1039,3 +974,4 @@
 
   </body>
 </html>
+

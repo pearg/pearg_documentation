@@ -3,105 +3,100 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/pearg_documentation/metadata-documentation/metadata-overview/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</loc>
     <lastmod>2017-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/best-practices/directory-structure/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</loc>
     <lastmod>2017-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/getting-started/hpc-resources/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</loc>
   </url>
   
   <url>
-    <loc>/pearg_documentation/getting-started/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/getting-started/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/metadata-documentation/using-mediaflux/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+    <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/best-practices/naming-files/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/usage-documentation/stacks-databases/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/getting-started/getting-an-account/</loc>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/getting-started/tips-for-windows-users/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/usage-documentation/reference-data/</loc>
-    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/usage-documentation/installing-software/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</loc>
     <lastmod>2017-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/best-practices/backing-up-your-data/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/getting-started/getting-help/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/best-practices/</loc>
-    <lastmod>2017-08-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/metadata-documentation/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/usage-documentation/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</loc>
     <lastmod>2017-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/_header/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</loc>
   </url>
   
   <url>
-    <loc>/pearg_documentation/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/pearg_documentation/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/pearg_documentation/tags/</loc>
+    <loc>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/best-practices/</loc>
+    <lastmod>2017-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/usage-documentation/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/_header/</loc>
+    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/tags/</loc>
     <priority>0</priority>
   </url>
   

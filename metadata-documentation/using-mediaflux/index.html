@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="How to use Mediaflux.">
+    <meta name="description" content="How to upload your files into Mediaflux and set metadata.">
 
 
     <title>Using Mediaflux :: PEARG Documentation</title>
@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "\/pearg_documentation\/";
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -148,26 +148,6 @@
       ">
         <a href="/pearg_documentation/getting-started/getting-an-account/">
         <span>Getting an Account</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/getting-started/tips-for-windows-users/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/getting-started/tips-for-windows-users/">
-        <span>Tips for Windows Users</span> 
         
         </a></li>
      
@@ -378,6 +358,26 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
+        <span>Mediaflux Explorer</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -446,51 +446,31 @@
  
   
     
-      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
-        <span>Stacks Databases</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/reference-data/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/reference-data/">
-        <span>Reference Data</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
       <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
      
       ">
         <a href="/pearg_documentation/usage-documentation/installing-software/">
         <span>Installing Software</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+        <span>Stacks Databases</span> 
         
         </a></li>
      
@@ -613,48 +593,47 @@
 
 
 
-<p>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or
-via your web browser with <a href="https://mediaflux.vicnode.org.au/desktop/">Mediaflux Desktop</a>.
-These clients allow you to view your data, transfer data, and edit metadata.</p>
+<p>The documents below cover the basics of using Mediaflux to create assets,
+set metadata and upload your data.</p>
 
-<p>The Mediaflux Explorer Java applet should be used when transferring data and is
-available on both <a href="http://45.113.232.220"><code>mozzie</code></a> and
-<a href="http://45.113.233.108/"><code>rescue</code></a> servers. Note that uploading large files
-via the browser is unreliable and slow, therefore Mediaflux Desktop should not be
-used for uploading.</p>
+<hr />
 
-<p>Assuming you have your data stored on one of our servers
-(<a href="http://45.113.232.220"><code>mozzie</code></a> or <a href="http://45.113.233.108/"><code>rescue</code></a>) open
-your preferred internet browser and enter the IP address of the server into
-the navigation bar.</p>
+<p><a href="https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/1.%20Mediaflux_introduction.pdf">1. Mediaflux Introduction</a></p>
 
-<p>You should be taken to the dashboard page that lists the services available.
-Find the &lsquo;Lubuntu Desktop&rsquo; service and click on the access link to use VNC.
-This allows us to access the server using a graphical interface through a browser.</p>
+<ul>
+<li>How to log into Mediaflux Desktop</li>
+<li>What assets are stored in <code>data/</code>, <code>individuals/</code>, and <code>libraries/</code></li>
+<li>Metadata associated with assets</li>
+</ul>
 
-<p><img src="../static/dashboard_vnc.png" alt="" /></p>
+<hr />
 
-<p>Enter your credentials for your account to login. You may need to do this twice&mdash;
-once to access VNC and again to login to the Lubuntu desktop.</p>
+<p><a href="https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/2.%20Adding_individuals_assets.pdf">2. Adding Individual Assets</a></p>
 
-<p><img src="../static/lubuntu_login.png" width=80%></p>
+<ul>
+<li>Creating assets in <code>individuals/</code></li>
+<li>Setting sample metadata</li>
+<li>Modifying and deleting existing assets</li>
+<li>Using metadata templates</li>
+</ul>
 
-<p>Logging in will bring you to the Lubuntu desktop where you should see icons
-including a &lsquo;Mediaflux&rsquo; icon. Double click it to launch Mediaflux Explorer.</p>
+<hr />
 
-<p><img src="../static/lubuntu_desktop.png" alt="" /></p>
+<p><a href="https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/3.%20Adding_libraries_assets.pdf">3. Adding Libraries to Assets</a></p>
 
-<p>Select the HTTPS protocol in the dropdown menu and enter <code>mediaflux.vicnode.org.au</code>
-as the host. The port should automatically change to <code>443</code>.</p>
+<ul>
+<li>Creating assets in <code>libraries/</code></li>
+<li>Setting library metadata</li>
+</ul>
 
-<p>In the &lsquo;Domain&rsquo; field enter <code>aaf</code> and then move to the next field.
-A dropdown menu should then appear below the &lsquo;Domain&rsquo; field (if it doesn&rsquo;t show
-up immediately, wait a few seconds). Select <code>The University of Melbourne</code> from
-the listed institutions.</p>
+<hr />
 
-<p>Finally, enter your unimelb username (not your email) and password to sign in.</p>
+<p><a href="https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/4.%20Uploading_libraries_to_mediaflux.pdf">4. Uploading Libraries to Mediaflux</a></p>
 
-<p><img src="../static/mediaflux_login.png" width=80%></p>
+<ul>
+<li>Creating an archive containing your sequencing library data</li>
+<li>Uploading to Mediaflux using Mediaflux Desktop to <code>data/</code></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -754,22 +733,6 @@ the listed institutions.</p>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -887,9 +850,6 @@ the listed institutions.</p>
             
         
                     
-            
-        
-                    
                         
             
             
@@ -897,19 +857,6 @@ the listed institutions.</p>
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -921,6 +868,22 @@ the listed institutions.</p>
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -983,7 +946,7 @@ the listed institutions.</p>
             <a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/metadata-overview/" title="Metadata Overview"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/" title="Usage Documentation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/mediaflux-explorer/" title="Mediaflux Explorer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
