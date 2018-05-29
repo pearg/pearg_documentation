@@ -5,7 +5,7 @@ date: '2017-09-29'
 slug: installing-software
 categories: []
 tags: []
-weight: 10
+weight: 2
 description: 'How to install software on our servers.'
 ---
 

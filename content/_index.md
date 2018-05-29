@@ -13,7 +13,6 @@ get an account on our clusters, and some terms of conditions.
 
 * [HPC resources overview]({{%relref "getting-started/hpc-resources.md"%}})
 * [Getting an account]({{%relref "getting-started/getting-an-account.md"%}})
-* [Tips for Windows users]({{%relref "getting-started/tips-for-windows-users.md"%}})
 
 ### Best practices
 
@@ -37,9 +36,9 @@ relating to your samples.
 Documentation related to using our clusters.
 
 * [Running jobs with SLURM ]({{%relref "usage-documentation/running-jobs-with-slurm.md"%}})
+* [Installing software]({{%relref "usage-documentation/installing-software.md"%}})
 * [Stacks databases]({{%relref "usage-documentation/stacks-databases.md"%}})
 * [Reference data]({{%relref "usage-documentation/reference-data.md"%}})
-* [Installing software]({{%relref "usage-documentation/installing-software.md"%}})
 
 ### Contribute to this documentation
 
