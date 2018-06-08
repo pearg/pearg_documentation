@@ -48,3 +48,14 @@ Projects can also apply to get access to the Melbourne Bioinformatics clusters,
 
 The documentation for using the Melbourne Bioinformatics computational resources
 are located [here](https://www.melbournebioinformatics.org.au/documentation/).
+
+-----
+
+## Spartan
+
+[Spartan](https://dashboard.hpc.unimelb.edu.au/) is The University of Melbourne 
+HPC system managed by Research Platform Services.
+
+To get started with Spartan, you will need to [request a Spartan account](https://dashboard.hpc.unimelb.edu.au/karaage/)
+using your University of Melbourne email and apply for a new project or join an
+existing project.
