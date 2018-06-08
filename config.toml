@@ -39,5 +39,5 @@ weight = 30
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-globe'></i> PEARG homepage"
-url = "https://pearg.com/"
+url = "https://blogs.unimelb.edu.au/pearg/"
 weight = 40
