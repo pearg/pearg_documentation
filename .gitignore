@@ -4,3 +4,5 @@
 .RData
 .Ruserdata
 public
+.DS_Store
+pearg_data
