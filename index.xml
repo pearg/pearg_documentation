@@ -124,6 +124,27 @@ Make sure to include your name and the date your database was created in your da
     </item>
     
     <item>
+      <title>Using the RAD-seq Pipeline</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</guid>
+      <description>If you&amp;rsquo;re using the mozzie or rescue server and want to use Stacks &amp;gt;= 2.0 to perform your RAD-seq data processing and analysis, then you have the option of using the RAD-seq pipeline: radpipe.
+To use the pipeline, it is highly recommended you have some knowledge on how to use Screen or another terminal multiplexer such as Tmux. This is because the pipeline can run for hours or days and a terminal multiplexer will allow you to detach the session so it can continue running when you disconnect from the server.</description>
+    </item>
+    
+    <item>
+      <title>Sample Map</title>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</guid>
+      <description>Interactive map of the sample data in the Hoffmann Lab Mediaflux project.
+
+Last updated 2018-05-30.</description>
+    </item>
+    
+    <item>
       <title>Backing Up Your Data</title>
       <link>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>

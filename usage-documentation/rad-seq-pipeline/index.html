@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.26" />
+    <meta name="description" content="How to use radpipe: the Hoffmann Lab RAD-seq pipeline">
+
+
+    <title>Using the RAD-seq Pipeline :: PEARG Documentation</title>
+    <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
+    <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/hybrid.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/featherlight.min.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/horsey.css" rel="stylesheet">
+    
+    <link href="/pearg_documentation/css/theme.css" rel="stylesheet">
+    
+    
+      <link href="/pearg_documentation/css/theme-blue.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/pearg_documentation/css/bootstrap.min.css">
+    <script src="/pearg_documentation/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/pearg_documentation/usage-documentation/rad-seq-pipeline/">
+    <nav id="sidebar" class="">
+
+
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+       
+	<p>PEARG Documentation</p>
+ 
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
+<script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
+</script>
+<script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
+
+    
+  </div>
+
+  
+    <ul class="topics">
+        
+            <li data-nav-id="/pearg_documentation/" class="dd-item">
+            <a href="/pearg_documentation/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/getting-started/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/getting-started/">
+        <span>Getting Started</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/hpc-resources/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/hpc-resources/">
+        <span>Compute Resources</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/getting-an-account/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/getting-an-account/">
+        <span>Getting an Account</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/getting-help/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/getting-help/">
+        <span>Getting Help</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/best-practices/">
+        <span>Best Practices</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/directory-structure/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/directory-structure/">
+        <span>Directory Structure</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/naming-files/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/naming-files/">
+        <span>Naming Files</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/backing-up-your-data/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/backing-up-your-data/">
+        <span>Backing Up Your Data</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/metadata-documentation/">
+        <span>Metadata Documentation</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/metadata-overview/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/metadata-overview/">
+        <span>Metadata Overview</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/using-mediaflux/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/using-mediaflux/">
+        <span>Using Mediaflux</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
+        <span>Mediaflux Explorer</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/sample-map/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/sample-map/">
+        <span>Sample Map</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/usage-documentation/" class="dd-item 
+        parent
+        
+        parent
+        ">
+      <a href="/pearg_documentation/usage-documentation/">
+        <span>Usage Documentation</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">
+        <span>Running Jobs with SLURM</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/installing-software/">
+        <span>Installing Software</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+        <span>Stacks Databases</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/rad-seq-pipeline/" class="dd-item
+     active
+      ">
+        <a href="/pearg_documentation/usage-documentation/rad-seq-pipeline/">
+        <span>Using the RAD-seq Pipeline</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+        
+
+        
+        <section id="shortcuts">
+            
+                <li class="" role="">
+                    <h3>More</h3>
+                    <a href="https://github.com/pearg/pearg_documentation"><i class='fa fa-github'></i> Github repo</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://gohugo.io/"><i class='fa fa-book'></i> Hugo Documentation</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://github.com/vjeantet/hugo-theme-docdock"><i class='fa fa-bookmark'></i> DocDock Theme</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://blogs.unimelb.edu.au/pearg/"><i class='fa fa-globe'></i> PEARG homepage</a>
+                    
+                </li>
+            
+        </section>    
+        
+        
+
+        
+    </ul>
+    
+     
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/usage-documentation/rad-seq-pipeline.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/usage-documentation/'>Usage Documentation</a> > Using the RAD-seq Pipeline
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#project-setup">Project setup</a></li>
+<li><a href="#pipeline-stages">Pipeline stages</a></li>
+<li><a href="#create-a-pipeline-config-file">Create a pipeline config file</a></li>
+<li><a href="#executing-the-pipeline">Executing the pipeline</a></li>
+<li><a href="#running-the-pipeline">Running the pipeline</a></li>
+<li><a href="#how-to-kill-a-running-pipeline">How to kill a running pipeline</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Using the RAD-seq Pipeline</h1>
+          
+
+
+
+
+
+
+<p>If you&rsquo;re using the <code>mozzie</code> or <code>rescue</code> server and want to use Stacks &gt;= 2.0
+to perform your RAD-seq data processing and analysis, then you have the
+option of using the RAD-seq pipeline:
+<a href="https://github.com/pearg/radpipe">radpipe</a>.</p>
+
+<p>To use the pipeline, it is highly recommended you have some knowledge on how to
+use <a href="https://en.wikipedia.org/wiki/GNU_Screen">Screen</a> or another
+terminal multiplexer such as <a href="https://en.wikipedia.org/wiki/Tmux">Tmux</a>. This
+is because the pipeline can run for hours or days and a terminal multiplexer
+will allow you to detach the session so it can continue running when you
+disconnect from the server. These instructions assume you are familiar with
+Screen.</p>
+
+<p>If you want to run <code>radpipe</code> on another system such as your own virtual machine
+or local computer, you&rsquo;ll need to install it and the dependencies described
+<a href="https://github.com/pearg/radpipe/blob/master/README.md">here</a>.</p>
+
+<div class="notices info" ><p>Note that radpipe does not support the Stacks de-novo assembly workflow (yet).
+To use the pipeline, you will need a reference genome to align your sequence
+data to.</p>
+</div>
+
+
+<hr />
+
+<h2 id="project-setup">Project setup</h2>
+
+<p>Before you begin any analysis you need to create your project directory to
+store your analysis.</p>
+
+<p>Your project directory should follow our
+<a href="/pearg_documentation/best-practices/directory-structure/">best practices guidelines</a>.</p>
+
+<p>For example:</p>
+
+<pre><code class="language-bash"># I like to store my projects in a directory named 'projects' located in my home directory
+cd ~/projects
+
+# Give your project a name that makes sense
+mkdir super_rad_project &amp;&amp; cd super_rad_project
+
+# Create directories for the data, results, and reference files
+mkdir data results reference
+</code></pre>
+
+<p>If you don&rsquo;t have your reference genome for your organism on the server yet,
+download it to the <code>reference/</code> directory. If the reference genome is already
+on the server, I recommend you move or or symlink the file to the reference
+directory.</p>
+
+<p>Download your sequencing FASTQ files and place them in your <code>data/</code>
+directory. Make sure your <code>data/</code> directory has a separate directory for
+each sequencing run or library. Each directory must contain two files from
+Illumina sequencing, a FASTQ file containing forward reads (R1) and a FASTQ
+file containing reverse reads (R2).</p>
+
+<p>Each library should have a barcodes file containing the barcode pair and the
+sample name separated by tabs. For example:</p>
+
+<pre><code class="language-txt">ACGTCA	CATGAC	A110
+GTACTG	CATGAC	E002
+CTAGTC	CATGAC	X433
+AGCTGA	CATGAC	A8814
+</code></pre>
+
+<div class="notices note" ><p>If using the mozzie or rescue servers and symlinking data make sure your paths
+begin with <code>/mnt/galaxy/home/my_username/...</code> and not <code>/home/my_username/...</code>.
+This is because jobs running on worker nodes need the <code>/mnt/</code> path to find the
+files as the user directory symlinks in <code>/home/</code> don&rsquo;t exist on the worker
+nodes.</p>
+</div>
+
+
+<hr />
+
+<h2 id="pipeline-stages">Pipeline stages</h2>
+
+<p><img src=https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/images/radpipe_flowchart.png width="500px"></p>
+
+<p>The pipeline is composed of a number of stages.</p>
+
+<ul>
+<li><strong><code>fastqc</code></strong>: Runs FastQC on raw sequencing files and outputs to <code>results/qc/fastqc/</code>.</li>
+<li><strong><code>multiqc_fastqc</code></strong>: Runs MultiQC on FastQC outputs and outputs to <code>results/qc/</code>.</li>
+<li><strong><code>process_radtags</code></strong>: Runs Stacks process_radtags to demux samples and outputs to <code>results/sample_radtags/</code>.</li>
+<li><strong><code>build_index</code></strong>: Builds index for the reference FASTA file for either bwa or bowtie and stores indices in <code>results/ref/</code>.</li>
+<li><strong><code>alignment</code></strong>: Aligns FASTQ files with either bwa or bowtie and outputs BAMs to <code>results/alignments/</code>.</li>
+<li><strong><code>sort_bam</code></strong>: Sorts BAM files by coordinate and generates indices. Outputs to <code>results/alignments/</code>.</li>
+<li><strong><code>filter_bam</code></strong>: Optional step to filter BAM files using Samtools view. Outputs to <code>results/alignments/</code>.</li>
+<li><strong><code>flagstat</code></strong>: Runs Samtools flagstat on the final BAM files and outputs to <code>results/qc/flagstat/</code>.</li>
+<li><strong><code>multiqc_flagstat</code></strong>: Runs MultiQC on the flagstat outputs and outputs to <code>results/qc/</code>.</li>
+<li><strong><code>gstacks</code></strong>: Runs Stacks gstacks on sorted BAMs and outputs to <code>results/gstacks/</code>.</li>
+<li><strong><code>populations</code></strong>: Runs Stacks populations and outputs to <code>results/populations/</code>.</li>
+</ul>
+
+<p>Ruffus (the framework the pipeline uses) works by requiring you to specify
+a target task. The pipeline will then work out which tasks the target task
+depends on, and run them automatically.</p>
+
+<hr />
+
+<h2 id="create-a-pipeline-config-file">Create a pipeline config file</h2>
+
+<p><code>radpipe</code> reads a configuration file to define how the pipeline stages will
+be run. This config file is written in YAML.</p>
+
+<p>Copy the below block, and paste the contents in a file named <code>pipeline.config</code>
+in your project directory.</p>
+
+<pre><code class="language-txt">#---------------------------------
+# CONFIG
+#---------------------------------
+
+pipeline_id: radpipe
+
+# The directory the pipeline will write files.
+results_dir: results/
+
+# The reference genome in FASTA format.
+reference_genome: ref/mppdraft3.fa
+
+# Sequencing data
+# Each sequencing run / library should be in its own directory. In each
+# directory, there should be two Illumina sequncing read files in *fastq.gz
+# format (R1 and R2) and a text file containing barcodes in the format that
+# process_radtags accepts. FASTQ filenames should be unique.
+# Note that the directory name will be used as the read group ID for when
+# performing alignment.
+libraries:
+    lib_01:
+        lib_dir: data/lib_01
+        r1: BparvusLib1_S1_R1_001.fastq.gz
+        r2: BparvusLib1_S1_R2_001.fastq.gz
+        barcodes: lib1_barcode.txt
+    lib_02:
+        lib_dir: data/lib_02
+        r1: BparvusLib2_S2_R1_001.fastq.gz
+        r2: BparvusLib2_S2_R2_001.fastq.gz
+        barcodes: lib2_barcode.txt
+    lib_03:
+        lib_dir: data/2017-08-29_Burramys_MtBuller_RADSeq_Lib3
+        r1: BparvusLib3_S3_R1_001.fastq.gz
+        r2: BparvusLib3_S3_R2_001.fastq.gz
+        barcodes: lib3_barcode.txt
+
+#---------------------------------
+# PROCESS RADTAG OPTIONS
+#---------------------------------
+
+# The two restriction enzymes used.
+renz_1: sphI
+renz_2: mluCI
+
+# Additional process_radtag options
+# http://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php
+# Add PCR adapter options if necessary:
+# --adapter_1 AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
+# --adapter_2 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+process_radtags_options: &quot;-t 60 -c -q -r -s 10&quot;
+
+#---------------------------------
+# ALIGNMENT OPTIONS
+#---------------------------------
+
+# Which program to use for alignment. Choose from [bowtie, bwa mem]
+alignment_method: bwa mem
+
+# Additional alignment options
+# bwa mem: http://bio-bwa.sourceforge.net/bwa.shtml
+alignment_options: &quot;-a&quot;
+# bowtie: http://bowtie-bio.sourceforge.net/manual.shtml
+# alignment_options: &quot;-v 3 --tryhard --best&quot;
+
+#---------------------------------
+# BAM FILTERING OPTIONS
+#---------------------------------
+
+# Samtools view filtering options. Comment out to skip bam filtering step.
+# samtools_view_options: &quot;-f 3 -q 30&quot;
+
+#---------------------------------
+# STACKS POPULATIONS OPTIONS
+#---------------------------------
+
+# Analysis ID
+# If you plan to run multiple populations runs with different popmap files, give
+# each run a different name, which will create new directories in the results
+# directory instead of overwriting them
+analysis_id: analysis_v1
+
+# Custom popmap file (optional)
+# If this is left blank, the pipeline will create a popmap file with all samples
+# in the same population group. Note that this is for stacks populations
+# only (gstacks will use all available samples)
+# popmap_file: test_popmap.txt
+
+# Values of r for which Stacks populations will run. A new directory will
+# be created for each run
+populations_r:
+  - 0.5
+  - 0.75
+  - 0.8
+
+# Extra options for populations. Note that the --vcf option will be
+# automatically included when running the pipeline.
+# http://catchenlab.life.illinois.edu/stacks/comp/populations.php
+populations_options: &quot;--min_maf 0.05 --write_random_snp --hwe --fstats --genepop&quot;
+
+
+#---------------------------------
+# SLURM PIPELINE CONFIG
+#---------------------------------
+
+# Default settings for the pipeline stages.
+# These can be overridden in the stage settings below.
+
+defaults:
+    # Number of CPU cores to use for the task
+    cores: 1
+    # Maximum memory in gigabytes for a cluster job
+    mem: 4
+    # VLSCI account for quota
+    account: VR0002
+    queue: main
+    # Maximum allowed running time on the cluster in Hours:Minutes
+    walltime: '1:00'
+    # Load modules for running a command on the cluster.
+    modules:
+    # Run on the local machine (where the pipeline is run)
+    # instead of on the cluster. False means run on the cluster.
+    local: False
+
+# Stage-specific settings. These override the defaults above.
+
+stages:
+    fastqc:
+        walltime: '4:00'
+    multiqc:
+        walltime: '1:00'
+    process_radtags:
+        walltime: '8:00'
+        mem: 4
+    build_index:
+        walltime: '8:00'
+        mem: 16
+    alignment:
+        walltime: '8:00'
+        cores: 2
+        mem: 8
+    sort_bam:
+        walltime: '4:00'
+        mem: 4
+    filter_bam:
+        walltime: '1:00'
+    gstacks:
+        walltime: '24:00'
+        cores: 8
+        mem: 32
+    populations:
+        walltime: '24:00'
+        cores: 4
+        mem: 8
+</code></pre>
+
+<p>Carefully read through the config file and edit the options to fit with
+your analysis.</p>
+
+<ul>
+<li>Edit the <code>libraries</code> dictionary to contain your library directories and
+filenames.</li>
+<li>Edit the Stacks process radtags options if necessary.</li>
+<li>Edit the alignment options if necessary. Note that the pipeline supports
+both BWA mem and Bowtie using the <code>alignment_method</code> option.</li>
+<li>Edit the BAM filtering options if necessary. If <code>samtools_view_options</code> is
+commented out, filtering will be skipped.</li>
+<li>Edit the Stacks populations options if necessary. If you have a popmap file,
+uncomment the <code>popmap_file</code> option and provide the path to your file.</li>
+<li>The remaining SLURM pipeline options should be left as is unless your jobs
+are running out of walltime or memory.</li>
+</ul>
+
+<hr />
+
+<h2 id="executing-the-pipeline">Executing the pipeline</h2>
+
+<p>If you&rsquo;re using the mozzie or rescue servers, radpipe is already installed.</p>
+
+<p>Before you begin, start up a screen session. For example:</p>
+
+<pre><code class="language-bash"># Create and attach a screen session named 'pipeline'
+screen -S pipeline
+</code></pre>
+
+<p>radpipe is installed inside a Python virtual environment. You can activate
+the virtual environment with:</p>
+
+<pre><code class="language-bash">source /mnt/galaxy/gvl/software/radpipe/bin/activate
+</code></pre>
+
+<div class="notices note" ><p><strong>What is a virtual environment?</strong><br />
+On the server, radpipe is installed inside a Python virtual environment.<br />
+TODO: briefly explain virtual environments</p>
+</div>
+
+
+<p>First, see if you can run <code>radpipe</code> and look at the usage information the
+program has with the <code>-h</code> option.</p>
+
+<pre><code class="language-bash">radpipe -h
+</code></pre>
+
+<p>The pipeline runs by specifying a target task. All stages that are required
+for that task to run are executed. For example, running radpipe with
+<code>--target_task=alignment</code>, the pipeline will run the <strong>process_radtags</strong>,
+<strong>build_index</strong>, and <strong>alignment</strong> steps. If you want to know which tasks will
+be run when you specify a particular target_task, you can refer to the
+<a href="#pipeline-stages">above flowchart</a>, then look for your task and follow
+all the dependencies upward to see what will be run.</p>
+
+<p>Try using the <code>-n</code> (or <code>--just_print</code>) option to perform a dry run of the
+pipeline.</p>
+
+<pre><code class="language-bash">radpipe \
+    --config pipeline.config \
+    --verbose \
+    --target_tasks alignment \
+    -n
+</code></pre>
+
+<p>Something like the following should be printed on to the screen:</p>
+
+<pre><code class="language-text">________________________________________
+Tasks which will be run:
+
+Task = 'radpipe::reference_genome'
+Task = 'radpipe::process_radtags'
+Task = 'radpipe::bwa_index'
+Task = 'radpipe::bwa_mem'
+________________________________________
+
+</code></pre>
+
+<p>Note that since &ldquo;bwa mem&rdquo; is specified as the alignment method in the
+configuration file, the build_index task is named bwa_index and the alignment
+task is named bwa_mem.</p>
+
+<p>I recommend always running radpipe with the <code>-n</code> option to print what tasks
+will be run before running jobs for real.</p>
+
+<div class="notices note" ><p><strong>Verbosity level:</strong><br />
+The <code>--verbose</code> option allows you to set the verbosity (how much information
+the program prints out to the screen) of the pipeline. It&rsquo;s useful to increase
+the verbosity level if you&rsquo;re troubleshooting a problem. Generally, I recommend
+<code>--verbose 3</code> as a good level of verbosity for radpipe.</p>
+</div>
+
+
+<p>You can also generate a flowchart image with the <code>--flowchart</code> option.</p>
+
+<pre><code class="language-bash">radpipe \
+    --config pipeline.config \
+    --target_tasks populations,multiqc_fastqc,multiqc_flagstat \
+    --flowchart_format png \
+    --flowchart radpipe.png
+</code></pre>
+
+<hr />
+
+<h2 id="running-the-pipeline">Running the pipeline</h2>
+
+<p>It is recommended to run <strong>fastqc</strong> and <strong>multiqc_fastqc</strong> before you begin
+processing your data. After MultiQC finishes, view the <code>multiqc_report.html</code>
+file by transferring the html file to your computer and opening it in your
+web browser. Alternatively you could also move the html file to the your
+<code>public_html</code> directory and view the file remotely.</p>
+
+<p>Make sure you&rsquo;re inside a screen session before running the pipeline.
+You can run the pipeline to <code>multiqc_fastqc</code> with the following:</p>
+
+<pre><code class="language-bash">radpipe \
+    --config pipeline.config \
+    --verbose 3 \
+    --log_file radpipe.log \
+    --target_tasks multiqc_fastqc \
+    --jobs 8 \
+    --use_threads
+</code></pre>
+
+<p>The <code>--jobs</code> option allows the pipeline to submit multiple jobs to the
+SLURM queue. This will result in a maximum of 8 jobs in your queue.
+If there are more than 8 jobs in total, the jobs will be submitted one
+at a time as jobs get completed.</p>
+
+<div class="notices note" ><p><strong>How many jobs should I run at a time?</strong><br />
+If you&rsquo;re the only person running jobs on the server, you can use as many
+CPUs as there are available. SLURM will handle the resources automatically,
+so jobs will wait in the queue until there are enough resouces available for
+that particular job to run. However, if you&rsquo;re sharing the server with other
+people, please limit the number of jobs you&rsquo;re submittiing as the SLURM
+scheduling configuration is set to run jobs as First In, First Out.</p>
+</div>
+
+
+<p>Once your jobs are running, in another terminal session or screen session,
+try checking the SLURM queue (and if you need to refresh your memory on SLURM
+commands, you can do so
+<a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">here</a>).</p>
+
+<pre><code class="language-bash">squeue
+</code></pre>
+
+<p>You should see a list of your jobs running and which node they&rsquo;re running on.
+e.g.</p>
+
+<pre><code class="language-txt">     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+     1843      main radpipe_     jess  R       3:30      1 master
+     1844      main radpipe_     jess  R       2:39      1 w1
+</code></pre>
+
+<p>The job names in the queue are too long, so they appear cut off. You can
+use squeue&rsquo;s <code>-o</code> option to specify the output format and make the job
+name column wider.</p>
+
+<pre><code class="language-bash">squeue -o &quot;%.10i %.22j %.8u %.8T %.10M %.9l %.6D %R&quot;
+</code></pre>
+
+<p>Using the <code>--log_file</code> option will create a log file called <code>radpipe.log</code>
+which will keep track of what commands you ran.</p>
+
+<p>As an addition layer of logging, Slurm job scripts are written in the newly
+created <code>jobscripts/</code> directory. If a job fails, and you&rsquo;re trying to
+troubleshoot why, you can check the stderr files in this directory.</p>
+
+<p>You can also increase the verbosity by supplying a number after the <code>--verbose</code>
+option, e.g. <code>--verbose 3</code>.</p>
+
+<p>If an individual task of the pipeline fails (e.g. due to running
+out of memory), the pipeline will stop running after the jobs in the SLURM
+queue are finished. When you run radpipe again, the pipeline will only
+run the jobs that need running (i.e. it won&rsquo;t re-run the previously completed
+steps). However, if you update an earlier stage in the pipeline (e.g. changing
+the reference genome file), all the downstream tasks will be indentified as
+being out-of-date, and the pipeline will attempt to run these tasks again the
+next time you specify a target task that depends on the out-of-date task.</p>
+
+<hr />
+
+<h2 id="how-to-kill-a-running-pipeline">How to kill a running pipeline</h2>
+
+<p>If you want to kill a running pipeline that is running on the cluster and
+<code>^C</code> isn&rsquo;t killing the pipeline process, you will need to cancel all individual
+pipeline jobs in the system. With SLURM, you can cancel your jobs with
+<code>scancel &lt;job_id&gt;</code>. If all your jobs are from radpipe, you can cancel all jobs
+submitted with <code>scancel --user=&lt;your_username&gt;</code>.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/pearg_documentation/usage-documentation/stacks-databases/" title="Stacks Databases"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" title="Running Jobs with SLURM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/pearg_documentation/js/clipboard.min.js"></script>
+    <script src="/pearg_documentation/js/featherlight.min.js"></script>
+    <script src="/pearg_documentation/js/html5shiv-printshiv.min.js"></script>
+    <script src="/pearg_documentation/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/pearg_documentation/js/modernizr.custom.71422.js"></script>
+    <script src="/pearg_documentation/js/learn.js"></script>
+    <script src="/pearg_documentation/js/hugo-learn.js"></script>
+
+    
+    <link href="/pearg_documentation/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+    <script src="/pearg_documentation/mermaid/mermaid.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+    
+
+  </body>
+</html>
+

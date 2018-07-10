@@ -56,6 +56,16 @@
   </url>
   
   <url>
+    <loc>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</loc>
+    <lastmod>2017-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</loc>
+    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
