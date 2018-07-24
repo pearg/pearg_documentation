@@ -14,11 +14,11 @@ Build the site with `hugo` or `blogdown::build_site()`.
 To deploy the site using GitHub pages on the `gh-pages` branch:
 
 ```
-# Prune old git worktrees
-git worktree prune
-
 # Remove old public directory
 rm -r public
+
+# Prune old git worktrees
+git worktree prune
 
 # Add new worktree
 git worktree add -B gh-pages public origin/gh-pages
