@@ -149,11 +149,6 @@ libraries:
         r1: BparvusLib2_S2_R1_001.fastq.gz
         r2: BparvusLib2_S2_R2_001.fastq.gz
         barcodes: lib2_barcode.txt
-    lib_03:
-        lib_dir: data/2017-08-29_Burramys_MtBuller_RADSeq_Lib3
-        r1: BparvusLib3_S3_R1_001.fastq.gz
-        r2: BparvusLib3_S3_R2_001.fastq.gz
-        barcodes: lib3_barcode.txt
 
 #---------------------------------
 # PROCESS RADTAG OPTIONS
@@ -189,6 +184,14 @@ alignment_options: "-a"
 
 # Samtools view filtering options. Comment out to skip bam filtering step.
 # samtools_view_options: "-f 3 -q 30"
+
+#---------------------------------
+# STACKS GSTACKS OPTIONS
+#---------------------------------
+
+# Extra options for gstacks
+# http://catchenlab.life.illinois.edu/stacks/comp/gstacks.php
+gstacks_options: ""
 
 #---------------------------------
 # STACKS POPULATIONS OPTIONS
@@ -246,7 +249,7 @@ defaults:
 
 stages:
     fastqc:
-        walltime: '4:00'
+        walltime: '2:00'
     multiqc:
         walltime: '1:00'
     process_radtags:
@@ -263,6 +266,8 @@ stages:
         walltime: '4:00'
         mem: 4
     filter_bam:
+        walltime: '1:00'
+    flagstat:
         walltime: '1:00'
     gstacks:
         walltime: '24:00'
