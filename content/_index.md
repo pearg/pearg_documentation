@@ -40,6 +40,12 @@ Documentation related to using our clusters.
 * [Stacks databases]({{%relref "usage-documentation/stacks-databases.md"%}})
 * [Reference data]({{%relref "usage-documentation/reference-data.md"%}})
 
+### Tutorials
+
+Tutorials to help you get started in bioinformatics.
+
+* [Introduction to RAD-seq using Stacks]({{%relref "tutorials/introduction-to-rad-seq.md"%}})
+
 ### Contribute to this documentation
 
 This documentation's source code is hosted on
