@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
@@ -91,6 +96,11 @@
   </url>
   
   <url>
+    <loc>https://pearg.github.io/pearg_documentation/tutorials/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pearg.github.io/pearg_documentation/_header/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url>
@@ -102,7 +112,7 @@
   
   <url>
     <loc>https://pearg.github.io/pearg_documentation/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>

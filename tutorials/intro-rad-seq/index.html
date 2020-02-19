@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.26" />
+    <meta name="description" content="Introduction to Reference-based ddRAD-Seq using Stacks.">
+
+
+    <title>Introduction to RAD-Seq :: PEARG Documentation</title>
+    <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
+    <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/hybrid.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/featherlight.min.css" rel="stylesheet">
+    <link href="/pearg_documentation/css/horsey.css" rel="stylesheet">
+    
+    <link href="/pearg_documentation/css/theme.css" rel="stylesheet">
+    
+    
+      <link href="/pearg_documentation/css/theme-blue.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/pearg_documentation/css/bootstrap.min.css">
+    <script src="/pearg_documentation/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body class="" data-url="/pearg_documentation/tutorials/intro-rad-seq/">
+    <nav id="sidebar" class="">
+
+
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+       
+	<p>PEARG Documentation</p>
+ 
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
+<script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
+</script>
+<script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
+
+    
+  </div>
+
+  
+    <ul class="topics">
+        
+            <li data-nav-id="/pearg_documentation/" class="dd-item">
+            <a href="/pearg_documentation/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/getting-started/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/getting-started/">
+        <span>Getting Started</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/hpc-resources/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/hpc-resources/">
+        <span>Compute Resources</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/getting-an-account/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/getting-an-account/">
+        <span>Getting an Account</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/getting-started/getting-help/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/getting-started/getting-help/">
+        <span>Getting Help</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/best-practices/">
+        <span>Best Practices</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/directory-structure/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/directory-structure/">
+        <span>Directory Structure</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/naming-files/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/naming-files/">
+        <span>Naming Files</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/best-practices/backing-up-your-data/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/best-practices/backing-up-your-data/">
+        <span>Backing Up Your Data</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/metadata-documentation/">
+        <span>Metadata Documentation</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/metadata-overview/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/metadata-overview/">
+        <span>Metadata Overview</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/using-mediaflux/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/using-mediaflux/">
+        <span>Using Mediaflux</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
+        <span>Mediaflux Explorer</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/metadata-documentation/sample-map/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/metadata-documentation/sample-map/">
+        <span>Sample Map</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/usage-documentation/" class="dd-item 
+        
+        
+        parent
+        ">
+      <a href="/pearg_documentation/usage-documentation/">
+        <span>Usage Documentation</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">
+        <span>Running Jobs with SLURM</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/installing-software/">
+        <span>Installing Software</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+        <span>Stacks Databases</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/usage-documentation/rad-seq-pipeline/" class="dd-item
+     
+      ">
+        <a href="/pearg_documentation/usage-documentation/rad-seq-pipeline/">
+        <span>Using the RAD-seq Pipeline</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pearg_documentation/tutorials/" class="dd-item 
+        parent
+        
+        parent
+        ">
+      <a href="/pearg_documentation/tutorials/">
+        <span>Tutorials</span>
+
+        
+        
+
+          
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+          
+
+        
+
+        
+      </a>
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pearg_documentation/tutorials/intro-rad-seq/" class="dd-item
+     active
+      ">
+        <a href="/pearg_documentation/tutorials/intro-rad-seq/">
+        <span>Introduction to RAD-Seq</span> 
+        
+        </a></li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+        
+
+        
+        <section id="shortcuts">
+            
+                <li class="" role="">
+                    <h3>More</h3>
+                    <a href="https://github.com/pearg/pearg_documentation"><i class='fa fa-github'></i> Github repo</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://gohugo.io/"><i class='fa fa-book'></i> Hugo Documentation</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://github.com/vjeantet/hugo-theme-docdock"><i class='fa fa-bookmark'></i> DocDock Theme</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="https://blogs.unimelb.edu.au/pearg/"><i class='fa fa-globe'></i> PEARG homepage</a>
+                    
+                </li>
+            
+        </section>    
+        
+        
+
+        
+    </ul>
+    
+     
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/tutorials/introduction-to-rad-seq.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/tutorials/'>Tutorials</a> > Introduction to RAD-Seq
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#pre-requisites">Pre-requisites</a></li>
+<li><a href="#learning-objectives">Learning objectives</a></li>
+<li><a href="#the-data">The data</a>
+<ul>
+<li><a href="#setup-the-project-directory">Setup the project directory</a></li>
+<li><a href="#get-the-data">Get the data</a></li>
+</ul></li>
+<li><a href="#demultiplexing">Demultiplexing</a>
+<ul>
+<li><a href="#examine-the-data">Examine the data</a>
+<ul>
+<li>
+<ul>
+<li><a href="#todo-insert-image-here">TODO: Insert image here</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#run-process-radtags">Run process_radtags</a></li>
+</ul></li>
+<li><a href="#alignment">Alignment</a>
+<ul>
+<li><a href="#the-reference-genome">The reference genome</a></li>
+<li><a href="#bowtie2">Bowtie2</a></li>
+</ul></li>
+<li><a href="#stacks">Stacks</a>
+<ul>
+<li><a href="#run-gstacks">Run gstacks</a></li>
+<li><a href="#run-populations">Run populations</a></li>
+</ul></li>
+<li><a href="#downstream-analysis">Downstream analysis</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#todo-insert-image-here-1">TODO: Insert image here</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+        <div id="body-inner">
+          
+            <h1>Introduction to RAD-Seq</h1>
+          
+
+
+
+
+
+
+<!-- 
+Simple CSS spoiler tags from
+https://stackoverflow.com/questions/28615544/how-to-create-spoiler-text
+-->
+
+<style>
+.spoiler2{ 
+  color: black; 
+  background-color:black;
+}
+
+.spoiler2:hover { 
+  background-color:white; 
+}
+</style>
+
+<p><em>Note: Currently, this tutorial is written to be performed on the mozzie server. In the future, this will be expanded so it can be done on any linux server.</em></p>
+
+<p>This tutorial goes through the steps of setting up a project directory, demultiplexing RAD-Seq data, aligning RAD-seq samples to a reference genome, building the loci catalogue and calling SNPs with Stacks, and generating a PCA plot of the SNP data.</p>
+
+<hr />
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>Before beginning this tutorial, you should be familiar with RAD-seq for SNP discovery. If you&rsquo;re not familiar with RAD-seq, we recommend you read this <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037135">review paper</a> to help you get started.</p>
+
+<p>This tutorial also assumes you&rsquo;re familiar with Unix and running commands on the command line interface. If you&rsquo;re using a shared cluster, you should also be familiar with running jobs through SLURM.</p>
+
+<p>The last section also assumes some basic knowledge of R.</p>
+
+<hr />
+
+<h2 id="learning-objectives">Learning objectives</h2>
+
+<ul>
+<li>Understand the nature of RAD-seq sequencing data</li>
+<li>Process ddRAD data using the Stacks reference-based workflow</li>
+<li>Be able to calculate some statistics and generate a PCA plot using the SNP results</li>
+</ul>
+
+<hr />
+
+<h2 id="the-data">The data</h2>
+
+<p>The data this tutorial uses is from Aedes Aegypti mosquitos collected from Indonesia and Malaysia. The samples were prepared following a protocol adapted from the methods described <a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-275#Sec10">here</a>. The restriction enzymes used for the double digest were nlaIII and mluCI.</p>
+
+<p>To save time, we&rsquo;ll be using a subset of the full data in this tutorial. Only reads belonging to Aedes Aegypti Chr1:1-1000000 have been included in the sequencing data.</p>
+
+<p>The size of the tutorial data is around 500 MB. In real situations, you would expect libraries to be in the order of 10s of gigabytes, and have multiple libraries in a project.</p>
+
+<h3 id="setup-the-project-directory">Setup the project directory</h3>
+
+<p>Let&rsquo;s begin by setting up a directory for your project. Good project organisation will make your life easier in the long run, so spend some time at the outset to do it properly. A few months after your initial analysis, you may not remember what you did or what your files contain. Detailed documentation and a sensible directory structure can help with this.</p>
+
+<p>Go to the directory where you wish to store this project, and create a new directory for this tutorial. An example project name could be <code>rad_seq_tutorial</code>.</p>
+
+<pre><code class="language-text">cd /path/to/sensible/project/directory
+mkdir rad_seq_tutorial
+cd rad_seq_tutorial
+
+# Store the tutorial path in a variable so we can refer to it later
+TUTORIAL_DIR=$(pwd)
+</code></pre>
+
+<p>In this directory, we&rsquo;ll create some new directories where we&rsquo;ll store our data and results.</p>
+
+<pre><code class="language-text">mkdir raw_data demuxed_seq results scripts software
+</code></pre>
+
+<p>We&rsquo;ll also create a few sub-directories in results where we&rsquo;ll store output from different programs that we&rsquo;ll run. These will be stored in <code>results_2020-02-01</code> (change the date to your current date). When performing bioinformatics, it&rsquo;s not unusual to have to re-run analyses again sometime down the track (e.g. the addition of a new sequencing library, changing of parameters for tools, fixing mistakes). Including the date in the directory name is an easy way to identify different sets of analyses in the future.</p>
+
+<pre><code class="language-text">cd results
+mkdir results_2020-02-01
+cd results_2020-02-01
+mkdir alignments gstacks populations
+</code></pre>
+
+<p>Lastly, create a <code>README.txt</code> text file with a brief description of what the project directory is about using your favourite text editor. For example:</p>
+
+<pre><code class="language-text"># RAD-seq Tutorial
+
+This directory contains analysis of RAD-seq data from Indonesia and Malaysia 
+from the Intro to RAD-Seq tutorial.
+</code></pre>
+
+<p>Your project directory should look something like this:</p>
+
+<pre><code class="language-text">rad_seq_tutorial/
+├── demuxed_seq/
+├── raw_data/
+├── results/
+│   ├── results_2020-02-01/
+│   │   ├── alignments/
+│   │   ├── gstacks/
+│   │   └── populations/
+├── scripts/
+├── software/
+└── README.txt
+</code></pre>
+
+<h3 id="get-the-data">Get the data</h3>
+
+<p>If you&rsquo;re using the mozzie server, copy the files in <code>/mnt/galaxy/shared/tutorial_data/rad_seq_workshop/</code> into the <code>raw_data</code> directory of your tutorial project directory.</p>
+
+<pre><code class="language-text">cd $TUTORIAL_DIR
+cd raw_data
+cp -r /mnt/galaxy/shared/tutorial_data/rad_seq_workshop/* .
+</code></pre>
+
+<p>Note that our library data is stored in another sub-directory, <code>tute_library</code>. It&rsquo;s common to have multiple libraries for a single project, therefore a good idea to have a separate sub-directories for each of your libraries.</p>
+
+<p>In the library directory, the paired end sequencing data is in the two FASTQ files:</p>
+
+<ul>
+<li><code>tute_library_R1.fastq.gz</code> corresponds to the forward reads from a PE library</li>
+<li><code>tute_library_R2.fastq.gz</code> corresponds to the reverse reads from a PE library</li>
+</ul>
+
+<p>Also included is:</p>
+
+<ul>
+<li><code>barcodes.txt</code>: the barcode file that will be used to separate individual samples from the FASTQ file</li>
+</ul>
+
+<p>There are also two files called <code>popmap_01.txt</code> and <code>popmap_02.txt</code> that we&rsquo;ll discuss later.</p>
+
+<p>Your raw data directory should now look like this:</p>
+
+<pre><code class="language-text">raw_data/
+├── tute_library/
+│   ├── barcodes.txt
+│   ├── tute_library_R1.fastq.gz
+│   └── tute_library_R2.fastq.gz
+├── popmap_01.txt
+└── popmap_02.txt
+</code></pre>
+
+<hr />
+
+<h2 id="demultiplexing">Demultiplexing</h2>
+
+<h3 id="examine-the-data">Examine the data</h3>
+
+<p>Multiple samples are sequenced in a single RAD-seq library. Each sample has a unique combination of barcodes that we can use to separate which reads belong to each sample. The program that we&rsquo;ll use, <code>process_radtags</code>, requires this information to be in a specific form.</p>
+
+<p>Navigate to the <code>raw_data/tute_library</code> directory. Take a look at the <code>barcodes.txt</code> file to see an example of a barcode file.</p>
+
+<pre><code class="language-text">cat barcodes.txt
+</code></pre>
+
+<pre><code class="language-text">CTAGTC	GTACTG	indonesia_01
+AGCTGA	GTACTG	indonesia_02
+TCGACT	GTACTG	indonesia_03
+ATGCTA	GTACTG	indonesia_04
+GCATAG	GTACTG	indonesia_05
+TGCACA	CATGAC	malaysia_01
+CATGTG	CATGAC	malaysia_02
+GTACAC	TGCAGT	malaysia_03
+ACGTGT	TGCAGT	malaysia_04
+AGCTCT	TGCAGT	malaysia_05
+GATCTC	TGCAGT	unknown_01
+AGCTGA	ACGTCA	unknown_02
+</code></pre>
+
+<p>The barcode file is a tab-separated file where the first column corresponds to the p1 barcode (the barcode that will be found at the beginning of the read), the second column corresponds to the p2 barcode (the barcode that will be found a the end of the read), and the third column represents the sample name.</p>
+
+<p>From this file, we can see there are 12 samples we&rsquo;d like to demultiplex from the library: five samples from Indonesia, five from Malaysia, and two samples that have not been labelled with their location of origin.</p>
+
+<p>Let&rsquo;s now have a look at the raw FASTQ data. If you&rsquo;re unfamiliar with the FASTQ format, you can read up on it <a href="https://en.wikipedia.org/wiki/FASTQ_format">here</a>.</p>
+
+<p>Use <code>less</code> to view the R1 reads (i.e. the forward reads of this library):</p>
+
+<pre><code class="language-text">less tute_library_R1.fastq.gz
+# press 'q' to quit when you're done
+</code></pre>
+
+<p>Look at the first read of the file which makes up the first four lines:</p>
+
+<pre><code class="language-text">@SN7001291:345:HFKWVBCXX:2:1101:1829:1987 1:N:0:2
+ATCGCTCATGCCAGCTCAAAATAATCAACTTCGAGGTGCACCAATCCTAGCGCTATCAGACCTCCCTCGCTATGAGACGGCTGCGCATTTTCATTCCCTTG
++
+GGGGGIIIIIIIIIIIIIIIIIIIIIIIIIIIIGIIIIIIIIIIIIIIIGGGGIIIIIIIGIIIIIIIIIIIIIIIIIIIIIGIGIGGGIIIIIIIIIGGG
+</code></pre>
+
+<ul>
+<li>The first line contains the read identifier. Each identifier begins with an <code>@</code> character and is unique.</li>
+<li>The second line contains the nucleotide sequence of the read.</li>
+<li>The third line is a separator line and contains a <code>+</code> character.</li>
+<li>The fourth line contains the PHRED quality score (i.e. a measurement of base confidence) for each of the bases in the nucleotide sequence.</li>
+</ul>
+
+<p>Let&rsquo;s look at the second line (i.e. the sequence) more closely:</p>
+
+<pre><code class="language-text">ATCGCTCATGCCAGCTCAAAATAATCAACTTCGAGGTGCACCAATCCTAGCGCTATCAGACCTCCCTCGCTATGAGACGGCTGCGCATTTTCATTCCCTTG
+</code></pre>
+
+<p>The first six bases (e.g. <code>ATCGCT</code>) of each read in this file correspond to the p1 barcode sequence. The next four bases are <code>CATG</code> which corresponds to the restriction site where nlaIII cleaves.</p>
+
+<pre><code class="language-text">5'-   C A T G | -3'
+3'- | G T A C   -5'
+</code></pre>
+
+<p>All reads in the R1 file should have this restriction site sequence immediately following the barcode sequence.</p>
+
+<p>Now, look at the R2 file (i.e. the reverse reads):</p>
+
+<pre><code class="language-text">less tute_library_R2.fastq.gz
+# press 'q' to quit when you're done
+</code></pre>
+
+<p>The first read in this file is</p>
+
+<pre><code class="language-text">@SN7001291:345:HFKWVBCXX:2:1101:1829:1987 2:N:0:2
+CATGACAATTACCCTTTGTCAAGAAGGCGAAGATGTCTCCCTTTAGGTGGTAAGTCAACTTACCAGAAAGAAGTTGAGCAATGTGGAAAAATCCACCATTC
++
+GGIGGIGGIGIGIGGIIIIIIIIIIGIIGIGIIIGIIGGGIIGGGGGAGGGIIIIIIIIIIGIIIIIIIIIGIIIIIIIIIIIGIIIIIIIIIIIIGGGGG
+</code></pre>
+
+<p>Like the R1 file, the first six bases (<code>CATGAC</code>) correspond to the p2 barcode sequence. Since the first read of the R1 file and the first read of the R2 file are mate pairs (i.e. they were sequenced from the same DNA fragment), we can use both the p1 and p2 barcodes to determine what sample the sequence belongs to.</p>
+
+<p>The next four bases are <code>AATT</code> which corresponds to the restriction site were mluCI cleaves.</p>
+
+<pre><code class="language-text">5'- | A A T T   -3'
+3'-   T T A A | -5'
+</code></pre>
+
+<p>These two reads are both sequenced from the same DNA fragment.</p>
+
+<h5 id="todo-insert-image-here">TODO: Insert image here</h5>
+
+<p><strong>Question:</strong><br />
+For a specific set of paired-end reads, the p1 barcode is observed to be <code>ATGCTA</code> and the p2 barcode is observed to be <code>GTACTG</code>. What sample does the read belong to?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">indonesia_04</span></p>
+
+<h3 id="run-process-radtags">Run process_radtags</h3>
+
+<p>The Stacks suite has a program called <a href="http://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php"><code>process_radtags</code></a> that demultiplexes RAD-seq data. We&rsquo;ll run it on our tutorial data and provide it the barcode file like so:</p>
+
+<pre><code class="language-text">cd $TUTORIAL_DIR
+
+process_radtags \
+    -1 raw_data/tute_library/tute_library_R1.fastq.gz \
+    -2 raw_data/tute_library/tute_library_R2.fastq.gz \
+    -o demuxed_seq \
+    -b raw_data/tute_library/barcodes.txt \
+    --renz_1 nlaIII \
+    --renz_2 mluCI \
+    --paired \
+    -i gzfastq \
+    --inline_inline \
+    -c -q -r -t 80 -s 20
+</code></pre>
+
+<div class="notices info" ><p>Generally, if you&rsquo;re running commands on a shared server, you should be using <a href="https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/">SLURM</a> to submit your jobs. However, this tutorial data only takes a few seconds to process, so if you&rsquo;re using the mozzie server, you can just run it on the master node without SLURM. With real data, jobs can take hours to run, so make sure you don&rsquo;t run large jobs on the master node.</p>
+</div>
+
+
+<p><code>process_radtags</code> produces four files for each sample. For example, for indonesia_01:</p>
+
+<ul>
+<li><strong><code>indonesia_01.1.fq.gz</code></strong>: contains R1 (forward) reads belonging to the sample</li>
+<li><strong><code>indonesia_01.2.fq.gz</code></strong>: contains R2 (reverse) reads belonging to the sample</li>
+<li><strong><code>indonesia_01.rem.1.fq.gz</code></strong>: contains orphaned R1 reads that don&rsquo;t have a matching R2 read</li>
+<li><strong><code>indonesia_01.rem.2.fq.gz</code></strong>: contains orphaned R2 reads that don&rsquo;t have a matching R1 read</li>
+</ul>
+
+<p>Reads can be orphaned when the mate pair&rsquo;s read restriction enzyme site doesn&rsquo;t match or the read is dropped due to low quality.</p>
+
+<p><strong>Question:</strong><br />
+Have a look at the log file in <code>process_radtags</code>. How many reads matched the barcode for the indonesia_01 sample? After filtering those without a matching restriction site and low quality, how many reads have been retained for indonesia_01?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">258052 total sequences matched indonesia_01. 229479 were retained after removing reads with restriction site not matching (23282) and of low quality (5291).</span></p>
+
+<p><strong>Question:</strong><br />
+In the <code>process_radtags</code> command you ran, what does the option <code>-t 80</code> and <code>-s 20</code> do? (Hint: check the <a href="http://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php">manual</a>)<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">The &ldquo;-t 80&rdquo; option truncates the read to a final length of 80 bp. The &ldquo;-s 20&rdquo; option tells the program to discard the read due to low quality if the average quality score drops below 20 in a sliding window (whose size is set by the &ldquo;-w&rdquo; option and has a default of 0.15).</span></p>
+
+<hr />
+
+<h2 id="alignment">Alignment</h2>
+
+<h3 id="the-reference-genome">The reference genome</h3>
+
+<p>Next we&rsquo;ll align the demultiplexed reads to the reference Aedes Aegypti reference genome using bowtie2. First, have a look at the reference assembly <a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA</a> file. On the mozzie server:</p>
+
+<pre><code class="language-text">cd /mnt/galaxy/shared/genomes/GCF_002204515.2_AaegL5.0
+less GCF_002204515.2_AaegL5.0_genomic.fna
+# press 'q' to quit when you're done
+</code></pre>
+
+<p>This large file contains the 1.9 gigabases that make up the Aedes Aegypti genome. Most of the bases have been assembled into three chromosomes: NC_035107.1 (chr1), NC_035108.1 (chr2), and NC_035109.1 (chr3). Since the assembly is imperfect, there are also thousands of smaller scaffolds that have yet to be placed to a chromosome.</p>
+
+<p>If you&rsquo;re working on the mozzie server, the genome has already been indexed and is ready to be used for alignment with bowtie2. If you&rsquo;re working on another server, you&rsquo;ll need to download the genomic FASTA file for GenBank assembly <a href="https://www.ncbi.nlm.nih.gov/assembly/GCF_002204515.2/">GCF_002204515.2</a> yourself. You&rsquo;ll also need to <a href="http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer">build a Bowtie index</a> for the reference genome using <code>bowtie2-build</code>.</p>
+
+<h3 id="bowtie2">Bowtie2</h3>
+
+<p>Alignment is the process of mapping reads from your FASTQ files to a location on the reference genome. Bowtie2 is a commonly used aligner that can quickly align short reads to a reference. We&rsquo;ll now align the demultiplexed reads to the Aegypti reference genome we viewed earlier. For indonesia_01:</p>
+
+<pre><code class="language-text">cd $TUTORIAL_DIR/results/results_2020-02-01
+
+bowtie2 \
+  -p 2 \
+  -x /mnt/galaxy/shared/genomes/GCF_002204515.2_AaegL5.0/GCF_002204515.2_AaegL5.0_genomic \
+  --very-sensitive \
+  -1 ../../demuxed_seq/indonesia_01.1.fq.gz \
+  -2 ../../demuxed_seq/indonesia_01.2.fq.gz \
+  2&gt; alignments/indonesia_01.bt2.log \
+  | samtools view -bS \
+  | samtools sort -o alignments/indonesia_01.bam
+</code></pre>
+
+<p>We&rsquo;ve chosen the <code>--very-sensitive</code> preset option which is through in trying to align reads to the reference genome, but takes a longer time than other presets. The SAM output from <code>bowtie2</code> is piped into <code>samtools</code> to convert it to BAM, and then piped again to sort the BAM file. If you&rsquo;re unfamiliar with the SAM/BAM format, you can read up on it <a href="https://en.wikipedia.org/wiki/SAM_(file_format)">here</a>.</p>
+
+<p>Take a look at the BAM file:</p>
+
+<pre><code class="language-text">samtools view alignments/indonesia_01.bam | less
+# press q to quit when you're done
+</code></pre>
+
+<p>If you want to have a more in-depth look at the options that bowtie2 has, you can view the help message with the <code>-h</code> flag:</p>
+
+<pre><code class="language-text">bowtie2 -h
+</code></pre>
+
+<p>or have a look at the <a href="http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">bowtie2 manual</a>.</p>
+
+<p>We can also write a loop to process all samples sequentially. For example, the code below uses the barcode file&rsquo;s to extract the sample names in the library, and then runs bowtie2 on the sample&rsquo;s demultiplexed FASTQ file.</p>
+
+<pre><code class="language-text">while read line; do
+    sample=$(echo $line | cut -d &quot; &quot; -f 3)
+    echo Aligning sample: $sample
+    bowtie2 \
+        -p 2 \
+        -x /mnt/galaxy/shared/genomes/GCF_002204515.2_AaegL5.0/GCF_002204515.2_AaegL5.0_genomic \
+        --very-sensitive \
+        -1 ../../demuxed_seq/${sample}.1.fq.gz \
+        -2 ../../demuxed_seq/${sample}.2.fq.gz \
+        2&gt; alignments/${sample}.bt2.log \
+        | samtools view -bS \
+        | samtools sort -o alignments/${sample}.bam
+done &lt; ../../raw_data/tute_library/barcodes.txt
+</code></pre>
+
+<p><strong>Question:</strong><br />
+Take a look at the log file <code>malaysia_02.bt2.log</code>. What is the overall alignment rate for the sample? Given what you know about this tutorial data, why might this alignment rate be higher than normal?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">The observed overall alignment rate of this sample is 93.84%. This alignment rate is not representative of a real RAD-seq experiment because the tutorial data is made up of reads that were selected because they were known to align to a defined part of this genome. If we were working with the full set of data, the alignment rate would be reduced.</span></p>
+
+<hr />
+
+<h2 id="stacks">Stacks</h2>
+
+<p><a href="http://catchenlab.life.illinois.edu/stacks/">Stacks</a> is a suite of software tools that can processes RAD-seq data, call SNPs, and calculate some popgen statistics. In reference-based RAD-seq analysis, we&rsquo;ll be using the programs <code>gstacks</code> and <code>populations</code>.</p>
+
+<h3 id="run-gstacks">Run gstacks</h3>
+
+<p>The next step is to build a catalogue of RAD-tags using <code>gstacks</code>. You can read more about the program and its options <a href="http://catchenlab.life.illinois.edu/stacks/comp/gstacks.php">here</a>.</p>
+
+<p>There are two valid ways you can define which BAM files you input into gstacks: using a popmap file or listing each bam file in the command. We&rsquo;ll be using the latter. Here we&rsquo;ll use the <code>-M</code> argument to give gstacks a popmap file and the <code>-I</code> argument to give it our alignments directory.</p>
+
+<p>The popmap file is a simple tab-delimited file that defines what population each sample is from. The <code>populations</code> program that we&rsquo;ll run immediately after <code>gstacks</code> can use this information to calculate common population genetics statistics such as FST and nucleotide diversity.</p>
+
+<p>In some cases, you won&rsquo;t be interested in the statistics calculated by <code>populations</code> (since you&rsquo;ll be doing your own analyses downstream). If this is the case, you can just define all samples as belonging in the same group. Have a look at the popmap file included in the <code>raw_data</code> directory:</p>
+
+<pre><code class="language-text">cd $TUTORIAL_DIR/raw_data/
+cat popmap_01.txt
+</code></pre>
+
+<p>In this directory, there&rsquo;s also another popmap file called <code>popmap_02.txt</code>. You can use this popmap file if you want to define groups in downstream Stacks analysis.</p>
+
+<p><strong>Question:</strong><br />
+Have a look at the <code>popmap_02.txt</code> file. How many unique populations are there?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">There are three unique populations in the file: &ldquo;indonesia&rdquo;, &ldquo;malaysia&rdquo;, and &ldquo;unknown&rdquo;.</span></p>
+
+<p>Now go back to the results directory and run <code>gstacks</code> to create the catalogue. We&rsquo;ll use the <code>popmap_01.txt</code> file here, but note that <code>gstacks</code> doesn&rsquo;t use the population information, only <code>populations</code> does.</p>
+
+<pre><code class="language-text">cd $TUTORIAL_DIR/results/results_2020-02-01
+gstacks \
+    -I alignments \
+    -M ../../raw_data/popmap_01.txt \
+    -O gstacks \
+    --min-mapq 20 \
+    -t 4
+</code></pre>
+
+<p>Have a look at the <code>catalog.fa.gz</code> output from gstacks using <code>less</code>.</p>
+
+<p><code>catalog.fa.gz</code> is a FASTA file that contains the RAD tags that have been detected in the given RAD-seq samples. The header of each sequence contains the position of where the RAD-tag is in the reference genome (e.g. <code>pos=CM008043.1:9352:-</code>) and the number of samples the RAD-tag was found (e.g. <code>NS=1</code>).</p>
+
+<p><code>catalog.calls</code> is a binary file that contains the genotyping data that <code>populations</code> will use for calling SNPs.</p>
+
+<h3 id="run-populations">Run populations</h3>
+
+<p>Populations can do a number of calculations and statistical tests, but for this tutorial, we&rsquo;ll only be using it to output a VCF file of our SNP calls. You can read up on populations <a href="http://catchenlab.life.illinois.edu/stacks/comp/populations.php">here</a>.</p>
+
+<p>When we run populations, we&rsquo;ll be writing to a sub-directory in the <code>populations</code> results directory. It can be useful to have multiple directories for <code>populations</code> as re-running it with different parameters, samples, etc. is common.</p>
+
+<p>Run populations requiring no missing data for any SNPs:</p>
+
+<pre><code class="language-text">mkdir populations/pop_01
+populations \
+    -P gstacks \
+    -M ../../raw_data/popmap_01.txt \
+    -O populations/pop_01 \
+    -t 1 \
+    -p 1 \
+    -r 1 \
+    --write_single_snp \
+    --vcf
+</code></pre>
+
+<p>Have a look at the VCF file. If you&rsquo;re not familiar with the VCF format, you can read up on it <a href="https://faculty.washington.edu/browning/intro-to-vcf.html">here</a>.</p>
+
+<p><strong>Question:</strong><br />
+Approximately many SNPs are there in the VCF file?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">There are 987 SNPs in the VCF file.</span></p>
+
+<p><strong>Question:</strong><br />
+For the first SNP in the VCF file (chromosome NC_035107.1, position 119501), what is the genotype call for indonesia_01? What nucleotide bases would be observed?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">For indonesia_01, the GT field is &ldquo;0/1&rdquo; which means the sample is heterozygous at that position. Since the REF base is C and the ALT base is A, the genotype would be C/A.</span></p>
+
+<p>Re-run populations in a new directory (<code>pop_02</code>) using less stringent parameters. For this example, we&rsquo;ll use the <code>popmap_02.txt</code> file to define populations and require SNPs to be called in at least 80% of individuals (<code>-r 0.8</code>) in at least two of the three populations (<code>-p 2</code>). We&rsquo;ll also include the <code>--fstats</code> flag to enable SNP-based F-statistics.</p>
+
+<pre><code class="language-text">mkdir populations/pop_02
+populations \
+    -P gstacks \
+    -M ../../raw_data/popmap_02.txt \
+    -O populations/pop_02 \
+    -t 1 \
+    -p 2 \
+    -r 0.8 \
+    --write_single_snp \
+    --vcf \
+    --fstats
+</code></pre>
+
+<p>Since we defined populations and use the <code>--fstats</code> option, we now are given pairwise estimates of FST in our output. Go to the output directory and view some of these files. The files beginning with <code>populations.fst_*</code> contain the SNP-level measures of FST between two populations and <code>populations.fst_summary.tsv</code> contains the pairwise FSTs for the populations.</p>
+
+<p>Additionally, with our less stringent parameters, the new VCF file now has more than twice the number of SNPs included, but some samples have missing genotype calls (i.e. <code>./.</code>).</p>
+
+<p><strong>Question:</strong><br />
+What does the <code>--write_single_snp</code> option do in populations? Why might you want to use this option when you run populations? (Hint: look at the help page or <a href="http://catchenlab.life.illinois.edu/stacks/comp/populations.php">manual</a>)<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">The &ldquo;--write_single_snp&rdquo; restricts analysis to only use the first SNP on the RAD tag. Often you want your SNPs to be independent observations (i.e. not under linkage disequilibrium). Using the &ldquo;--write_single_snp&rdquo; or &ldquo;--write-random-snp&rdquo; flag removes SNPs which are located on the same RAD tag, and therefore very close together in the genome.</span></p>
+
+<hr />
+
+<h2 id="downstream-analysis">Downstream analysis</h2>
+
+<p>Generally, the VCF files from <code>populations</code> will form the basis of your downstream analysis of population genetics.</p>
+
+<p>Here, we&rsquo;ll go through a toy example of using the SNP data to produce a PCA plot and identifying which populations the two unknown samples belong to, but for serious popgen analysis, you&rsquo;ll need to turn to software packages like <a href="https://cran.r-project.org/web/packages/adegenet/index.html">adegenet</a>, <a href="https://cran.r-project.org/web/packages/vegan/index.html">vegan</a>, and <a href="https://cran.r-project.org/web/packages/pegas/index.html">pegas</a>.</p>
+
+<p>We&rsquo;ll first convert the VCF file into a &ldquo;012&rdquo; matrix using <a href="https://vcftools.github.io/index.html">VCFtools</a>. This format represents homozygous REF calls as &ldquo;0&rdquo;, heterozygous calls as &ldquo;1&rdquo; and homozygous ALT calls as &ldquo;2&rdquo;.</p>
+
+<pre><code class="language-text"># Go to the pop_01 directory of populations
+cd $TUTORIAL_DIR/results/results_2020-02-01/populations/pop_01
+
+vcftools \
+    --vcf populations.snps.vcf \
+    --012 \
+    --out populations.snps
+</code></pre>
+
+<p>Have a look at the output files produced by VCFtools.</p>
+
+<p>The next step is to load the files into R. If you&rsquo;re on the mozzie server, you can just use the RStudio server provided. If you&rsquo;re not using the mozzie server, download the <code>populations.snps.012</code> and <code>populations.snps.012.indv</code> files to your local computer.</p>
+
+<p>In R, this code generates a simple PCA plot:</p>
+
+<pre><code class="language-r"># Load 012 files (change the paths)
+gt_matrix &lt;- read.table(file=&quot;/path/to/rad_seq_tutorial/results/results_2020-02-01/populations/pop_01/populations.snps.012&quot;,
+                        row.names = 1, header=FALSE)
+sample_names &lt;- read.table(file=&quot;/path/to/rad_seq_tutorial/results/results_2020-02-01/populations/pop_01/populations.snps.012.indv&quot;,
+                           header=FALSE)
+
+# View the first bit of the genotype matrix
+gt_matrix[1:5,1:5]
+
+# Create a dataframe containing sample info
+sample_info &lt;- data.frame(
+  sample_id=sample_names[,1],
+  group=str_remove(sample_names[,1], &quot;_\\d\\d$&quot;),
+  stringsAsFactors=FALSE)
+sample_info
+
+# PCA plot
+pca &lt;- prcomp(gt_matrix)$x[,1:4]
+pca &lt;- cbind(pca, sample_info)
+ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
+  geom_point()
+</code></pre>
+
+<h5 id="todo-insert-image-here-1">TODO: Insert image here</h5>
+
+<p><strong>Question:</strong><br />
+There are two samples from unknown origin. After looking at the PCA plot, what country do you think they originate from?<br />
+<strong>Answer:</strong><br />
+<span class="spoiler2">The two unknown samples both cluster more closely to the Malaysian samples, so it is likely they are from Malaysia.</span></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/pearg_documentation/tutorials/" title="Tutorials"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/pearg_documentation/getting-started/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/pearg_documentation/js/clipboard.min.js"></script>
+    <script src="/pearg_documentation/js/featherlight.min.js"></script>
+    <script src="/pearg_documentation/js/html5shiv-printshiv.min.js"></script>
+    <script src="/pearg_documentation/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/pearg_documentation/js/modernizr.custom.71422.js"></script>
+    <script src="/pearg_documentation/js/learn.js"></script>
+    <script src="/pearg_documentation/js/hugo-learn.js"></script>
+
+    
+    <link href="/pearg_documentation/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+    <script src="/pearg_documentation/mermaid/mermaid.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+    
+
+  </body>
+</html>
+

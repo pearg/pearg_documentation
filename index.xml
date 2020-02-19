@@ -6,10 +6,20 @@
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introduction to RAD-Seq</title>
+      <link>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</guid>
+      <description>.spoiler2{ color: black; background-color:black; } .spoiler2:hover { background-color:white; }  Note: Currently, this tutorial is written to be performed on the mozzie server. In the future, this will be expanded so it can be done on any linux server.
+This tutorial goes through the steps of setting up a project directory, demultiplexing RAD-Seq data, aligning RAD-seq samples to a reference genome, building the loci catalogue and calling SNPs with Stacks, and generating a PCA plot of the SNP data.</description>
+    </item>
     
     <item>
       <title>Metadata Overview</title>
@@ -52,7 +62,7 @@ Check your project directory At absolute minimum, please check:</description>
       <description>This page lists the compute resources available to PEARG lab members.
 Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
 When using these servers you should follow the best practices described in these documents.
-Each server has approximately 10 TB of storage space which is not backed up. It is your own responsibility to have backups of your important data.
+Each server has 10 - 30 TB of storage space which is not backed up. It is your own responsibility to have backups of your important data.
 Mosquito Server (mozzie) IP address: 45.</description>
     </item>
     
@@ -98,7 +108,7 @@ Just by looking at the filename and knowing what each field represents, we have 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</guid>
-      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account.
+      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account. Please include your preferred username in the email.
 After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
     </item>
     
