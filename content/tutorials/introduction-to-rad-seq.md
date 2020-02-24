@@ -245,7 +245,7 @@ The next four bases are `AATT` which corresponds to the restriction site were ml
 
 These two reads are both sequenced from the same DNA fragment.
 
-##### TODO: Insert image here
+![](/tutorials/media/rad_fig1.png)
 
 
 **Question:**  
@@ -504,6 +504,10 @@ The next step is to load the files into R. If you're on the mozzie server, you c
 In R, this code generates a simple PCA plot:
 
 ```r
+# Load libraries
+library(ggplot2)
+library(stringr)
+
 # Load 012 files (change the paths)
 gt_matrix <- read.table(file="/path/to/rad_seq_tutorial/results/results_2020-02-01/populations/pop_01/populations.snps.012",
                         row.names = 1, header=FALSE)
@@ -527,7 +531,8 @@ ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
   geom_point()
 ```
 
-##### TODO: Insert image here
+
+![](/tutorials/media/rad_fig2.png)
 
 **Question:**  
 There are two samples from unknown origin. After looking at the PCA plot, what country do you think they originate from?  
@@ -535,4 +540,5 @@ There are two samples from unknown origin. After looking at the PCA plot, what c
 <span class="spoiler2">The two unknown samples both cluster more closely to the Malaysian samples, so it is likely they are from Malaysia.</span>
 
 
+##### TODO: write concluding remarks
 
