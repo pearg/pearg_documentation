@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="Bioinformatics documentation for PEARG lab members">
+    <meta name="description" content="Using sFTP to upload and download files from Mediaflux">
 
 
-    <title>PEARG Documentation :: PEARG Documentation</title>
+    <title>Using sFTP with Mediaflux :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 </script>
   </head>
-  <body class="" data-url="/pearg_documentation/">
+  <body class="" data-url="/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/">
     <nav id="sidebar" class="">
 
 
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
-        
+        parent
         
         parent
         ">
@@ -641,86 +641,177 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
         
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/mediaflux-sftp.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div>
+              
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/metadata-documentation/'>Metadata Documentation</a> > Using sFTP with Mediaflux
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#command-line-sftp">Command-line sFTP</a>
+<ul>
+<li><a href="#downloading-files-from-mediaflux">Downloading files from mediaflux</a></li>
+<li><a href="#uploading-files-to-mediaflux">Uploading files to Mediaflux</a></li>
+</ul></li>
+<li><a href="#sftp-clients">sFTP clients</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
         
         <div id="body-inner">
+          
+            <h1>Using sFTP with Mediaflux</h1>
           
 
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="pearg-documentation">PEARG Documentation</h1>
 
-<p>This site contains bioinformatics-related documentation for PEARG lab members.</p>
+<hr />
 
-<h3 id="getting-started">Getting started</h3>
+<h3 id="command-line-sftp">Command-line sFTP</h3>
 
-<p>These documents go over what compute resources are available to you, how to
-get an account on our clusters, and some terms of conditions.</p>
+<p>If you want to transfer files between the PEARG servers (e.g. mozzie) and
+Mediaflux, the easiest way to do this is to use sFTP on the command line.</p>
 
-<ul>
-<li><a href="/pearg_documentation/getting-started/hpc-resources/">HPC resources overview</a></li>
-<li><a href="/pearg_documentation/getting-started/getting-an-account/">Getting an account</a></li>
-</ul>
+<p>If you&rsquo;re transferring large files, I recommend you use sFTP in a screen
+session so you can detach it and leave it running in the background.</p>
 
-<h3 id="best-practices">Best practices</h3>
+<h4 id="downloading-files-from-mediaflux">Downloading files from mediaflux</h4>
 
-<p>These documents describe some best practices when using our compute resources.
-Not following some of these guidelines may result in a scolding.</p>
+<p>Let&rsquo;s say I&rsquo;m interested in a particular tarball which is located at   <code>/Volumes/proj-hoffmann_data-1128.4.49/data/QA_library3_DPS_INC_KL.tar</code><br />
+in Mediaflux and want to download it to my current working directory.</p>
 
-<ul>
-<li><a href="/pearg_documentation/best-practices/directory-structure/">Directory structure</a></li>
-<li><a href="/pearg_documentation/best-practices/naming-files/">Naming files</a></li>
-<li><a href="/pearg_documentation/best-practices/backing-up-your-data/">Backing up your data</a></li>
-</ul>
+<pre><code class="language-text"># First navigate to where you want the downloaded file to be stored.
+cd /path/to/my/project/data
 
-<h3 id="metadata-documentation">Metadata Documentation</h3>
+# Then sFTP into the mediaflux server (change the credentials to your username)
 
-<p>These documents describe how to use our metadata system to record information
-relating to your samples.</p>
+# If you have a staff unimelb account:
+sftp -P 21 -o User=unimelb:username mediaflux.researchsoftware.unimelb.edu.au
+# Authenticate using your university password
 
-<ul>
-<li><a href="/pearg_documentation/metadata-documentation/metadata-overview/">Metadata overview</a></li>
-<li><a href="/pearg_documentation/metadata-documentation/using-mediaflux/">Using Mediaflux</a></li>
-</ul>
+# Alternatively, if you have a student unimelb account:
+# sftp -P 21 -o User=student:username mediaflux.researchsoftware.unimelb.edu.au
 
-<h3 id="usage-documentation">Usage Documentation</h3>
+# Navigate to directory that has the file of interest
+cd /Volumes/proj-hoffmann_data-1128.4.49/data
 
-<p>Documentation related to using our clusters.</p>
+# List all files in the current directory
+ls
 
-<ul>
-<li><a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">Running jobs with SLURM </a></li>
-<li><a href="/pearg_documentation/usage-documentation/installing-software/">Installing software</a></li>
-<li><a href="/pearg_documentation/usage-documentation/stacks-databases/">Stacks databases</a></li>
-<li><a href="">Reference data</a></li>
-</ul>
+# Download the file to your current working directory
+get QA_library3_DPS_INC_KL.tar
 
-<h3 id="tutorials">Tutorials</h3>
+# Disconnect from the mediaflux server
+exit
+</code></pre>
 
-<p>Tutorials to help you get started in bioinformatics.</p>
+<h4 id="uploading-files-to-mediaflux">Uploading files to Mediaflux</h4>
 
-<ul>
-<li><a href="/pearg_documentation/tutorials/intro-rad-seq/">Introduction to RAD-seq using Stacks</a></li>
-</ul>
+<p>Let&rsquo;s say I have a file on the mozzie server, <code>MPP_allsubreads.fastq.gz</code> that I
+would like to upload into Mediaflux to the location<br />
+<code>/Volumes/proj-marsupial_genomics-1128.4.19/Burramys/Assembly</code></p>
 
-<h3 id="contribute-to-this-documentation">Contribute to this documentation</h3>
+<pre><code class="language-text"># First navigate to where you want the downloaded file to be stored.
+cd /path/to/my/project/data
 
-<p>This documentation&rsquo;s source code is hosted on
-<a href="https://github.com/pearg/pearg_documentation">GitHub</a>. Feel free to update the
-content&mdash; just click the <strong>Edit this page</strong> link displayed on top right of
-each page, and create a pull request when done.</p>
+# Then sFTP into the mediaflux server (change the credentials to your username)
 
-<h4 id="contact">Contact</h4>
+# If you have a staff unimelb account:
+sftp -P 21 -o User=unimelb:username mediaflux.researchsoftware.unimelb.edu.au
+# Authenticate using your university password
 
-<p>Contact me at <a href="mailto:jchung@unimelb.edu.au">jchung@unimelb.edu.au</a> or submit an
-<a href="https://github.com/pearg/pearg_documentation/issues">issue on GitHub</a>.</p>
+# Alternatively, if you have a student unimelb account:
+# sftp -P 21 -o User=student:username mediaflux.researchsoftware.unimelb.edu.au
+
+# Navigate to directory where you want to upload the file to
+cd /Volumes/proj-marsupial_genomics-1128.4.19/Burramys/Assembly
+
+# List all files in the current directory
+ls
+
+# Upload the file from your current working directory
+put MPP_allsubreads.fastq.gz
+
+# Disconnect from the mediaflux server
+exit
+</code></pre>
+
+<hr />
+
+<h3 id="sftp-clients">sFTP clients</h3>
+
+<p>If you want to transfer files between your local computer and Mediaflux, you
+can also use graphical sFTP clients such as WinSCP, FileZilla, and Cyberduck.</p>
+
+<p>You&rsquo;ll need to connect to the <code>mediaflux.researchsoftware.unimelb.edu.au</code> server
+using port 21 (note: if port 21 doesn&rsquo;t work, try port 9003).</p>
+
+<p>If you have a unimelb staff account, your username should be <code>unimelb:username</code>,
+and if you have a student account, <code>student:username</code>.</p>
+
+<p>Example connecting using Cyberduck:</p>
+
+<p><img src="/metadata-documentation/static/sftp_cyberduck.png" alt="" width="70%" height="70%"/></p>
+
+<p>Example connecting using WinSCP:</p>
+
+<p><img src="/metadata-documentation/static/sftp_winscp.png" alt="" /></p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+
 
       </div>
     </div>
@@ -885,6 +976,7 @@ each page, and create a pull request when done.</p>
             
                 
                     
+                    
                 
                 
 
@@ -892,6 +984,114 @@ each page, and create a pull request when done.</p>
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -941,107 +1141,6 @@ each page, and create a pull request when done.</p>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1084,8 +1183,10 @@ each page, and create a pull request when done.</p>
 
 
         
+            <a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/metadata-overview/" title="Metadata Overview"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/pearg_documentation/getting-started/" title="Getting Started" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/mediaflux-explorer/" title="Mediaflux Explorer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

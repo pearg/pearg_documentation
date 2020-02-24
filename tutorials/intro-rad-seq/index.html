@@ -398,6 +398,9 @@
 
             
           
+             
+            
+          
         
         </ul>
               
@@ -692,13 +695,7 @@
 </ul></li>
 <li><a href="#demultiplexing">Demultiplexing</a>
 <ul>
-<li><a href="#examine-the-data">Examine the data</a>
-<ul>
-<li>
-<ul>
-<li><a href="#todo-insert-image-here">TODO: Insert image here</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#examine-the-data">Examine the data</a></li>
 <li><a href="#run-process-radtags">Run process_radtags</a></li>
 </ul></li>
 <li><a href="#alignment">Alignment</a>
@@ -717,7 +714,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#todo-insert-image-here-1">TODO: Insert image here</a></li>
+<li><a href="#todo-write-concluding-remarks">TODO: write concluding remarks</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -968,7 +965,7 @@ GGIGGIGGIGIGIGGIIIIIIIIIIGIIGIGIIIGIIGGGIIGGGGGAGGGIIIIIIIIIIGIIIIIIIIIGIIIIIIII
 
 <p>These two reads are both sequenced from the same DNA fragment.</p>
 
-<h5 id="todo-insert-image-here">TODO: Insert image here</h5>
+<p><img src="/tutorials/media/rad_fig1.png" alt="" /></p>
 
 <p><strong>Question:</strong><br />
 For a specific set of paired-end reads, the p1 barcode is observed to be <code>ATGCTA</code> and the p2 barcode is observed to be <code>GTACTG</code>. What sample does the read belong to?<br />
@@ -1215,7 +1212,11 @@ vcftools \
 
 <p>In R, this code generates a simple PCA plot:</p>
 
-<pre><code class="language-r"># Load 012 files (change the paths)
+<pre><code class="language-r"># Load libraries
+library(ggplot2)
+library(stringr)
+
+# Load 012 files (change the paths)
 gt_matrix &lt;- read.table(file=&quot;/path/to/rad_seq_tutorial/results/results_2020-02-01/populations/pop_01/populations.snps.012&quot;,
                         row.names = 1, header=FALSE)
 sample_names &lt;- read.table(file=&quot;/path/to/rad_seq_tutorial/results/results_2020-02-01/populations/pop_01/populations.snps.012.indv&quot;,
@@ -1238,12 +1239,14 @@ ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
   geom_point()
 </code></pre>
 
-<h5 id="todo-insert-image-here-1">TODO: Insert image here</h5>
+<p><img src="/tutorials/media/rad_fig2.png" alt="" /></p>
 
 <p><strong>Question:</strong><br />
 There are two samples from unknown origin. After looking at the PCA plot, what country do you think they originate from?<br />
 <strong>Answer:</strong><br />
 <span class="spoiler2">The two unknown samples both cluster more closely to the Malaysian samples, so it is likely they are from Malaysia.</span></p>
+
+<h5 id="todo-write-concluding-remarks">TODO: write concluding remarks</h5>
 
 
 <footer class=" footline" >
@@ -1484,6 +1487,11 @@ There are two samples from unknown origin. After looking at the PCA plot, what c
                     
 
                     
+            
+        
+                    
+                        
+            
             
         
                     
