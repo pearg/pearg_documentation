@@ -42,3 +42,9 @@ set metadata and upload your data.
 
 - Creating an archive containing your sequencing library data
 - Uploading to Mediaflux using Mediaflux Desktop to `data/`
+
+-----
+
+[5. Using sFTP to access Mediaflux]({{%ref "mediaflux-sftp.md"%}})
+
+- Using sFTP to upload/download files from Mediaflux
