@@ -98,9 +98,9 @@ and if you have a student account, `student:username`.
 
 Example connecting using Cyberduck:
 
-<img src="/metadata-documentation/mediaflux-sftp_files/sftp_cyberduck.png" alt="" width="70%" height="70%"/>
+<img src="/pearg_documentation/metadata-documentation/mediaflux-sftp_files/sftp_cyberduck.png" alt="" width="70%" height="70%"/>
 
 Example connecting using WinSCP:
 
-![](/metadata-documentation/mediaflux-sftp_files/sftp_winscp.png)
+![](/pearg_documentation/metadata-documentation/mediaflux-sftp_files/sftp_winscp.png)
 

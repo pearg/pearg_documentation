@@ -245,7 +245,7 @@ The next four bases are `AATT` which corresponds to the restriction site were ml
 
 These two reads are both sequenced from the same DNA fragment.
 
-![](/tutorials/introduction-to-rad-seq_files/rad_fig1.png)
+![](/pearg_documentation/tutorials/introduction-to-rad-seq_files/rad_fig1.png)
 
 
 **Question:**  
@@ -531,7 +531,7 @@ ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
   geom_point()
 ```
 
-![](/tutorials/introduction-to-rad-seq_files/rad_fig2.png)
+![](/pearg_documentation/tutorials/introduction-to-rad-seq_files/rad_fig2.png)
 
 
 **Question:**  
