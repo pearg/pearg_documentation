@@ -245,7 +245,7 @@ The next four bases are `AATT` which corresponds to the restriction site were ml
 
 These two reads are both sequenced from the same DNA fragment.
 
-![](/tutorials/media/rad_fig1.png)
+![](/tutorials/introduction-to-rad-seq_files/rad_fig1.png)
 
 
 **Question:**  
@@ -531,8 +531,8 @@ ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
   geom_point()
 ```
 
+![](/tutorials/introduction-to-rad-seq_files/rad_fig2.png)
 
-![](/tutorials/media/rad_fig2.png)
 
 **Question:**  
 There are two samples from unknown origin. After looking at the PCA plot, what country do you think they originate from?  
