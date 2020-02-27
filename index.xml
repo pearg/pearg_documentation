@@ -150,7 +150,7 @@ To use the pipeline, it is highly recommended you have some knowledge on how to 
       
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</guid>
       <description>Enter the password to view the interactive map of the sample data in the Hoffmann Lab Mediaflux project.
-Enter    &#34;use strict&#34;; function loadPage(pwd) { var hash = pwd; hash = Sha1.hash(pwd); var url = &#34;http://45.113.232.220/secret/&#34; + hash + &#34;/sample_map.html&#34;; window.open(url, &#39;_blank&#39;); } $(&#34;#loginbutton&#34;).on(&#34;click&#34;, function() { loadPage($(&#34;#password&#34;).val()); }); $(&#34;#password&#34;).keypress(function(e) { if (e.which == 13) { loadPage($(&#34;#password&#34;).val()); } }); $(&#34;#password&#34;).focus(); $(document).ready(function() { $(&#34;#loginbutton&#34;).hover(function() { $(this).css(&#34;background-color&#34;, &#34;#2E53A5&#34;); }, function() { $(this).</description>
+Enter    &#34;use strict&#34;; function loadPage(pwd) { var hash = pwd; hash = Sha1.hash(pwd); var url = &#34;http://45.113.235.8/secret/&#34; + hash + &#34;/sample_map.html&#34;; window.open(url, &#39;_blank&#39;); } $(&#34;#loginbutton&#34;).on(&#34;click&#34;, function() { loadPage($(&#34;#password&#34;).val()); }); $(&#34;#password&#34;).keypress(function(e) { if (e.which == 13) { loadPage($(&#34;#password&#34;).val()); } }); $(&#34;#password&#34;).focus(); $(document).ready(function() { $(&#34;#loginbutton&#34;).hover(function() { $(this).css(&#34;background-color&#34;, &#34;#2E53A5&#34;); }, function() { $(this).</description>
     </item>
     
     <item>
@@ -179,9 +179,9 @@ For help related to Mediaflux and metadata, email Tom Schmidt (tom.schmidt@unime
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/</guid>
-      <description>Command-line sFTP If you want to transfer files between the PEARG servers (e.g. mozzie) and Mediaflux, the easiest way to do this is to use sFTP on the command line.
+      <description>Command line sFTP If you want to transfer files between the PEARG servers (e.g. mozzie) and Mediaflux, the easiest way to do this is to use sFTP on the command line.
 If you&amp;rsquo;re transferring large files, I recommend you use sFTP in a screen session so you can detach it and leave it running in the background.
-Downloading files from mediaflux Let&amp;rsquo;s say I&amp;rsquo;m interested in a particular tarball which is located at /Volumes/proj-hoffmann_data-1128.</description>
+Downloading files from Mediaflux Let&amp;rsquo;s say I&amp;rsquo;m interested in a particular tarball which is located at /Volumes/proj-hoffmann_data-1128.</description>
     </item>
     
     <item>
