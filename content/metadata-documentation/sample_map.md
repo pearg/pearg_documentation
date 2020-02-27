@@ -38,7 +38,7 @@ password is incorrect, just lead to a 'Page Not found' page.
 	function loadPage(pwd) {
 		var hash = pwd;
 		hash = Sha1.hash(pwd);
-		var url = "http://45.113.232.220/secret/" + hash + "/sample_map.html";
+		var url = "http://45.113.235.8/secret/" + hash + "/sample_map.html";
     window.open(url, '_blank');
 	}
 	

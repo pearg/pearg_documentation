@@ -12,7 +12,7 @@ description: 'Using sFTP to upload and download files from Mediaflux'
 
 -----
 
-### Command-line sFTP
+### Command line sFTP
 
 If you want to transfer files between the PEARG servers (e.g. mozzie) and
 Mediaflux, the easiest way to do this is to use sFTP on the command line.
@@ -20,7 +20,7 @@ Mediaflux, the easiest way to do this is to use sFTP on the command line.
 If you're transferring large files, I recommend you use sFTP in a screen
 session so you can detach it and leave it running in the background.
 
-#### Downloading files from mediaflux
+#### Downloading files from Mediaflux
 
 Let's say I'm interested in a particular tarball which is located at   `/Volumes/proj-hoffmann_data-1128.4.49/data/QA_library3_DPS_INC_KL.tar`  
 in Mediaflux and want to download it to my current working directory.

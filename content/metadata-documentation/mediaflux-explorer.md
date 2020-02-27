@@ -10,7 +10,7 @@ description: 'How to use Mediaflux Explorer.'
 ---
 
 The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or
-via your web browser with [Mediaflux Desktop](https://mediaflux.vicnode.org.au/desktop/).
+via your web browser with [Mediaflux Desktop](https://mediaflux.researchsoftware.unimelb.edu.au/desktop/).
 These clients allow you to view your data, transfer data, and edit metadata.
 
 The Mediaflux Explorer Java applet should be used when transferring data and is
@@ -20,7 +20,7 @@ via the browser is unreliable and slow, therefore Mediaflux Desktop should not b
 used for uploading.
 
 Assuming you have your data stored on one of our servers
-([`mozzie`](http://45.113.232.220) or [`rescue`](http://45.113.233.108/)) open 
+([`mozzie`](http://45.113.235.8) or [`rescue`](http://45.113.233.108/)) open 
 your preferred internet browser and enter the IP address of the server into
 the navigation bar.
 
@@ -40,15 +40,13 @@ including a 'Mediaflux' icon. Double click it to launch Mediaflux Explorer.
 
 ![](../static/lubuntu_desktop.png)
 
-Select the HTTPS protocol in the dropdown menu and enter `mediaflux.vicnode.org.au`
+Select the HTTPS protocol in the dropdown menu and enter 
+`mediaflux.researchsoftware.unimelb.edu.au`
 as the host. The port should automatically change to `443`.
 
-In the 'Domain' field enter `aaf` and then move to the next field.
-A dropdown menu should then appear below the 'Domain' field (if it doesn't show
-up immediately, wait a few seconds). Select `The University of Melbourne` from
-the listed institutions.
-
-Finally, enter your unimelb username (not your email) and password to sign in.
+In the 'Domain' field, enter `unimelb` if you have a unimelb staff account or
+`student` if you have a unimelb student account. Then enter your unimelb
+username (not your email) and password to sign in.
 
 <img src="../static/mediaflux_login.png" width=80%>
 
