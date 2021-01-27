@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="Best practises for working with Stacks databases.">
+    <meta name="description" content="">
 
 
-    <title>Stacks Databases :: PEARG Documentation</title>
+    <title>Adding individuals to Mediaflux via Excel spreadsheet :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 </script>
   </head>
-  <body class="" data-url="/pearg_documentation/usage-documentation/stacks-databases/">
+  <body class="" data-url="/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/">
     <nav id="sidebar" class="">
 
 
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
-        
+        parent
         
         parent
         ">
@@ -419,7 +419,7 @@
   
     
     <li data-nav-id="/pearg_documentation/usage-documentation/" class="dd-item 
-        parent
+        
         
         parent
         ">
@@ -493,7 +493,7 @@
   
     
       <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
-     active
+     
       ">
         <a href="/pearg_documentation/usage-documentation/stacks-databases/">
         <span>Stacks Databases</span> 
@@ -650,7 +650,7 @@
               
               
             <div id="top-github-link">
-              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/usage-documentation/stacks-databases.md" target="blank">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/mediaflux_individual_xlsx_import.md" target="blank">
                 <i class="fa fa-code-fork"></i>
                 Edit page
               </a>
@@ -674,7 +674,7 @@
 
 
 
- <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/usage-documentation/'>Usage Documentation</a> > Stacks Databases
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/metadata-documentation/'>Metadata Documentation</a> > Adding individuals to Mediaflux via Excel spreadsheet
 
  
 
@@ -685,28 +685,7 @@
             </div>
             <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#database-management">Database management</a>
-<ul>
-<li><a href="#naming-your-databases">Naming your databases</a></li>
-<li><a href="#removing-databases">Removing databases</a></li>
-<li><a href="#backing-up-databases">Backing up databases</a></li>
-<li><a href="#restoring-a-database-from-backup">Restoring a database from backup</a></li>
-<li><a href="#running-stacks-on-clusters-which-don-t-allow-databases">Running Stacks on clusters which don&rsquo;t allow databases</a>
-<ul>
-<li><a href="#on-barcoo">On barcoo</a></li>
-<li><a href="#transfer-your-data">Transfer your data</a></li>
-<li><a href="#load-the-catalog-with-load-radtags-pl">Load the catalog with load_radtags.pl</a></li>
-<li><a href="#index-the-catalog-with-index-radtags-pl">Index the catalog with index_radtags.pl</a></li>
-<li><a href="#view-your-data-in-the-web-interface">View your data in the web interface</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -715,161 +694,31 @@
         
         <div id="body-inner">
           
-            <h1>Stacks Databases</h1>
+            <h1>Adding individuals to Mediaflux via Excel spreadsheet</h1>
           
 
 
 
 
+<p>If you prefer, you can choose to add the sample individuals component of your
+sequencing metadata via Excel spreadsheet instead of using the Mediaflux GUI.</p>
 
+<p>This step requires a few steps:</p>
 
-<h2 id="database-management">Database management</h2>
+<ol>
+<li><p>Download the template for individual samples
+<a href="https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/mediaflux_individuals_template.xlsx">here</a>.</p></li>
 
-<p>Databases are usually large in size and we have limited space on our clusters.
-To remedy this, please remove any databases you don&rsquo;t need. If you have a
-database older than 3 months in the system, you will be asked to clean up
-your old databases.</p>
+<li><p>Fill in the Excel spreadsheet with the information from your sequencing library.</p></li>
 
-<h3 id="naming-your-databases">Naming your databases</h3>
+<li><p>Send the spreadsheet to Jessica at <a href="mailto:jchung@unimelb.edu.au">jchung@unimelb.edu.au</a></p></li>
 
-<p>Your database name must end with <code>_radtags</code> to show up in the web interface.</p>
+<li><p>There might be some back and forth communication in order for the data to be validated.</p></li>
 
-<p>Make sure to include your name and the date your database was created in your
-database name. Some examples of good database names are:</p>
+<li><p>Jessica will import the individuals to Mediaflux to a temporary staged directory. You&rsquo;ll then be asked to confirm that the files look correct.</p></li>
 
-<pre><code class="language-text">alice_mozzie_20170304_radtags
-bob_possum_filtered_20170701_radtags
-carol_AaegL2_males_20170122_radtags
-</code></pre>
-
-<div class="notices warning" ><p>If your name and a creation date is not included in your database name, your
-database may be deleted without warning.</p>
-</div>
-
-
-<h3 id="removing-databases">Removing databases</h3>
-
-<p>Delete databases by using the SQL <code>DROP DATABASE</code> statement.</p>
-
-<pre><code class="language-bash">mysql -e &quot;DROP DATABASE jess_20170815_radtags&quot;
-</code></pre>
-
-<h3 id="backing-up-databases">Backing up databases</h3>
-
-<p>You can also backup your database with the <code>mysqldump</code> command. The output is
-in plain-text, so use <code>gzip</code> to compress the file to save space.</p>
-
-<pre><code class="language-bash">mysqldump --databases jess_20170815_radtags \
-    | gzip \
-    &gt; ~/my_backups/jess_20170815_radtags.sql.gz
-</code></pre>
-
-<h3 id="restoring-a-database-from-backup">Restoring a database from backup</h3>
-
-<p>You can restore your saved databases by importing your file into MySQL.</p>
-
-<pre><code class="language-bash"># Uncompress your file
-gunzip jess_20170815_radtags.sql.gz
-
-# Import from file
-mysql jess_20170815_radtags &lt; ~/my_backups/jess_20170815_radtags.sql
-</code></pre>
-
-<hr />
-
-<h3 id="running-stacks-on-clusters-which-don-t-allow-databases">Running Stacks on clusters which don&rsquo;t allow databases</h3>
-
-<p>If you&rsquo;re using the barcoo cluster for your analysis, you won&rsquo;t be able to
-load your catalog to a database on the cluster. This means you&rsquo;ll need to
-do your computation (on barcoo) separately to a machine that alows database
-access.</p>
-
-<h4 id="on-barcoo">On barcoo</h4>
-
-<p>If you&rsquo;re using <code>ref_map.pl</code> or <code>denovo_map.pl</code> you can use the <code>-S</code> option
-to disable all database interaction. The output from this step should be
-many tsv files.</p>
-
-<p>Example output:</p>
-
-<pre><code class="language-text">batch_1.catalog.alleles.tsv
-batch_1.catalog.snps.tsv
-batch_1.catalog.tags.tsv
-batch_1.haplotypes.tsv
-batch_1.hapstats.tsv
-batch_1.markers.tsv
-batch_1.populations.log
-batch_1.sumstats_summary.tsv
-batch_1.sumstats.tsv
-batch_1.vcf
-mozzie-1.alleles.tsv
-mozzie-1.matches.tsv
-mozzie-1.models.tsv
-mozzie-1.snps.tsv
-mozzie-1.tags.tsv
-mozzie-2.alleles.tsv
-mozzie-2.matches.tsv
-mozzie-2.models.tsv
-mozzie-2.snps.tsv
-mozzie-2.tags.tsv
-...
-</code></pre>
-
-<h4 id="transfer-your-data">Transfer your data</h4>
-
-<p>You&rsquo;ll need to transfer your output files from <code>ref_map.pl</code> or <code>denovo_map.pl</code>
-to another computer which you have permission to create databases on. Since
-tsv files are plain-text, it&rsquo;s good practice to compress them before transferring.</p>
-
-<p>You can use a graphical FTP client or the command line to transfer files.
-Here we&rsquo;ll use <code>rsync</code> with the <code>--compress</code> option to do transfer the files.</p>
-
-<p>On barcoo, in an interactive slurm session, you can transfer the directory
-called <code>catalog</code> with the following command:</p>
-
-<pre><code class="language-sh">rsync -av --compress --update --progress \
-    catalog \
-    &lt;username&gt;@&lt;IP-address&gt;:&lt;path_to_my_project_directory&gt;
-</code></pre>
-
-<p>replacing <code>&lt;username&gt;</code>, <code>&lt;IP-address&gt;</code>, and <code>&lt;path_to_my_project_directory&gt;</code>
-with your relevant information.</p>
-
-<h4 id="load-the-catalog-with-load-radtags-pl">Load the catalog with load_radtags.pl</h4>
-
-<p>On your machine which you have permission to create databases, load your
-catalog with <a href="http://catchenlab.life.illinois.edu/stacks/comp/load_radtags.php"><code>load_radtags.pl</code></a>.</p>
-
-<pre><code class="language-bash"># Create an empty database
-mysql -e &quot;CREATE DATABASE jess_20170815_radtags&quot;
-
-# Load template tables
-mysql jess_20170815_radtags &lt; /mnt/galaxy/gvl/software/stacks/share/stacks/sql/stacks.sql
-
-# Load RAD tags
-load_radtags.pl \
-    -D jess_20170815_radtags \
-    -p catalog \
-    -b 1
-    -B -e &quot;Description here&quot; \
-    -c
-</code></pre>
-
-<h4 id="index-the-catalog-with-index-radtags-pl">Index the catalog with index_radtags.pl</h4>
-
-<p>You&rsquo;ll then need to create indices for your database. Use <code>-c</code> to generate
-the catalog index and <code>-d</code> to generate the unique tags index.</p>
-
-<pre><code class="language-bash">index_radtags.pl \
-    -D jess_20170815_radtags \
-    -c \
-    -t
-</code></pre>
-
-<h4 id="view-your-data-in-the-web-interface">View your data in the web interface</h4>
-
-<p>With your web browser, go to the server you have your data on, and navigate
-to the Stacks page. Click on your database name to view it.</p>
+<li><p>After confirmation, the individuals will be moved to the proper <code>individuals/</code> directory.</p></li>
+</ol>
 
 
 <footer class=" footline" >
@@ -1041,6 +890,7 @@ to the Stacks page. Click on your database name to view it.</p>
             
                 
                     
+                    
                 
                 
 
@@ -1048,6 +898,119 @@ to the Stacks page. Click on your database name to view it.</p>
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1097,120 +1060,6 @@ to the Stacks page. Click on your database name to view it.</p>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1253,10 +1102,10 @@ to the Stacks page. Click on your database name to view it.</p>
 
 
         
-            <a class="nav nav-prev" href="/pearg_documentation/usage-documentation/installing-software/" title="Installing Software"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/metadata-overview/" title="Metadata Overview"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/rad-seq-pipeline/" title="Using the RAD-seq Pipeline" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/mediaflux-explorer/" title="Mediaflux Explorer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

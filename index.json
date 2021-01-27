@@ -46,7 +46,7 @@
 	"title": "Using Mediaflux",
 	"tags": [],
 	"description": "How to upload your files into Mediaflux and set metadata.",
-	"content": "The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.\n1. Mediaflux Introduction\n How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets\n Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  3. Adding Libraries to Assets\n Creating assets in libraries/ Setting library metadata  4. Uploading Libraries to Mediaflux\n Creating an archive containing your sequencing library data Uploading to Mediaflux using Mediaflux Desktop to data/  5. Using sFTP to access Mediaflux\n Using sFTP to upload/download files from Mediaflux  "
+	"content": "The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.\n1. Mediaflux Introduction\n How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets\n Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  Alternatively, you can import individual assets using an Excel Spreadsheet\n3. Adding Libraries to Assets\n Creating assets in libraries/ Setting library metadata  4. Uploading Libraries to Mediaflux\n Creating an archive containing your sequencing library data Uploading to Mediaflux using Mediaflux Desktop to data/  5. Using sFTP to access Mediaflux\n Using sFTP to upload/download files from Mediaflux  "
 },
 {
 	"uri": "https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/",
@@ -96,6 +96,13 @@
 	"tags": [],
 	"description": "Interactive map of sample data in Mediaflux.",
 	"content": "Enter the password to view the interactive map of the sample data in the Hoffmann Lab Mediaflux project.\nEnter    \"use strict\"; function loadPage(pwd) { var hash = pwd; hash = Sha1.hash(pwd); var url = \"http://45.113.235.8/secret/\" + hash + \"/sample_map.html\"; window.open(url, '_blank'); } $(\"#loginbutton\").on(\"click\", function() { loadPage($(\"#password\").val()); }); $(\"#password\").keypress(function(e) { if (e.which == 13) { loadPage($(\"#password\").val()); } }); $(\"#password\").focus(); $(document).ready(function() { $(\"#loginbutton\").hover(function() { $(this).css(\"background-color\", \"#2E53A5\"); }, function() { $(this).css(\"background-color\", \"#008CBA\"); }); });  Last updated 2018-09-07.\n"
+},
+{
+	"uri": "https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/",
+	"title": "Adding individuals to Mediaflux via Excel spreadsheet",
+	"tags": [],
+	"description": "",
+	"content": "If you prefer, you can choose to add the sample individuals component of your sequencing metadata via Excel spreadsheet instead of using the Mediaflux GUI.\nThis step requires a few steps:\n Download the template for individual samples here.\n Fill in the Excel spreadsheet with the information from your sequencing library.\n Send the spreadsheet to Jessica at jchung@unimelb.edu.au\n There might be some back and forth communication in order for the data to be validated.\n Jessica will import the individuals to Mediaflux to a temporary staged directory. You\u0026rsquo;ll then be asked to confirm that the files look correct.\n After confirmation, the individuals will be moved to the proper individuals/ directory.\n  "
 },
 {
 	"uri": "https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/",

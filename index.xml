@@ -75,8 +75,7 @@ Mosquito Server (mozzie) IP address: 45.</description>
       <description>The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.
 1. Mediaflux Introduction
  How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets
- Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  3. Adding Libraries to Assets
- Creating assets in libraries/ Setting library metadata  4.</description>
+ Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  Alternatively, you can import individual assets using an Excel Spreadsheet</description>
     </item>
     
     <item>
@@ -151,6 +150,20 @@ To use the pipeline, it is highly recommended you have some knowledge on how to 
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</guid>
       <description>Enter the password to view the interactive map of the sample data in the Hoffmann Lab Mediaflux project.
 Enter    &#34;use strict&#34;; function loadPage(pwd) { var hash = pwd; hash = Sha1.hash(pwd); var url = &#34;http://45.113.235.8/secret/&#34; + hash + &#34;/sample_map.html&#34;; window.open(url, &#39;_blank&#39;); } $(&#34;#loginbutton&#34;).on(&#34;click&#34;, function() { loadPage($(&#34;#password&#34;).val()); }); $(&#34;#password&#34;).keypress(function(e) { if (e.which == 13) { loadPage($(&#34;#password&#34;).val()); } }); $(&#34;#password&#34;).focus(); $(document).ready(function() { $(&#34;#loginbutton&#34;).hover(function() { $(this).css(&#34;background-color&#34;, &#34;#2E53A5&#34;); }, function() { $(this).</description>
+    </item>
+    
+    <item>
+      <title>Adding individuals to Mediaflux via Excel spreadsheet</title>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</guid>
+      <description>If you prefer, you can choose to add the sample individuals component of your sequencing metadata via Excel spreadsheet instead of using the Mediaflux GUI.
+This step requires a few steps:
+ Download the template for individual samples here.
+ Fill in the Excel spreadsheet with the information from your sequencing library.
+ Send the spreadsheet to Jessica at jchung@unimelb.edu.au
+ There might be some back and forth communication in order for the data to be validated.</description>
     </item>
     
     <item>
