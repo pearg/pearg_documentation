@@ -29,6 +29,8 @@ set metadata and upload your data.
 - Modifying and deleting existing assets
 - Using metadata templates
 
+[Alternatively, you can import individual assets using an Excel Spreadsheet]({{%ref "mediaflux_individual_xlsx_import.md"%}})
+
 -----
 
 [3. Adding Libraries to Assets](https://swift.rc.nectar.org.au:8888/v1/AUTH_0edd079661d54bc0a0e4fde3b4892362/mediaflux_docs/3.%20Adding_libraries_assets.pdf)
