@@ -63,7 +63,19 @@ Check your project directory At absolute minimum, please check:</description>
 Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
 When using these servers you should follow the best practices described in these documents.
 Each server has 10 - 30 TB of storage space which is not backed up. It is your own responsibility to have backups of your important data.
-Mosquito Server (mozzie) IP address: 45.</description>
+Mosquito Server (mozzie) IP address: 115.</description>
+    </item>
+    
+    <item>
+      <title>Using VNC</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</link>
+      <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</guid>
+      <description>You can also connect to the mozzie or rescue server using VNC, a graphical desktop-sharing system, from your internet browser.
+Setup You&amp;rsquo;ll only need to follow these setup instructions once.
+First, SSH into the server and create a password using vncpasswd. Note that any password over 8 character is automatically truncated to a length of 8.
+vncpasswd  Follow the prompts to setup and confirm your password. You don&amp;rsquo;t need to setup a view-only password.</description>
     </item>
     
     <item>

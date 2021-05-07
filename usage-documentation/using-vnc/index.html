@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="Best practices for naming files.">
+    <meta name="description" content="How to connect to the server using VNC">
 
 
-    <title>Naming Files :: PEARG Documentation</title>
+    <title>Using VNC :: PEARG Documentation</title>
     <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
     <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
     <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
 </script>
   </head>
-  <body class="" data-url="/pearg_documentation/best-practices/naming-files/">
+  <body class="" data-url="/pearg_documentation/usage-documentation/using-vnc/">
     <nav id="sidebar" class="">
 
 
@@ -191,7 +191,7 @@
   
     
     <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
-        parent
+        
         
         parent
         ">
@@ -245,7 +245,7 @@
   
     
       <li data-nav-id="/pearg_documentation/best-practices/naming-files/" class="dd-item
-     active
+     
       ">
         <a href="/pearg_documentation/best-practices/naming-files/">
         <span>Naming Files</span> 
@@ -419,7 +419,7 @@
   
     
     <li data-nav-id="/pearg_documentation/usage-documentation/" class="dd-item 
-        
+        parent
         
         parent
         ">
@@ -473,7 +473,7 @@
   
     
       <li data-nav-id="/pearg_documentation/usage-documentation/using-vnc/" class="dd-item
-     
+     active
       ">
         <a href="/pearg_documentation/usage-documentation/using-vnc/">
         <span>Using VNC</span> 
@@ -670,7 +670,7 @@
               
               
             <div id="top-github-link">
-              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/best-practices/naming-files.md" target="blank">
+              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/usage-documentation/using-vnc.md" target="blank">
                 <i class="fa fa-code-fork"></i>
                 Edit page
               </a>
@@ -694,7 +694,7 @@
 
 
 
- <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/best-practices/'>Best Practices</a> > Naming Files
+ <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/usage-documentation/'>Usage Documentation</a> > Using VNC
 
  
 
@@ -709,12 +709,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#be-descriptive">Be descriptive</a></li>
-<li><a href="#be-consistent">Be consistent</a></li>
-<li><a href="#allowed-characters">Allowed characters</a></li>
-<li><a href="#avoid-using-spaces">Avoid using spaces</a></li>
-<li><a href="#yyyy-mm-dd">YYYY-MM-DD</a></li>
-<li><a href="#lowercase-and-uppercase">Lowercase and uppercase</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#running-vncserver">Running vncserver</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -726,7 +722,7 @@
         
         <div id="body-inner">
           
-            <h1>Naming Files</h1>
+            <h1>Using VNC</h1>
           
 
 
@@ -734,107 +730,96 @@
 
 
 
-<p>This document describes best practices for naming files.</p>
+<p>You can also connect to the <code>mozzie</code> or <code>rescue</code> server using VNC, a graphical
+desktop-sharing system, from your internet browser.</p>
 
-<p>I highly recommend you read this Data Carpentary document on
-<a href="https://butterflyology.github.io/rr-organization1/01-file-naming/">file naming</a>.</p>
+<hr />
 
-<h2 id="be-descriptive">Be descriptive</h2>
+<h2 id="setup">Setup</h2>
 
-<p>Good filenames should be precise. For example, a raw FASTQ filename received
-from AGRF may look something like this:</p>
+<p>You&rsquo;ll only need to follow these setup instructions once.</p>
 
-<pre><code class="language-text">X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz
+<p>First, SSH into the server and create a password using <code>vncpasswd</code>. Note that
+any password over 8 character is automatically truncated to a length of 8.</p>
+
+<pre><code class="language-bash">vncpasswd
 </code></pre>
 
-<p>The filename contains a lot of information which is descriptive to the user and
-can be easily extracted programatically.</p>
+<p>Follow the prompts to setup and confirm your password. You don&rsquo;t need to setup
+a view-only password.</p>
 
-<p>Just by looking at the filename and knowing what each field represents, we have
-the following information:</p>
-
-<ul>
-<li>Sample name: <code>X54321-1</code></li>
-<li>Flowcell ID: <code>AB1XXXXXX</code></li>
-<li>Index: <code>GAATTCGT-ATAGAGGC</code></li>
-<li>Lane: <code>L007</code></li>
-<li>Forward/Reverse: <code>R2</code></li>
-<li>File format: <code>fastq</code></li>
-<li>Compression: <code>gz</code></li>
-</ul>
-
-<p>Storing metadata in this fashion allows us to avoid mixing up samples and
-losing expensive sequencing data due to lost information.</p>
-
-<h2 id="be-consistent">Be consistent</h2>
-
-<p>If you&rsquo;re storing metadata in filenames, it&rsquo;s good practice to be consistent
-with what each field represents. Being consisent also means filenames are
-sorted in a logical manner when listed alphabetically.</p>
-
-<p>Good consistency:</p>
-
-<pre><code class="language-text">2017-02-07_cg_meeting_notes_with_alice.md
-2017-02-14_cg_meeting_notes_with_bob.md
-2017-02-21_cg_meeting_notes_with_alice.md
-2017-02-28_cg_meeting_notes_with_carol.md
+<pre><code># Using password file /mnt/galaxy/home/jess/.vnc/passwd
+# VNC directory /mnt/galaxy/home/jess/.vnc does not exist, creating.
+# Password:
+# Warning: password truncated to the length of 8.
+# Verify:
+# Would you like to enter a view-only password (y/n)? n
 </code></pre>
 
-<p>Bad consistency:</p>
+<p>If you ever want to change your password, you can use the <code>vncpasswd</code> utility
+again.</p>
 
-<pre><code class="language-text">14.02.17_bob_cg_meeting.md
-21-02-alice-meeting-cg.md
-carol_cg_meeting_notes_2017-02-28.md
-cg_meeting_with_alice_2017-02-07.md
+<p>Then copy the <code>xstartup</code> script to your home <code>.vnc</code> directory.</p>
+
+<pre><code class="language-bash">cp /mnt/galaxy/shared/scripts/xstartup ~/.vnc/
 </code></pre>
 
-<h2 id="allowed-characters">Allowed characters</h2>
+<hr />
 
-<p>Avoid special characters. The only characters you should be using in your
-filenames are the alphanumeric characters (<code>A-Z</code>, <code>a-z</code>, <code>0-9</code>), underscores
-(<code>_</code>), periods (<code>.</code>), and dashes (<code>-</code>). Always start your filename with an
-alphanumeric character.</p>
+<h2 id="running-vncserver">Running vncserver</h2>
 
-<h2 id="avoid-using-spaces">Avoid using spaces</h2>
+<p>Each time you want to use VNC, you&rsquo;ll need to start and stop your personal VNC
+server.</p>
 
-<p>Using spaces in filenames makes things difficult when working with UNIX.
-Therefore, use underscores <code>_</code> and dashes <code>-</code> to separate words.</p>
+<p>To start the server, use the <code>vncserver</code> command.</p>
 
-<p>For example:</p>
-
-<pre><code class="language-text">sample-data-from-bob.txt
-2017-03-03_raw_data_ID_A721BW.tar.gz
+<pre><code class="language-bash">vncserver
 </code></pre>
 
-<p>You can also use periods <code>.</code> for additional metadata information.</p>
+<p>You&rsquo;ll get something like the following output printed out to the console:</p>
 
-<pre><code class="language-text">sample-1.AaegL3.bam
-sample-1.AaegL3.sorted.bam
-sample-1.AaegL3.sorted.filtered.bam
+<p><img src="/pearg_documentation/usage-documentation/static/vncserver_session.png" alt="" width="90%" height="90%"/></p>
+
+<p>Keep note of the session number that is on the first line. In the example above,
+the session number is 3.</p>
+
+<p>In your internet browser, head to your server&rsquo;s homepage
+(<a href="http://115.146.86.169/">mozzie</a>,
+<a href="http://115.146.86.14">rescue</a>), and
+click on the corresponding link under the VNC heading.</p>
+
+<p><img src="/pearg_documentation/usage-documentation/static/vnc_session_links.png" alt="" width="70%" height="70%"/></p>
+
+<p>(If your session number is greater than the number of sessions available
+on the homepage, please contact Jess at
+<a href="mailto:jchung@unimelb.edu.au">jchung@unimelb.edu.au</a>.)</p>
+
+<p><img src="/pearg_documentation/usage-documentation/static/novnc.png" alt="" width="70%" height="70%"/></p>
+
+<p>Click the connect button and type in your VNC password.</p>
+
+<p>You should now be connected to the server via VNC.</p>
+
+<p><img src="/pearg_documentation/usage-documentation/static/novnc_xfce.png" alt="" width="70%" height="70%"/></p>
+
+<p>When you&rsquo;re done using VNC, stop the VNC server by with <code>vncserver -kill</code> and by specifying the session number like so:</p>
+
+<pre><code class="language-bash">vncserver -kill :3
 </code></pre>
 
-<h2 id="yyyy-mm-dd">YYYY-MM-DD</h2>
+<p>Please shut down your vncserver when you&rsquo;re finished with it since there are
+a limited number of sessions that can be used simultaneously.</p>
 
-<p>The <a href="https://xkcd.com/1179/">correct</a> way to write numeric dates is <code>YYYY-MM-DD</code>,
-(i.e. ISO 8601).</p>
+<p>Note that you can only have one instance of vncsesrver that works. Multiple
+instances will result in a blank grey screen.</p>
 
-<p>Good names:</p>
+<p>If you ever forget the session number of your vncserver session, or want to
+check how many sessions you have running, you can check your <code>~/.vnc</code> directory
+for files ending with <code>*.pid</code>. Each running session will create a <code>.pid</code> file
+that has the session number in the filename (e.g. <code>mozzie:3.pid</code>).</p>
 
-<pre><code class="language-text">2017-08-01_results/
-2016-04-22_meeting_notes.txt
-2018-11-29_raw-data-from-john-doe.tar.gz
-</code></pre>
-
-<h2 id="lowercase-and-uppercase">Lowercase and uppercase</h2>
-
-<p>Using purely lowecase letters, or a mixture of lower and uppercase letters
-in filenames are both ok. It&rsquo;s a matter of personal preference.</p>
-
-<p>Avoid having files that differ only by case in the same directory. e.g.</p>
-
-<pre><code class="language-text">notes.txt
-Notes.txt
-</code></pre>
+<p>If you need any help getting VNC to work, or have any questions, don&rsquo;t hesitate
+to contact Jess.</p>
 
 
 <footer class=" footline" >
@@ -942,7 +927,6 @@ Notes.txt
             
                 
                     
-                    
                 
                 
 
@@ -955,26 +939,6 @@ Notes.txt
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -992,8 +956,21 @@ Notes.txt
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1104,6 +1081,7 @@ Notes.txt
             
                 
                     
+                    
                 
                 
 
@@ -1111,6 +1089,61 @@ Notes.txt
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1144,54 +1177,6 @@ Notes.txt
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1234,10 +1219,10 @@ Notes.txt
 
 
         
-            <a class="nav nav-prev" href="/pearg_documentation/best-practices/directory-structure/" title="Directory Structure"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" title="Running Jobs with SLURM"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/pearg_documentation/best-practices/backing-up-your-data/" title="Backing Up Your Data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/pearg_documentation/usage-documentation/installing-software/" title="Installing Software" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
