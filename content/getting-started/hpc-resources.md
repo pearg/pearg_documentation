@@ -22,21 +22,18 @@ important data.
 
 ### Mosquito Server (mozzie)
 
-IP address: `45.113.235.8`
+IP address: `115.146.86.169`
 
-The [mozzie server](http://45.113.235.8/) is a 28 core cluster comprised of 
-two nodes.
-The master node has 11 cores available for use and 48 GB of RAM, while the
-worker node has 16 cores and 64 GB available.
+The [mozzie server](http://115.146.86.169/) is currently a 32 core cluster comprised of 
+one node. It has 30 cores available for use via SLURM and 128 GB of RAM.
 
 
 ### Genetic Rescue Server (rescue)
 
-IP address: `115.146.85.115`
+IP address: `115.146.86.14`
 
-The [rescue server](http://115.146.85.115) is a 24 core cluster comprised of
-two machines. The master node has 11 cores available for use and 48 GB of RAM,
-while the worker node has 12 cores and 48 GB availble.
+The [rescue server](http://115.146.86.14) is currently a 16 core cluster comprised of
+one node. It has 15 cores available for use and 64 GB of RAM.
 
 -----
 
