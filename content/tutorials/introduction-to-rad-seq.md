@@ -297,6 +297,16 @@ In the `process_radtags` command you ran, what does the option `-t 80` and `-s 2
 **Answer:**  
 <span class="spoiler2">The "-t 80" option truncates the read to a final length of 80 bp. The "-s 20" option tells the program to discard the read due to low quality if the average quality score drops below 20 in a sliding window (whose size is set by the "-w" option and has a default of 0.15).</span>
 
+
+{{% notice info %}}
+In this tutorial, we have trimmed reads to 80 bp, as our sequence reads are 100 bp. 
+If you’re using new sequencing data, your reads may be 150 bp reads, and you should 
+trim these to a longer length such as 130 bp or 140 bp. If you don’t know what 
+length your sequence reads are, make sure you find out before progressing further 
+in this analysis. One method to do this is to run FastQC on your raw FASTQ files.
+{{% /notice %}}
+
+
 -----
 
 ## Alignment
