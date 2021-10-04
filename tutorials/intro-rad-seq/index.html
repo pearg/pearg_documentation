@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
+    var baseurl = "\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -1014,7 +1014,7 @@ process_radtags \
     -c -q -r -t 80 -s 20
 </code></pre>
 
-<div class="notices info" ><p>Generally, if you&rsquo;re running commands on a shared server, you should be using <a href="https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/">SLURM</a> to submit your jobs. However, this tutorial data only takes a few seconds to process, so if you&rsquo;re using the mozzie server, you can just run it on the master node without SLURM. With real data, jobs can take hours to run, so make sure you don&rsquo;t run large jobs on the master node.</p>
+<div class="notices info" ><p>Generally, if you&rsquo;re running commands on a shared server, you should be using <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">SLURM</a> to submit your jobs. However, this tutorial data only takes a few seconds to process, so if you&rsquo;re using the mozzie server, you can just run it on the master node without SLURM. With real data, jobs can take hours to run, so make sure you don&rsquo;t run large jobs on the master node.</p>
 </div>
 
 
@@ -1038,6 +1038,14 @@ Have a look at the log file in <code>process_radtags</code>. How many reads matc
 In the <code>process_radtags</code> command you ran, what does the option <code>-t 80</code> and <code>-s 20</code> do? (Hint: check the <a href="http://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php">manual</a>)<br />
 <strong>Answer:</strong><br />
 <span class="spoiler2">The &ldquo;-t 80&rdquo; option truncates the read to a final length of 80 bp. The &ldquo;-s 20&rdquo; option tells the program to discard the read due to low quality if the average quality score drops below 20 in a sliding window (whose size is set by the &ldquo;-w&rdquo; option and has a default of 0.15).</span></p>
+
+<div class="notices info" ><p>In this tutorial, we have trimmed reads to 80 bp, as our sequence reads are 100 bp.
+If you’re using new sequencing data, your reads may be 150 bp reads, and you should
+trim these to a longer length such as 130 bp or 140 bp. If you don’t know what
+length your sequence reads are, make sure you find out before progressing further
+in this analysis. One method to do this is to run FastQC on your raw FASTQ files.</p>
+</div>
+
 
 <hr />
 
