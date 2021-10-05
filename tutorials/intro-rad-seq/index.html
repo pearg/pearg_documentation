@@ -66,7 +66,7 @@
 <script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
 <script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "\/pearg_documentation\/";
+    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
 </script>
 <script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
 
@@ -731,16 +731,7 @@
 <li><a href="#run-gstacks">Run gstacks</a></li>
 <li><a href="#run-populations">Run populations</a></li>
 </ul></li>
-<li><a href="#downstream-analysis">Downstream analysis</a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#todo-write-concluding-remarks">TODO: write concluding remarks</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li><a href="#downstream-analysis">Downstream analysis</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1014,7 +1005,7 @@ process_radtags \
     -c -q -r -t 80 -s 20
 </code></pre>
 
-<div class="notices info" ><p>Generally, if you&rsquo;re running commands on a shared server, you should be using <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">SLURM</a> to submit your jobs. However, this tutorial data only takes a few seconds to process, so if you&rsquo;re using the mozzie server, you can just run it on the master node without SLURM. With real data, jobs can take hours to run, so make sure you don&rsquo;t run large jobs on the master node.</p>
+<div class="notices info" ><p>Generally, if you&rsquo;re running commands on a shared server, you should be using <a href="https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/">SLURM</a> to submit your jobs. However, this tutorial data only takes a few seconds to process, so if you&rsquo;re using the mozzie server, you can just run it on the master node without SLURM. With real data, jobs can take hours to run, so make sure you don&rsquo;t run large jobs on the master node.</p>
 </div>
 
 
@@ -1204,7 +1195,7 @@ populations \
     -t 1 \
     -p 2 \
     -r 0.8 \
-    --write_single_snp \
+    --write-single-snp \
     --vcf \
     --fstats
 </code></pre>
@@ -1214,9 +1205,9 @@ populations \
 <p>Additionally, with our less stringent parameters, the new VCF file now has more than twice the number of SNPs included, but some samples have missing genotype calls (i.e. <code>./.</code>).</p>
 
 <p><strong>Question:</strong><br />
-What does the <code>--write_single_snp</code> option do in populations? Why might you want to use this option when you run populations? (Hint: look at the help page or <a href="http://catchenlab.life.illinois.edu/stacks/comp/populations.php">manual</a>)<br />
+What does the <code>--write-single-snp</code> option do in populations? Why might you want to use this option when you run populations? (Hint: look at the help page or <a href="http://catchenlab.life.illinois.edu/stacks/comp/populations.php">manual</a>)<br />
 <strong>Answer:</strong><br />
-<span class="spoiler2">The &ldquo;--write_single_snp&rdquo; restricts analysis to only use the first SNP on the RAD tag. Often you want your SNPs to be independent observations (i.e. not under linkage disequilibrium). Using the &ldquo;--write_single_snp&rdquo; or &ldquo;--write-random-snp&rdquo; flag removes SNPs which are located on the same RAD tag, and therefore very close together in the genome.</span></p>
+<span class="spoiler2">The &ldquo;--write-single-snp&rdquo; restricts analysis to only use the first SNP on the RAD tag. Often you want your SNPs to be independent observations (i.e. not under linkage disequilibrium). Using the &ldquo;--write-single-snp&rdquo; or &ldquo;--write-random-snp&rdquo; flag removes SNPs which are located on the same RAD tag, and therefore very close together in the genome.</span></p>
 
 <hr />
 
@@ -1276,8 +1267,6 @@ ggplot(pca, aes(x=PC1, y=PC2, color=group)) +
 There are two samples from unknown origin. After looking at the PCA plot, what country do you think they originate from?<br />
 <strong>Answer:</strong><br />
 <span class="spoiler2">The two unknown samples both cluster more closely to the Malaysian samples, so it is likely they are from Malaysia.</span></p>
-
-<h5 id="todo-write-concluding-remarks">TODO: write concluding remarks</h5>
 
 
 <footer class=" footline" >

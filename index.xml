@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PEARG Documentation</title>
-    <link>/pearg_documentation/</link>
+    <link>https://pearg.github.io/pearg_documentation/</link>
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Introduction to RAD-Seq</title>
-      <link>/pearg_documentation/tutorials/intro-rad-seq/</link>
+      <link>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/tutorials/intro-rad-seq/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</guid>
       <description>.spoiler2{ color: black; background-color:black; } .spoiler2:hover { background-color:white; }  Note: Currently, this tutorial is written to be performed on the mozzie server. In the future, this will be expanded so it can be done on any linux server.
 This tutorial goes through the steps of setting up a project directory, demultiplexing RAD-Seq data, aligning RAD-seq samples to a reference genome, building the loci catalogue and calling SNPs with Stacks, and generating a PCA plot of the SNP data.</description>
     </item>
     
     <item>
       <title>Metadata Overview</title>
-      <link>/pearg_documentation/metadata-documentation/metadata-overview/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/metadata-overview/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/</guid>
       <description>The Hoffmann Lab has a system for storing its raw sequencing data. It is important you follow the system in place and ensure all your data is properly labelled and backed up. This is to ensure that sequencing data generated at the present time can still be used in future analyses, even if you are no longer at the lab. Storing our next-generation sequencing data in a systematic manner also benefits the whole lab as other lab members can find and use data that could be beneficial to their project.</description>
     </item>
     
     <item>
       <title>Running Jobs with SLURM</title>
-      <link>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
       <description>Using a computer cluster with other users means sharing resources. SLURM (Simple Linux Utility for Resource Management) is a commonly used job scheduler that manages a queue where you submit your jobs and allocates resources to run your job when resources are available.
 The documentation on using SLURM at Melbourne Bioinformatics is quite comprehensive and can be found here.
 Checking the status of your jobs squeue You can view information about jobs in the SLURM queue with the squeue command.</description>
@@ -43,10 +43,10 @@ Checking the status of your jobs squeue You can view information about jobs in t
     
     <item>
       <title>Directory Structure</title>
-      <link>/pearg_documentation/best-practices/directory-structure/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</link>
       <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/directory-structure/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</guid>
       <description>When using the PEARG clusters or the Melbourne Bioinformatics clusters, your files and data should be organised according to the convention described here.
 Each project should have its own directory located inside your home directory or a shared location. Your project directory name should be meaningful.
 Any shared data such as reference genomes and indices should be stored outside your project directory to avoid unnecessary duplication of data.
@@ -55,10 +55,10 @@ Check your project directory At absolute minimum, please check:</description>
     
     <item>
       <title>Compute Resources</title>
-      <link>/pearg_documentation/getting-started/hpc-resources/</link>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/getting-started/hpc-resources/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</guid>
       <description>This page lists the compute resources available to PEARG lab members.
 Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
 When using these servers you should follow the best practices described in these documents.
@@ -68,10 +68,10 @@ Mosquito Server (mozzie) IP address: 115.</description>
     
     <item>
       <title>Using VNC</title>
-      <link>/pearg_documentation/usage-documentation/using-vnc/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</link>
       <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/using-vnc/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</guid>
       <description>You can also connect to the mozzie or rescue server using VNC, a graphical desktop-sharing system, from your internet browser.
 Setup You&amp;rsquo;ll only need to follow these setup instructions once.
 First, SSH into the server and create a password using vncpasswd. Note that any password over 8 character is automatically truncated to a length of 8.
@@ -80,10 +80,10 @@ vncpasswd  Follow the prompts to setup and confirm your password. You don&amp;rs
     
     <item>
       <title>Using Mediaflux</title>
-      <link>/pearg_documentation/metadata-documentation/using-mediaflux/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
       <description>The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.
 1. Mediaflux Introduction
  How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets
@@ -92,20 +92,20 @@ vncpasswd  Follow the prompts to setup and confirm your password. You don&amp;rs
     
     <item>
       <title>Installing Software</title>
-      <link>/pearg_documentation/usage-documentation/installing-software/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</link>
       <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/installing-software/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</guid>
       <description>If you want a particular piece of software installed on mozzie or rescue you can email me at jchung@unimelb.edu.au. Anyone is also free to compile and install software in their personal directories.
 Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as easy as a downloading a pre-compiled binary file and sometimes you&amp;rsquo;re stuck in Dependency Hell. There are also be many different ways to install software depending on which form it comes in.</description>
     </item>
     
     <item>
       <title>Naming Files</title>
-      <link>/pearg_documentation/best-practices/naming-files/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/naming-files/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</guid>
       <description>This document describes best practices for naming files.
 I highly recommend you read this Data Carpentary document on file naming.
 Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
@@ -115,30 +115,30 @@ Just by looking at the filename and knowing what each field represents, we have 
     
     <item>
       <title>Getting an Account</title>
-      <link>/pearg_documentation/getting-started/getting-an-account/</link>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/getting-started/getting-an-account/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</guid>
       <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account. Please include your preferred username in the email.
 After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
     </item>
     
     <item>
       <title>Mediaflux Explorer</title>
-      <link>/pearg_documentation/metadata-documentation/mediaflux-explorer/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/mediaflux-explorer/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</guid>
       <description>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
 The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers. Note that uploading large files via the browser is unreliable and slow, therefore Mediaflux Desktop should not be used for uploading.</description>
     </item>
     
     <item>
       <title>Stacks Databases</title>
-      <link>/pearg_documentation/usage-documentation/stacks-databases/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/stacks-databases/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</guid>
       <description>Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
 Naming your databases Your database name must end with _radtags to show up in the web interface.
 Make sure to include your name and the date your database was created in your database name.</description>
@@ -146,30 +146,30 @@ Make sure to include your name and the date your database was created in your da
     
     <item>
       <title>Using the RAD-seq Pipeline</title>
-      <link>/pearg_documentation/usage-documentation/rad-seq-pipeline/</link>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/usage-documentation/rad-seq-pipeline/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</guid>
       <description>If you&amp;rsquo;re using the mozzie or rescue server and want to use Stacks &amp;gt;= 2.0 to perform your RAD-seq data processing and analysis, then you have the option of using the RAD-seq pipeline: radpipe.
 To use the pipeline, it is highly recommended you have some knowledge on how to use Screen or another terminal multiplexer such as Tmux. This is because the pipeline can run for hours or days and a terminal multiplexer will allow you to detach the session so it can continue running when you disconnect from the server.</description>
     </item>
     
     <item>
       <title>Sample Map</title>
-      <link>/pearg_documentation/metadata-documentation/sample-map/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/sample-map/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/</guid>
       <description>Enter the password to view the interactive map of the sample data in the Hoffmann Lab Mediaflux project.
 Enter    &#34;use strict&#34;; function loadPage(pwd) { var hash = pwd; hash = Sha1.hash(pwd); var url = &#34;http://45.113.235.8/secret/&#34; + hash + &#34;/sample_map.html&#34;; window.open(url, &#39;_blank&#39;); } $(&#34;#loginbutton&#34;).on(&#34;click&#34;, function() { loadPage($(&#34;#password&#34;).val()); }); $(&#34;#password&#34;).keypress(function(e) { if (e.which == 13) { loadPage($(&#34;#password&#34;).val()); } }); $(&#34;#password&#34;).focus(); $(document).ready(function() { $(&#34;#loginbutton&#34;).hover(function() { $(this).css(&#34;background-color&#34;, &#34;#2E53A5&#34;); }, function() { $(this).</description>
     </item>
     
     <item>
       <title>Adding individuals to Mediaflux via Excel spreadsheet</title>
-      <link>/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</guid>
       <description>If you prefer, you can choose to add the sample individuals component of your sequencing metadata via Excel spreadsheet instead of using the Mediaflux GUI.
 This step requires a few steps:
  Download the template for individual samples here.
@@ -180,30 +180,30 @@ This step requires a few steps:
     
     <item>
       <title>Backing Up Your Data</title>
-      <link>/pearg_documentation/best-practices/backing-up-your-data/</link>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/best-practices/backing-up-your-data/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</guid>
       <description>If you only have a single copy of your data, you&amp;rsquo;re vulnerable to losing it. A hardware failure or theft can lead to losing hundreds of hours of work or irreplacable photos.
 &amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;rdquo; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
     </item>
     
     <item>
       <title>Getting Help</title>
-      <link>/pearg_documentation/getting-started/getting-help/</link>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/getting-started/getting-help/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</guid>
       <description>For help related to getting/using compute resources or queries related to bioinformatics, email Jessica Chung (jchung@unimelb.edu.au).
 For help related to Mediaflux and metadata, email Tom Schmidt (tom.schmidt@unimelb.edu.au) or Jessica Chung (jchung@unimelb.edu.au).</description>
     </item>
     
     <item>
       <title>Using sFTP with Mediaflux</title>
-      <link>/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/</link>
+      <link>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/mediaflux-sftp/</guid>
       <description>Command line sFTP If you want to transfer files between the PEARG servers (e.g. mozzie) and Mediaflux, the easiest way to do this is to use sFTP on the command line.
 If you&amp;rsquo;re transferring large files, I recommend you use sFTP in a screen session so you can detach it and leave it running in the background.
 Downloading files from Mediaflux Let&amp;rsquo;s say I&amp;rsquo;m interested in a particular tarball which is located at /Volumes/proj-hoffmann_data-1128.</description>
@@ -211,10 +211,10 @@ Downloading files from Mediaflux Let&amp;rsquo;s say I&amp;rsquo;m interested in
     
     <item>
       <title>header</title>
-      <link>/pearg_documentation/_header/</link>
+      <link>https://pearg.github.io/pearg_documentation/_header/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>/pearg_documentation/_header/</guid>
+      <guid>https://pearg.github.io/pearg_documentation/_header/</guid>
       <description>PEARG Documentation</description>
     </item>
     
