@@ -473,7 +473,7 @@ populations \
     -t 1 \
     -p 2 \
     -r 0.8 \
-    --write_single_snp \
+    --write-single-snp \
     --vcf \
     --fstats
 ```
@@ -483,9 +483,9 @@ Since we defined populations and use the `--fstats` option, we now are given pai
 Additionally, with our less stringent parameters, the new VCF file now has more than twice the number of SNPs included, but some samples have missing genotype calls (i.e. `./.`).
 
 **Question:**  
-What does the `--write_single_snp` option do in populations? Why might you want to use this option when you run populations? (Hint: look at the help page or [manual](http://catchenlab.life.illinois.edu/stacks/comp/populations.php))  
+What does the `--write-single-snp` option do in populations? Why might you want to use this option when you run populations? (Hint: look at the help page or [manual](http://catchenlab.life.illinois.edu/stacks/comp/populations.php))  
 **Answer:**  
-<span class="spoiler2">The "\-\-write_single_snp" restricts analysis to only use the first SNP on the RAD tag. Often you want your SNPs to be independent observations (i.e. not under linkage disequilibrium). Using the "\-\-write_single_snp" or "\-\-write-random-snp" flag removes SNPs which are located on the same RAD tag, and therefore very close together in the genome.</span>
+<span class="spoiler2">The "\-\-write-single-snp" restricts analysis to only use the first SNP on the RAD tag. Often you want your SNPs to be independent observations (i.e. not under linkage disequilibrium). Using the "\-\-write-single-snp" or "\-\-write-random-snp" flag removes SNPs which are located on the same RAD tag, and therefore very close together in the genome.</span>
 
 -----
 
@@ -549,6 +549,4 @@ There are two samples from unknown origin. After looking at the PCA plot, what c
 **Answer:**  
 <span class="spoiler2">The two unknown samples both cluster more closely to the Malaysian samples, so it is likely they are from Malaysia.</span>
 
-
-##### TODO: write concluding remarks
 
