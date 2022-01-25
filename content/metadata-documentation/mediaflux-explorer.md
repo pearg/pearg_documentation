@@ -9,6 +9,11 @@ weight: 3
 description: 'How to use Mediaflux Explorer.'
 ---
 
+{{% notice warning %}}
+This page has been deprecated. To use Mediaflux Explorer on the mozzie server, [start a VNC session]({{%relref "using-vnc.md"%}}), launch a terminal, and enter `mediaflux-explorer` to launch the application.
+{{% /notice %}}
+
+
 The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or
 via your web browser with [Mediaflux Desktop](https://mediaflux.researchsoftware.unimelb.edu.au/desktop/).
 These clients allow you to view your data, transfer data, and edit metadata.

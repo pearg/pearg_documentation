@@ -39,7 +39,6 @@ Documentation related to using our clusters.
 * [Using VNC]({{%relref "usage-documentation/using-vnc.md"%}})
 * [Installing software]({{%relref "usage-documentation/installing-software.md"%}})
 * [Stacks databases]({{%relref "usage-documentation/stacks-databases.md"%}})
-* [Reference data]({{%relref "usage-documentation/reference-data.md"%}})
 
 ### Tutorials
 

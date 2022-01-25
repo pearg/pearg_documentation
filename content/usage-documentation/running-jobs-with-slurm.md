@@ -15,9 +15,9 @@ Using a computer cluster with other users means sharing resources. SLURM
 that manages a queue where you submit your jobs and allocates
 resources to run your job when resources are available.
 
-The documentation on using SLURM at Melbourne Bioinformatics is quite 
+The documentation on using SLURM for Spartan is quite 
 comprehensive and can be found
-[here](https://www.melbournebioinformatics.org.au/documentation/running_jobs/slurm_x86/).
+[here](https://dashboard.hpc.unimelb.edu.au/job_submission/).
 
 
 ## Checking the status of your jobs
@@ -39,7 +39,7 @@ squeue --account=UOM0041
 squeue -l -u jchung
 ```
 
-If you're using snowy or barcoo, you can also use the `showq` command.
+If you're using Spartan, you can also use the `showq` command.
 
 #### scontrol show job
 
@@ -121,15 +121,14 @@ scancel <job-id>
 
 ## Writing a SLURM script
 
-For beginners, I recommend using the 
-[job script generator](https://www.melbournebioinformatics.org.au/jobscript-generator/)
-written by Melbourne Bioinformatics.
+For beginners, I recommend using a 
+[job script generator](https://dashboard.hpc.unimelb.edu.au/forms/script_generator/).
 If you're using one of the PEARG clusters on the Nectar cloud (i.e. mozzie or 
 rescue), you can ignore the "Project ID" and the "Modules" field.
 
 Here's an example of a simple SLURM script running on the mozzie server.
 
-```bash
+```text
 #!/bin/bash
 #SBATCH --job-name=denovo_map
 #SBATCH --nodes=1
@@ -162,30 +161,30 @@ The most common `#SBATCH` options you'll most likely be using are:
 
 You can also direct your stdout and stderr into defined files:
 
-* `-output my-file-%j.out`
-* `-error my-file-%j.err`
+* `--output=my-file-%j.out`
+* `--error=my-file-%j.err`
 
-If you're using barcoo or snowy, you'll also need to specify memory in MB with:
+If you're using Spartan, you'll also need to specify memory in MB with:
 
 * `--mem=XXXXX` for jobs using multiple CPUs, or
 * `--mem-per-cpu=XXXX` for single CPU jobs.
 
-With barcoo and snowy, you'll also need to specify the partition, and a time limit:
+With Spartan, you'll also need to specify the partition, and a time limit:
 
 * `-p main`: The partition is called 'main'
 * `--time=D-HH:MM:SS`: Time limit given for the job. If the job exceeds the time,
    it is automatically terminated.
 
-Here's an example of a SLURM script for barcoo.
+Here's an example of a SLURM script for Spartan's physical partition.
 
-```bash
+```text
 #!/bin/bash
 
 # Partition for the job:
-#SBATCH -p main
+#SBATCH -p physical
 
 # Account to run the job:
-#SBATCH --account=VR0002
+#SBATCH --account=punim0395
 
 # Multithreaded (SMP) job: must run on one node
 #SBATCH --nodes=1
@@ -210,5 +209,5 @@ cd $HOME
 sleep 10
 ```
 
-When using barcoo and snowy, don't forget to `module load` the software you
+When using Spartan, don't forget to `module load` the software you
 need into your environment path.

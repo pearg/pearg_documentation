@@ -98,7 +98,8 @@ and if you have a student account, `student:username`.
 
 Example connecting using Cyberduck:
 
-<img src="/pearg_documentation/metadata-documentation/mediaflux-sftp_files/sftp_cyberduck.png" alt="" width="70%" height="70%"/>
+
+{{< figure src="/pearg_documentation/metadata-documentation/mediaflux-sftp_files/sftp_cyberduck.png" width=70% >}}
 
 Example connecting using WinSCP:
 

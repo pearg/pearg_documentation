@@ -20,7 +20,7 @@ and Time Machine hard drive are stolen.
 
 Hard disk drives are also prone to failure.
 
-<a href="https://www.backblaze.com/blog/hard-drive-reliability-update-september-2014"><img src="https://www.backblaze.com/blog/wp-content/uploads/2014/09/blog-fail-drives-manufactureX.jpg" alt="Hard Drive Failure Rates by Model" width=50% border="0" /></a>
+{{< figure src="https://www.backblaze.com/blog/wp-content/uploads/2014/09/blog-fail-drives-manufactureX.jpg" link="https://www.backblaze.com/blog/hard-drive-reliability-update-september-2014" title="Hard Drive Failure Rates by Model" width=50% >}}
 
 One solution is to store a copy of your data remotely in the cloud. Storage 
 services will also have redundancy measures in place to avoid data loss when 
