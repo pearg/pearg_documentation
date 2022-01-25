@@ -6,3 +6,4 @@
 public
 .DS_Store
 pearg_data
+.hugo_build.lock
