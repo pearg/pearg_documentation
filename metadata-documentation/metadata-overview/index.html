@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.26" />
-    <meta name="description" content="A overview of our metadata system in use.">
+    <title>PEARG Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2022-01-25T16:19:04 AEDT">
+<title>Metadata Overview :: PEARG Documentation</title>
+<link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
+<link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
+<link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/pearg_documentation/css/featherlight.min.css" rel="stylesheet">
+<link href="/pearg_documentation/css/auto-complete.css" rel="stylesheet">
+<link href="/pearg_documentation/theme-flex/style.css" rel="stylesheet">
 
+	<link href="/pearg_documentation/theme-flex/variant-blue.css" rel="stylesheet">
 
-    <title>Metadata Overview :: PEARG Documentation</title>
-    <link rel="shortcut icon" href="/pearg_documentation/images/favicon.png" type="image/x-icon" />
-    <link href="/pearg_documentation/css/nucleus.css" rel="stylesheet">
-    <link href="/pearg_documentation/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/pearg_documentation/css/hybrid.css" rel="stylesheet">
-    <link href="/pearg_documentation/css/featherlight.min.css" rel="stylesheet">
-    <link href="/pearg_documentation/css/horsey.css" rel="stylesheet">
-    
-    <link href="/pearg_documentation/css/theme.css" rel="stylesheet">
-    
-    
-      <link href="/pearg_documentation/css/theme-blue.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/pearg_documentation/css/bootstrap.min.css">
-    <script src="/pearg_documentation/js/jquery-2.x.min.js"></script>
-    <style type="text/css">
-      :root #header + #content > #left > #rlblock_left {
-        display:none !important;
-      }
-    </style>
-
-    
-
-    <script>
+<link rel="stylesheet" href="/pearg_documentation/css/bootstrap.min.css">
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -40,1126 +27,357 @@
   ga('send', 'pageview');
 
 </script>
+
+    
   </head>
-  <body class="" data-url="/pearg_documentation/metadata-documentation/metadata-overview/">
-    <nav id="sidebar" class="">
-
-
-
-
-
-<div class="highlightable">
-  <div id="header-wrapper">
-    <div id="header">
-       
-	<p>PEARG Documentation</p>
- 
-
-
-    </div>
+  <body data-url="/pearg_documentation/metadata-documentation/metadata-overview/">
     
-        <div class="searchbox">
-    <label for="search-by"><i class="fa fa-search"></i></label>
-    <input data-search-input id="search-by" type="text" placeholder="Search...">
-    <span data-search-clear=""><i class="fa fa-close"></i></span>
-</div>
-<script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
-<script type="text/javascript" src="/pearg_documentation/js/horsey.js"></script>
-<script type="text/javascript">
-    var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
-</script>
-<script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
-
+      <header>
+  <div class="logo">
     
-  </div>
+	
+  
+    <p>PEARG Documentation</p>
 
   
-    <ul class="topics">
-        
-            <li data-nav-id="/pearg_documentation/" class="dd-item">
-            <a href="/pearg_documentation/"><i class="fa fa-fw fa-home"></i></a>
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/pearg/pearg_documentation"  rel="noopener">
+                  <i class='fa fa-github'></i> Github repo
+                </a>
             </li>
-        
-        
-        
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/pearg_documentation/getting-started/" class="dd-item 
-        
-        
-        parent
+            <li class="" role="">
+                <a href="https://gohugo.io/"  rel="noopener">
+                  <i class='fa fa-book'></i> Hugo Documentation
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/vjeantet/hugo-theme-docdock"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> DocDock Theme
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://blogs.unimelb.edu.au/pearg/"  rel="noopener">
+                  <i class='fa fa-globe'></i> PEARG homepage
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/pearg_documentation/" class="dd-item">
+          <a href="/pearg_documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="https://pearg.github.io/pearg_documentation/getting-started/" class="dd-item alwaysopen haschildren
         ">
-      <a href="/pearg_documentation/getting-started/">
-        <span>Getting Started</span>
-
-        
-        
-
-          
+      <div>
+      <a href="/pearg_documentation/getting-started/">Getting Started</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
-          
-
-        
-
-        
-      </a>
-      
+      </div>
         <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/getting-started/hpc-resources/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/getting-started/hpc-resources/">
-        <span>Compute Resources</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/getting-started/getting-an-account/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/getting-started/getting-an-account/">
-        <span>Getting an Account</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/getting-started/getting-help/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/getting-started/getting-help/">
-        <span>Getting Help</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/getting-started/hpc-resources/">
+            Compute Resources
+          </a>
+        </div>
     </li>
-  
- 
-
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/pearg_documentation/best-practices/" class="dd-item 
-        
-        
-        parent
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/getting-started/getting-an-account/">
+            Getting an Account
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/getting-started/getting-help/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/getting-started/getting-help/">
+            Getting Help
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://pearg.github.io/pearg_documentation/best-practices/" class="dd-item alwaysopen haschildren
         ">
-      <a href="/pearg_documentation/best-practices/">
-        <span>Best Practices</span>
-
-        
-        
-
-          
+      <div>
+      <a href="/pearg_documentation/best-practices/">Best Practices</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
-          
-
-        
-
-        
-      </a>
-      
+      </div>
         <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/best-practices/directory-structure/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/best-practices/directory-structure/">
-        <span>Directory Structure</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/best-practices/naming-files/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/best-practices/naming-files/">
-        <span>Naming Files</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/best-practices/backing-up-your-data/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/best-practices/backing-up-your-data/">
-        <span>Backing Up Your Data</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/best-practices/directory-structure/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/best-practices/directory-structure/">
+            Directory Structure
+          </a>
+        </div>
     </li>
-  
- 
-
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/pearg_documentation/metadata-documentation/" class="dd-item 
-        parent
-        
-        parent
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/best-practices/naming-files/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/best-practices/naming-files/">
+            Naming Files
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/best-practices/backing-up-your-data/">
+            Backing Up Your Data
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://pearg.github.io/pearg_documentation/metadata-documentation/" class="dd-item alwaysopen haschildren
         ">
-      <a href="/pearg_documentation/metadata-documentation/">
-        <span>Metadata Documentation</span>
-
-        
-        
-
-          
+      <div>
+      <a href="/pearg_documentation/metadata-documentation/">Metadata Documentation</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
-          
-
-        
-
-        
-      </a>
-      
+      </div>
         <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/metadata-documentation/metadata-overview/" class="dd-item
-     active
-      ">
-        <a href="/pearg_documentation/metadata-documentation/metadata-overview/">
-        <span>Metadata Overview</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/metadata-documentation/using-mediaflux/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/metadata-documentation/using-mediaflux/">
-        <span>Using Mediaflux</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
-        <span>Mediaflux Explorer</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/metadata-documentation/sample-map/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/metadata-documentation/sample-map/">
-        <span>Sample Map</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-             
-            
-          
-             
-            
-          
-        
-        </ul>
-              
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/metadata-documentation/metadata-overview/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/metadata-documentation/metadata-overview/">
+            Metadata Overview
+          </a>
+        </div>
     </li>
-  
- 
-
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/pearg_documentation/usage-documentation/" class="dd-item 
-        
-        
-        parent
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/metadata-documentation/using-mediaflux/">
+            Using Mediaflux
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/metadata-documentation/mediaflux-explorer/">
+            Mediaflux Explorer
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/metadata-documentation/sample-map/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/metadata-documentation/sample-map/">
+            Sample Map
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/" class="dd-item alwaysopen haschildren
         ">
-      <a href="/pearg_documentation/usage-documentation/">
-        <span>Usage Documentation</span>
-
-        
-        
-
-          
+      <div>
+      <a href="/pearg_documentation/usage-documentation/">Usage Documentation</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
-          
-
-        
-
-        
-      </a>
-      
+      </div>
         <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">
-        <span>Running Jobs with SLURM</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/using-vnc/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/using-vnc/">
-        <span>Using VNC</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/installing-software/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/installing-software/">
-        <span>Installing Software</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/stacks-databases/">
-        <span>Stacks Databases</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/usage-documentation/rad-seq-pipeline/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/usage-documentation/rad-seq-pipeline/">
-        <span>Using the RAD-seq Pipeline</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/usage-documentation/running-jobs-with-slurm/">
+            Running Jobs with SLURM
+          </a>
+        </div>
     </li>
-  
- 
-
-          
-          
-
-
- 
-  
-    
-    <li data-nav-id="/pearg_documentation/tutorials/" class="dd-item 
-        
-        
-        parent
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/usage-documentation/using-vnc/">
+            Using VNC
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/usage-documentation/installing-software/">
+            Installing Software
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/usage-documentation/stacks-databases/">
+            Stacks Databases
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/usage-documentation/rad-seq-pipeline/">
+            Using the RAD-seq Pipeline
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://pearg.github.io/pearg_documentation/tutorials/" class="dd-item alwaysopen haschildren
         ">
-      <a href="/pearg_documentation/tutorials/">
-        <span>Tutorials</span>
-
-        
-        
-
-          
+      <div>
+      <a href="/pearg_documentation/tutorials/">Tutorials</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
-          
-
-        
-
-        
-      </a>
-      
+      </div>
         <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/pearg_documentation/tutorials/intro-rad-seq/" class="dd-item
-     
-      ">
-        <a href="/pearg_documentation/tutorials/intro-rad-seq/">
-        <span>Introduction to RAD-Seq</span> 
-        
-        </a></li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
+      <li data-nav-id="https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/" class="dd-item">
+        <div>
+          <a href="/pearg_documentation/tutorials/intro-rad-seq/">
+            Introduction to RAD-Seq
+          </a>
+        </div>
     </li>
-  
- 
+        </ul>
+    </li>
 
-          
-        
 
-        
-        <section id="shortcuts">
-            
-                <li class="" role="">
-                    <h3>More</h3>
-                    <a href="https://github.com/pearg/pearg_documentation"><i class='fa fa-github'></i> Github repo</a>
-                    
-                </li>
-            
-                <li class="" role="">
-                    
-                    <a href="https://gohugo.io/"><i class='fa fa-book'></i> Hugo Documentation</a>
-                    
-                </li>
-            
-                <li class="" role="">
-                    
-                    <a href="https://github.com/vjeantet/hugo-theme-docdock"><i class='fa fa-bookmark'></i> DocDock Theme</a>
-                    
-                </li>
-            
-                <li class="" role="">
-                    
-                    <a href="https://blogs.unimelb.edu.au/pearg/"><i class='fa fa-globe'></i> PEARG homepage</a>
-                    
-                </li>
-            
-        </section>    
-        
-        
 
-        
+
     </ul>
-    
-     
-    <section id="footer">
-      
+    <section>
     </section>
-  </div>
-</nav>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/pearg_documentation/getting-started/" >
+   Getting Started</option> 
+      <option value="/pearg_documentation/getting-started/hpc-resources/" >- Compute Resources</option>
+      <option value="/pearg_documentation/getting-started/getting-an-account/" >- Getting an Account</option>
+      <option value="/pearg_documentation/getting-started/getting-help/" >- Getting Help</option>
+  
+    <option value="/pearg_documentation/best-practices/" >
+   Best Practices</option> 
+      <option value="/pearg_documentation/best-practices/directory-structure/" >- Directory Structure</option>
+      <option value="/pearg_documentation/best-practices/naming-files/" >- Naming Files</option>
+      <option value="/pearg_documentation/best-practices/backing-up-your-data/" >- Backing Up Your Data</option>
+  
+    <option value="/pearg_documentation/metadata-documentation/" >
+   Metadata Documentation</option> 
+      <option value="/pearg_documentation/metadata-documentation/metadata-overview/"  selected>- Metadata Overview</option>
+      <option value="/pearg_documentation/metadata-documentation/using-mediaflux/" >- Using Mediaflux</option>
+      <option value="/pearg_documentation/metadata-documentation/mediaflux-explorer/" >- Mediaflux Explorer</option>
+      <option value="/pearg_documentation/metadata-documentation/sample-map/" >- Sample Map</option>
+  
+    <option value="/pearg_documentation/usage-documentation/" >
+   Usage Documentation</option> 
+      <option value="/pearg_documentation/usage-documentation/running-jobs-with-slurm/" >- Running Jobs with SLURM</option>
+      <option value="/pearg_documentation/usage-documentation/using-vnc/" >- Using VNC</option>
+      <option value="/pearg_documentation/usage-documentation/installing-software/" >- Installing Software</option>
+      <option value="/pearg_documentation/usage-documentation/stacks-databases/" >- Stacks Databases</option>
+      <option value="/pearg_documentation/usage-documentation/rad-seq-pipeline/" >- Using the RAD-seq Pipeline</option>
+  
+    <option value="/pearg_documentation/tutorials/" >
+   Tutorials</option> 
+      <option value="/pearg_documentation/tutorials/intro-rad-seq/" >- Introduction to RAD-Seq</option>
+  
 
 
 
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-        
-          <div id="top-bar">
-            
-              
-              
-              
-            <div id="top-github-link">
-              <a class="github-link" href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/metadata-overview.md" target="blank">
-                <i class="fa fa-code-fork"></i>
-                Edit page
-              </a>
-            </div>
-              
-            
-
-            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                <span id="sidebar-toggle-span">
-                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                    <i class="fa fa-bars"></i>
-                  </a>
-                </span>
-                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
-                <span class="links">
-                
-
-
-
-
-
-
-
- <a href='/pearg_documentation/'>PEARG Documentation</a> > <a href='/pearg_documentation/metadata-documentation/'>Metadata Documentation</a> > Metadata Overview
-
- 
-
- 
-
-   
-                </span>
-            </div>
-            <div class="progress">
-    <div class="wrapper">
-
+        </select>
+      </center>
     </div>
-</div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+      </div>
+    
 
-          </div>
-        
-        
-        <div id="body-inner">
-          
-            <h1>Metadata Overview</h1>
-          
-
-
-
-
-<p>The Hoffmann Lab has a system for storing its raw sequencing data. It is
+    <h1>Metadata Overview</h1>
+    
+    
+    
+    <p>The Hoffmann Lab has a system for storing its raw sequencing data. It is
 important you follow the system in place and ensure all your data is properly
 labelled and backed up. This is to ensure that sequencing data generated
 at the present time can still be used in future analyses, even if you are
 no longer at the lab. Storing our next-generation sequencing data in a
 systematic manner also benefits the whole lab as other lab members can find and
 use data that could be beneficial to their project. Sharing is caring.</p>
-
 <p>The Mediaflux is the service we use to manage our data, with the underlying
 storage being hosted by VicNode. With Mediaflux, we can upload sequencing
 libraries into storage located in the cloud, then set comprehenseive metadata
 detailing what was sequenced, where the biological samples are stored, and other
 important experimental design information.</p>
-
 <p>To get started using Mediaflux, visit the <a href="/pearg_documentation/metadata-documentation/using-mediaflux/">Using Mediaflux</a>
 page.</p>
 
 
-<footer class=" footline" >
-	
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/" title="Metadata Documentation"> <i class="fa fa-chevron-left"></i><label>Metadata Documentation</label></a>
+    <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/using-mediaflux/" title="Using Mediaflux" style="margin-right: 0px;"><label>Using Mediaflux</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 15/08/2017
+    </div>
+    
+
+    
+    <div class="github-link">
+      <a href="https://github.com/pearg/pearg_documentation/edit/master/content/metadata-documentation/metadata-overview.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+    
+  </div>
+
+
+	<div>
+
+
+  
+    Create a content/_footer.md file to customize the footer content
+  
+
+
+
+	</div>
 </footer>
 
-
-
-      </div>
-    </div>
-
+<script src="/pearg_documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
     
- 
+        var baseurl = "https:\/\/pearg.github.io\/pearg_documentation\/";
     
+</script>
+<script src="/pearg_documentation/js/clipboard.min.js"></script>
+<script src="/pearg_documentation/js/featherlight.min.js"></script>
 
-    <div id="navigation">
-        
-        
-        
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-        
-        
+<script type="text/javascript" src="/pearg_documentation/js/lunr.min.js"></script>
+<script type="text/javascript" src="/pearg_documentation/js/auto-complete.js"></script>
+<script type="text/javascript" src="/pearg_documentation/js/search.js"></script>
+<script src="/pearg_documentation/theme-flex/script.js"></script>
 
 
-        
-            <a class="nav nav-prev" href="/pearg_documentation/metadata-documentation/" title="Metadata Documentation"> <i class="fa fa-chevron-left"></i></a>
-        
-        
-            <a class="nav nav-next" href="/pearg_documentation/metadata-documentation/using-mediaflux/" title="Using Mediaflux" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-        
-    </div>
 
-    </section>
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="/pearg_documentation/js/clipboard.min.js"></script>
-    <script src="/pearg_documentation/js/featherlight.min.js"></script>
-    <script src="/pearg_documentation/js/html5shiv-printshiv.min.js"></script>
-    <script src="/pearg_documentation/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/pearg_documentation/js/modernizr.custom.71422.js"></script>
-    <script src="/pearg_documentation/js/learn.js"></script>
-    <script src="/pearg_documentation/js/hugo-learn.js"></script>
 
-    
-    <link href="/pearg_documentation/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
-    <script src="/pearg_documentation/mermaid/mermaid.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
+<script src="https://pearg.github.io/pearg_documentation/js/scripts.min.js"></script>
     
 
     
+    
 
+    
   </body>
 </html>
-

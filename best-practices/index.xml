@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Best Practices on PEARG Documentation</title>
+    <link>https://pearg.github.io/pearg_documentation/best-practices/</link>
+    <description>Recent content in Best Practices on PEARG Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://pearg.github.io/pearg_documentation/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Directory Structure</title>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</link>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/directory-structure/</guid>
+      <description>When using the PEARG clusters or the Melbourne Bioinformatics clusters, your files and data should be organised according to the convention described here.
+Each project should have its own directory located inside your home directory or a shared location. Your project directory name should be meaningful.
+Any shared data such as reference genomes and indices should be stored outside your project directory to avoid unnecessary duplication of data.
+Check your project directoryAt absolute minimum, please check:</description>
+    </item>
+    
+    <item>
+      <title>Naming Files</title>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/naming-files/</guid>
+      <description>This document describes best practices for naming files.
+I highly recommend you read this Data Carpentary document on file naming.
+Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
+X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz The filename contains a lot of information which is descriptive to the user and can be easily extracted programatically.
+Just by looking at the filename and knowing what each field represents, we have the following information:</description>
+    </item>
+    
+    <item>
+      <title>Backing Up Your Data</title>
+      <link>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</guid>
+      <description>If you only have a single copy of your data, you&amp;rsquo;re vulnerable to losing it. A hardware failure or theft can lead to losing hundreds of hours of work or irreplacable photos.
+&amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;quot; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
+    </item>
+    
+  </channel>
+</rss>

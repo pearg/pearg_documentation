@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PEARG Documentation</title>
@@ -6,11 +6,7 @@
     <description>Recent content on PEARG Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pearg.github.io/pearg_documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to RAD-Seq</title>
       <link>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</link>
@@ -37,7 +33,7 @@ This tutorial goes through the steps of setting up a project directory, demultip
       
       <guid>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
       <description>Using a computer cluster with other users means sharing resources. SLURM (Simple Linux Utility for Resource Management) is a commonly used job scheduler that manages a queue where you submit your jobs and allocates resources to run your job when resources are available.
-The documentation on using SLURM at Melbourne Bioinformatics is quite comprehensive and can be found here.
+The documentation on using SLURM for Spartan is quite comprehensive and can be found here.
 Checking the status of your jobs squeue You can view information about jobs in the SLURM queue with the squeue command.</description>
     </item>
     
@@ -50,7 +46,7 @@ Checking the status of your jobs squeue You can view information about jobs in t
       <description>When using the PEARG clusters or the Melbourne Bioinformatics clusters, your files and data should be organised according to the convention described here.
 Each project should have its own directory located inside your home directory or a shared location. Your project directory name should be meaningful.
 Any shared data such as reference genomes and indices should be stored outside your project directory to avoid unnecessary duplication of data.
-Check your project directory At absolute minimum, please check:</description>
+Check your project directoryAt absolute minimum, please check:</description>
     </item>
     
     <item>
@@ -73,9 +69,9 @@ Mosquito Server (mozzie) IP address: 115.</description>
       
       <guid>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</guid>
       <description>You can also connect to the mozzie or rescue server using VNC, a graphical desktop-sharing system, from your internet browser.
-Setup You&amp;rsquo;ll only need to follow these setup instructions once.
+ Setup You&amp;rsquo;ll only need to follow these setup instructions once.
 First, SSH into the server and create a password using vncpasswd. Note that any password over 8 character is automatically truncated to a length of 8.
-vncpasswd  Follow the prompts to setup and confirm your password. You don&amp;rsquo;t need to setup a view-only password.</description>
+vncpasswd Follow the prompts to setup and confirm your password. You don&amp;rsquo;t need to setup a view-only password.</description>
     </item>
     
     <item>
@@ -85,8 +81,8 @@ vncpasswd  Follow the prompts to setup and confirm your password. You don&amp;rs
       
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/</guid>
       <description>The documents below cover the basics of using Mediaflux to create assets, set metadata and upload your data.
-1. Mediaflux Introduction
- How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets  2. Adding Individual Assets
+ 1. Mediaflux Introduction
+ How to log into Mediaflux Desktop What assets are stored in data/, individuals/, and libraries/ Metadata associated with assets   2. Adding Individual Assets
  Creating assets in individuals/ Setting sample metadata Modifying and deleting existing assets Using metadata templates  Alternatively, you can import individual assets using an Excel Spreadsheet</description>
     </item>
     
@@ -109,7 +105,7 @@ Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as eas
       <description>This document describes best practices for naming files.
 I highly recommend you read this Data Carpentary document on file naming.
 Be descriptive Good filenames should be precise. For example, a raw FASTQ filename received from AGRF may look something like this:
-X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz  The filename contains a lot of information which is descriptive to the user and can be easily extracted programatically.
+X54321-1_AB1XXXXXX_GAATTCGT-ATAGAGGC_L007_R2.fastq.gz The filename contains a lot of information which is descriptive to the user and can be easily extracted programatically.
 Just by looking at the filename and knowing what each field represents, we have the following information:</description>
     </item>
     
@@ -129,8 +125,9 @@ After you SSH into the server, the first thing you should do is change your pass
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/mediaflux-explorer/</guid>
-      <description>The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
-The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers. Note that uploading large files via the browser is unreliable and slow, therefore Mediaflux Desktop should not be used for uploading.</description>
+      <description>This page has been deprecated. To use Mediaflux Explorer on the mozzie server, start a VNC session, launch a terminal, and enter mediaflux-explorer to launch the application.
+ The Mediaflux service can be accessed via a Java applet (Mediaflux Explorer) or via your web browser with Mediaflux Desktop. These clients allow you to view your data, transfer data, and edit metadata.
+The Mediaflux Explorer Java applet should be used when transferring data and is available on both mozzie and rescue servers.</description>
     </item>
     
     <item>
@@ -172,10 +169,10 @@ Enter    &#34;use strict&#34;; function loadPage(pwd) { var hash = pwd; hash = S
       <guid>https://pearg.github.io/pearg_documentation/metadata-documentation/using-mediaflux/xlsx_individual_import/</guid>
       <description>If you prefer, you can choose to add the sample individuals component of your sequencing metadata via Excel spreadsheet instead of using the Mediaflux GUI.
 This step requires a few steps:
- Download the template for individual samples here.
- Fill in the Excel spreadsheet with the information from your sequencing library.
- Send the spreadsheet to Jessica at jchung@unimelb.edu.au
- There might be some back and forth communication in order for the data to be validated.</description>
+  Download the template for individual samples here.
+  Fill in the Excel spreadsheet with the information from your sequencing library.
+  Send the spreadsheet to Jessica at jchung@unimelb.edu.au
+  There might be some back and forth communication in order for the data to be validated.</description>
     </item>
     
     <item>
@@ -185,7 +182,7 @@ This step requires a few steps:
       
       <guid>https://pearg.github.io/pearg_documentation/best-practices/backing-up-your-data/</guid>
       <description>If you only have a single copy of your data, you&amp;rsquo;re vulnerable to losing it. A hardware failure or theft can lead to losing hundreds of hours of work or irreplacable photos.
-&amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;rdquo; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
+&amp;ldquo;Don&amp;rsquo;t worry&amp;mdash; I have a Time Machine backup,&amp;quot; I hear you say. Having a Time Machine backup is a good first step, however, you&amp;rsquo;re still at risk in cases where you lose both copies in a house fire or if both your laptop and Time Machine hard drive are stolen.</description>
     </item>
     
     <item>

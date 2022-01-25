@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usage Documentation on PEARG Documentation</title>
+    <link>https://pearg.github.io/pearg_documentation/usage-documentation/</link>
+    <description>Recent content in Usage Documentation on PEARG Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pearg.github.io/pearg_documentation/usage-documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Jobs with SLURM</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/running-jobs-with-slurm/</guid>
+      <description>Using a computer cluster with other users means sharing resources. SLURM (Simple Linux Utility for Resource Management) is a commonly used job scheduler that manages a queue where you submit your jobs and allocates resources to run your job when resources are available.
+The documentation on using SLURM for Spartan is quite comprehensive and can be found here.
+Checking the status of your jobs squeue You can view information about jobs in the SLURM queue with the squeue command.</description>
+    </item>
+    
+    <item>
+      <title>Using VNC</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</link>
+      <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/using-vnc/</guid>
+      <description>You can also connect to the mozzie or rescue server using VNC, a graphical desktop-sharing system, from your internet browser.
+ Setup You&amp;rsquo;ll only need to follow these setup instructions once.
+First, SSH into the server and create a password using vncpasswd. Note that any password over 8 character is automatically truncated to a length of 8.
+vncpasswd Follow the prompts to setup and confirm your password. You don&amp;rsquo;t need to setup a view-only password.</description>
+    </item>
+    
+    <item>
+      <title>Installing Software</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</link>
+      <pubDate>Fri, 29 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/installing-software/</guid>
+      <description>If you want a particular piece of software installed on mozzie or rescue you can email me at jchung@unimelb.edu.au. Anyone is also free to compile and install software in their personal directories.
+Installing software on Linux can be challenging. Sometimes it&amp;rsquo;s as easy as a downloading a pre-compiled binary file and sometimes you&amp;rsquo;re stuck in Dependency Hell. There are also be many different ways to install software depending on which form it comes in.</description>
+    </item>
+    
+    <item>
+      <title>Stacks Databases</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/stacks-databases/</guid>
+      <description>Database management Databases are usually large in size and we have limited space on our clusters. To remedy this, please remove any databases you don&amp;rsquo;t need. If you have a database older than 3 months in the system, you will be asked to clean up your old databases.
+Naming your databases Your database name must end with _radtags to show up in the web interface.
+Make sure to include your name and the date your database was created in your database name.</description>
+    </item>
+    
+    <item>
+      <title>Using the RAD-seq Pipeline</title>
+      <link>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/usage-documentation/rad-seq-pipeline/</guid>
+      <description>If you&amp;rsquo;re using the mozzie or rescue server and want to use Stacks &amp;gt;= 2.0 to perform your RAD-seq data processing and analysis, then you have the option of using the RAD-seq pipeline: radpipe.
+To use the pipeline, it is highly recommended you have some knowledge on how to use Screen or another terminal multiplexer such as Tmux. This is because the pipeline can run for hours or days and a terminal multiplexer will allow you to detach the session so it can continue running when you disconnect from the server.</description>
+    </item>
+    
+  </channel>
+</rss>

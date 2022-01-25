@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on PEARG Documentation</title>
+    <link>https://pearg.github.io/pearg_documentation/getting-started/</link>
+    <description>Recent content in Getting Started on PEARG Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://pearg.github.io/pearg_documentation/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compute Resources</title>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/hpc-resources/</guid>
+      <description>This page lists the compute resources available to PEARG lab members.
+Cloud Servers These clusters are hosted on the Nectar cloud. Email jchung@unimelb.edu.au to request an account.
+When using these servers you should follow the best practices described in these documents.
+Each server has 10 - 30 TB of storage space which is not backed up. It is your own responsibility to have backups of your important data.
+Mosquito Server (mozzie) IP address: 115.</description>
+    </item>
+    
+    <item>
+      <title>Getting an Account</title>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-an-account/</guid>
+      <description>To obtain an account on mozzie or rescue, email jchung@unimelb.edu.au and request an account. Please include your preferred username in the email.
+After you SSH into the server, the first thing you should do is change your password. You can do this with the passwd command and follow the prompts.</description>
+    </item>
+    
+    <item>
+      <title>Getting Help</title>
+      <link>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/getting-started/getting-help/</guid>
+      <description>For help related to getting/using compute resources or queries related to bioinformatics, email Jessica Chung (jchung@unimelb.edu.au).
+For help related to Mediaflux and metadata, email Tom Schmidt (tom.schmidt@unimelb.edu.au) or Jessica Chung (jchung@unimelb.edu.au).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on PEARG Documentation</title>
+    <link>https://pearg.github.io/pearg_documentation/tutorials/</link>
+    <description>Recent content in Tutorials on PEARG Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://pearg.github.io/pearg_documentation/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to RAD-Seq</title>
+      <link>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://pearg.github.io/pearg_documentation/tutorials/intro-rad-seq/</guid>
+      <description>.spoiler2{ color: black; background-color:black; } .spoiler2:hover { background-color:white; }  Note: Currently, this tutorial is written to be performed on the mozzie server. In the future, this will be expanded so it can be done on any linux server.
+This tutorial goes through the steps of setting up a project directory, demultiplexing RAD-Seq data, aligning RAD-seq samples to a reference genome, building the loci catalogue and calling SNPs with Stacks, and generating a PCA plot of the SNP data.</description>
+    </item>
+    
+  </channel>
+</rss>
