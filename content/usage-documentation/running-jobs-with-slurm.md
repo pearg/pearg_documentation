@@ -95,7 +95,7 @@ sbatch my-script.sh
 You can use the `sinteractive` command to run your job in an interactive
 session. When SLURM allocates your job resources, you will be provided with
 an interactive terminal session. It is recommended to use sinteractive in
-conjunction with a terminal multiplexer such as GUN Screen so the job won't
+conjunction with a terminal multiplexer such as GNU Screen so the job won't
 terminate if you disconnect from the server.
 
 ```bash
