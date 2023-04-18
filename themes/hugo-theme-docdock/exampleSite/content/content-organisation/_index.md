@@ -46,7 +46,7 @@ in the page frontmatter, add a `head` param to insert any HTML code before the m
 example to display a "Hello"
 
 	+++
-	title = "Github repo"
+	title = "GitHub repo"
 	head ="<label>Hello</label> "
 	+++
 
@@ -59,7 +59,7 @@ in the page frontmatter, add a `pre` param to insert any HTML code before the me
 example to display a github icon 
 
 	+++
-	title = "Github repo"
+	title = "GitHub repo"
 	pre ="<i class='fa fa-github'></i> "
 	+++
 
@@ -74,7 +74,7 @@ Add a `name` param next to `[menu.main]`
 	parent = ""
 	identifier = "repo"
 	pre ="<i class='fa fa-github'></i> "
-	name = "Github repo"
+	name = "GitHub repo"
 	+++ -->
 
 <!-- ### Create a page redirector
